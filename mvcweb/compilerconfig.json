@@ -1,0 +1,118 @@
+﻿[
+  {
+    "outputFile": "Content/test.css",
+    "inputFile": "Content/test.less"
+  },
+  {
+    "outputFile": "js/layer/skin/abc/style.css",
+    "inputFile": "js/layer/skin/abc/style.less"
+  },
+  {
+    "outputFile": "Content/adult/index.css",
+    "inputFile": "Content/adult/index.less"
+  },
+  {
+    "outputFile": "Content/young/index.css",
+    "inputFile": "Content/young/index.less"
+  },
+  {
+    "outputFile": "Scripts/abc/index.es5.js",
+    "inputFile": "Scripts/abc/index.js"
+  },
+  {
+    "outputFile": "Content/train/train.css",
+    "inputFile": "Content/train/train.less"
+  },
+  {
+    "outputFile": "Scripts/abc/common.es5.js",
+    "inputFile": "Scripts/abc/common.js"
+  },
+  {
+    "outputFile": "Scripts/abc/train.es5.js",
+    "inputFile": "Scripts/abc/train.js"
+  },
+  {
+    "outputFile": "Content/abroad/abroad.css",
+    "inputFile": "Content/abroad/abroad.less"
+  },
+  {
+    "outputFile": "Scripts/abc/abroad.es5.js",
+    "inputFile": "Scripts/abc/abroad.js"
+  },
+  {
+    "outputFile": "Scripts/abc/base.es5.js",
+    "inputFile": "Scripts/abc/base.js"
+  },
+  {
+    "outputFile": "Scripts/abc/young.es5.js",
+    "inputFile": "Scripts/abc/young.js"
+  },
+  {
+    "outputFile": "Scripts/abc/home.es5.js",
+    "inputFile": "Scripts/abc/home.js"
+  },
+  {
+    "outputFile": "Content/young/home.css",
+    "inputFile": "Content/young/home.less"
+  },
+  {
+    "outputFile": "Content/young/student_voice.css",
+    "inputFile": "Content/young/student_voice.less"
+  },
+  {
+    "outputFile": "Scripts/abc/voice.es5.js",
+    "inputFile": "Scripts/abc/voice.js"
+  },
+  {
+    "outputFile": "Content/adult/foreign_teacher.css",
+    "inputFile": "Content/adult/foreign_teacher.less"
+  },
+  {
+    "outputFile": "Scripts/abc/team.es5.js",
+    "inputFile": "Scripts/abc/team.js"
+  },
+  {
+    "outputFile": "Scripts/layer/skin/abc/style.css",
+    "inputFile": "Scripts/layer/skin/abc/style.less"
+  },
+  {
+    "outputFile": "Scripts/layer/skin/abccart/style.css",
+    "inputFile": "Scripts/layer/skin/abccart/style.less"
+  },
+  {
+    "outputFile": "Scripts/abc/buyclass.es5.js",
+    "inputFile": "Scripts/abc/buyclass.js"
+  },
+  {
+    "outputFile": "Scripts/abc/member.es5.js",
+    "inputFile": "Scripts/abc/member.js"
+  },
+  {
+    "outputFile": "Scripts/abc/profile.es5.js",
+    "inputFile": "Scripts/abc/profile.js"
+  },
+  {
+    "outputFile": "Content/UserCenter/profile.css",
+    "inputFile": "Content/UserCenter/profile.less"
+  },
+  {
+    "outputFile": "Content/UserCenter/course-table.css",
+    "inputFile": "Content/UserCenter/course-table.less"
+  },
+  {
+    "outputFile": "Scripts/abc/courseTable.es5.js",
+    "inputFile": "Scripts/abc/courseTable.js"
+  },
+  {
+    "outputFile": "Scripts/abc/feature.es5.js",
+    "inputFile": "Scripts/abc/feature.js"
+  },
+  {
+    "outputFile": "Content/adult/feature.css",
+    "inputFile": "Content/adult/feature.less"
+  },
+  {
+    "outputFile": "Content/young/feature.css",
+    "inputFile": "Content/young/feature.less"
+  }
+]

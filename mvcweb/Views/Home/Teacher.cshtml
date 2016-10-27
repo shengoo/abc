@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="ABC,English online," />
+    <meta name="description" content="ABC English Online Education Platform, ABC在线英语" />
+    <title>ABC在线英语首页</title>
+    <link href="~/Content/commen.css" rel="stylesheet" />
+    <link href="~/static/css/index.css" rel="stylesheet" />
+    <link href="~/static/css/login.css" rel="stylesheet" />
+    <link href="~/assets/css/choosepage.css" rel="stylesheet" />
+    <link href="~/assets/css/StyleSheet1.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="contach-info">
+                <a class="email"><i></i>abc_online@abc.com.cn</a>
+                <a class="tel"><i></i>400-661-9888</a>
+            </div>
+            <div class="logo">
+                <a href="@Url.Action("Index","Home")"></a>
+                <div class="logo-bg"></div>
+            </div>
+            <div class="login">
+                <a class="xinlang">
+                    <i></i>
+                    <div class="ewm">
+                        <img src="@Url.Content("~/assets/image/twodimensioncode.jpg")" />
+                        <div class="appDown_title">扫码关注</div>
+                    </div>
+                </a>
+                <a class="weixin">
+                    <i></i>
+                    <div class="ewm">
+                        <img src="@Url.Content("~/assets/image/twodimensioncode.jpg")" />
+                        <div class="appDown_title">关注Abc微信</div>
+                    </div>
+                </a>
+            </div>
+            <div class="child">
+                <a href="@Url.Action("Index","Young")">切换至少儿版</a>
+            </div>
+            @*<div class="get">
+                    <a class="exit">登录</a>
+                    <a class="enroll">注册</a>
+                </div>*@
+            <div class="set">
+                <span class="span">个人中心&nbsp;,&nbsp;</span>
+                <a class="exit">退出</a>
+            </div>
+            <div class="user hidden" style="float: right; margin: 0 20px;"><span></span><span></span></div>
+        </div>
+    </div>
+
+    <iframe name="ContentFrame" id="ContentFrame" style="width: 100%; height: 600px; border: 0;" scrolling="no" src="@Url.Action("TeacherLogin","Home")"></iframe>
+
+
+
+
+    <div class="footer">
+        <div class="container">
+            <i class="footer-icon"></i>
+            <p class="copy">
+                COPYRIGHT &copy; 2014-9-1 ABC.COM.CN, ALL RIGHTS RESERVED<br>京ICP备12029524号-1 京ICP证130137号
+                京公网安备11010802012731号
+            </p>
+            <div class="logo-intro">
+                <div class="footer-logo"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="@ViewBag.Path/js/jquery-1.8.3.min.js"></script>
+    <script src="@ViewBag.Path/js/base.js"></script>
+    <script src="@ViewBag.Path/js/jquery.cookie.js"></script>
+    <script src="@ViewBag.Path/js/layer/layer.js"></script>
+    <script src="@ViewBag.Path/js/nav.js"></script>
+    @*<script src="@ViewBag.Path/js/common.js"></script>*@
+    @*<script src="@ViewBag.Path/js/teacherlogin.js"></script>*@
+    @*<script src="@ViewBag.Path/js/nav.js"></script>*@
+    <script>
+
+
+        window.loginOut = function () {
+            $.ajax({
+                url: $.url + '/Home/LoginOut',
+                data: Math.random(),
+                type: 'post',
+                dataType: 'json',
+                success: function (rel) {
+                    if (rel.IsSuccess) {
+                        window.location.href = window.location.href;
+                    }
+                }
+            });
+        }
+        window.updateContentFrameHeight = function (height) {
+            $('#ContentFrame').css({
+                height: height
+            });
+        };
+
+        window.showMessage = function (tip, message) {
+            layer.alert(message,
+            {
+                icon: tip || 1,
+                skin: 'layer-ext-moon' //该皮肤由layer.seaning.com友情扩展。关于皮肤的扩展规则，去这里查阅
+            });
+        };
+
+    </script>
+</body>
+</html>

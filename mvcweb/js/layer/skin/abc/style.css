@@ -1,0 +1,30 @@
+﻿/**
+    @author: sheng00(shengoo@hotmail.com)
+*/
+/* 选择器格式为：html #layui_layer_skin文件夹名stylecss，这一点非常重要 */
+html #layui_layer_skinabcstylecss {
+  display: none;
+  position: absolute;
+  width: 1989px;
+}
+body .layer-ext-abc .layui-layer-title {
+  background-color: #c9151e;
+  background-image: url(abc.png);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: 16px;
+}
+body .layer-ext-abc .layui-layer-btn a {
+  background-color: #c9151e;
+  border: none;
+}
+body .layer-ext-abc .layui-layer-setwin {
+  top: 10px;
+  right: 16px;
+}
+body .layer-ext-abc .layui-layer-close {
+  background-image: url(close.png);
+  width: 15px;
+  height: 15px;
+  background-position: 0;
+}

@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ABC在线英语</title>
+    <link href="~/Content/UserCenter/course-table.min.css" rel="stylesheet"/>
+    <link href="~/Scripts/laydate/need/laydate.css" rel="stylesheet" />
+    <link href='~/Scripts/fullcalendar/fullcalendar.css' rel='stylesheet' />
+    <link href='~/Scripts/fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .fc-head tr {
+            width: 770px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        .fc-head th {
+            width: 110px;
+            height: 70px;
+            color: #333;
+            border: 1px solid #ccc;
+            border-top: 0;
+            text-align: right;
+            display: table-cell;
+            vertical-align: top;
+            padding-top: 10px;
+            padding-right: 10px;
+            height: 30px;
+            text-align: center;
+            line-height: 20px;
+            background: #ccc;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .courseform {
+            /*width: 320px;*/
+            /*height: 280px;*/
+        }
+
+            .courseform table {
+                width: 100%;
+                border-spacing: 0;
+            }
+
+                .courseform table tr {
+                    height: 30px;
+                }
+
+            .courseform tr td {
+                text-align: right;
+            }
+
+                .courseform tr td div {
+                    text-align: left;
+                }
+
+        .oper {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            height: 40px;
+            width: 100%;
+        }
+
+            .oper a {
+                float: right;
+                margin-right: 5px;
+                margin-left: 0px;
+            }
+
+        .btn {
+            border-radius: 3px;
+            background-color: #30a0f6;
+            cursor: pointer;
+            border: 0px;
+            color: #FFF;
+            text-align: center;
+        }
+
+        .play-btn {
+            width: 80px;
+            height: 35px;
+            display: inline-block;
+            margin: 0 auto;
+            line-height: 35px;
+            text-align: center;
+            cursor: pointer;
+            cursor: hand;
+            border: 1px solid #ccc;
+            color: #000;
+        }
+
+        div.fc-toolbar div.fc-center h2 {
+            height: 35px;
+            line-height: 35px;
+            margin: 0 40px;
+        }
+
+        .lessonaccess {
+            min-height: 80px;
+            padding: 5px 10px;
+        }
+
+        .course_yueke {
+            width: 100%;
+            font-size: 12px;
+            border-spacing: 0px;
+            border-top: 1px solid #ddd;
+            border-left: 1px solid #ddd;
+        }
+
+            .course_yueke thead {
+                background: -moz-linear-gradient(top, #F6F6F6, #F0F0F0);
+                background: -webkit-gradient(linear, 0 0, 0 100%, from(#F6F6F6), to(#F0F0F0));
+            }
+
+                .course_yueke thead tr {
+                    height: 32px;
+                }
+
+            .course_yueke tr td {
+                border-bottom: 1px solid #ddd;
+                border-right: 1px solid #ddd;
+                text-align: center;
+                line-height: 1.42857;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                vertical-align: middle;
+                -moz-word-break: break-all;
+                -o-word-break: break-all;
+                word-break: break-all;
+                height: 34px;
+                color: #666666;
+            }
+    </style>
+</head>
+<body>
+    <div class="banner"></div>
+    @Html.Partial("UserCenterNav", 2)
+    <div class="section">
+        <div class="ad ad-1">
+            <div class="container">
+                <div class="page-title">
+                    <h1>COURSE MANAGEMENT</h1>
+                    <div class="divider"></div>
+                    @Html.Partial("PurchaseTabs", new ViewDataDictionary { { "index", 2 } })
+                </div>
+                <div class="free-course">
+                    <div class="coursetable flt" style="margin-left: 11px;">
+                        <div class="fullcalender">
+                        </div>
+                        <div class="courseform hidden">
+                            <h2>课次详情</h2>
+                            <table>
+                                <tr>
+                                    <td>课程类型：</td>
+                                    <td>
+                                        <div id="kclx"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>课程级别：</td>
+                                    <td>
+                                        <div id="kcjb"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>课程名称：</td>
+                                    <td>
+                                        <div id="kcmc"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>上课老师：</td>
+                                    <td>
+                                        <div id="skls"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>上课模式：</td>
+                                    <td>
+                                        <div id="skms"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>上课时间：</td>
+                                    <td>
+                                        <div id="sksj"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>上课时长：</td>
+                                    <td>
+                                        <div id="sksc"></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>课次：</td>
+                                    <td>
+                                        <div id="kc"></div>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <div class="oper">
+                                <a class="btn" type="1" target="_blank">进入教室</a>
+                                <a class="btn" type="2">取消预约</a>
+                                <a class="btn" type="3" target="_blank">视频回放</a>
+                                <a class="btn" type="4" target="_blank">下载课件</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--查看课件-->
+    <div class="lessonaccess hidden">
+        <table class="course_yueke">
+            <thead>
+                <tr>
+                    <td>序号</td>
+                    <td>课次号</td>
+                    <td>课次名称</td>
+                    <td>课件名称</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+
+    <script src="~/Scripts/jquery-2.2.4.min.js"></script>
+    <script src="~/Scripts/abc/base.es5.min.js"></script>
+    <script src="~/Scripts/jquery.cookie.js"></script>
+    <script src="~/Scripts/layer/layer.js"></script>
+    <script src="~/Scripts/laydate/laydate.js"></script>
+    <script src='~/Scripts/fullcalendar/lib/moment.min.js'></script>
+    <script src="~/Scripts/fullcalendar/fullcalendar.js"></script>
+    <script src="~/Scripts/fullcalendar/lang/zh-cn.js"></script>
+    <script src="~/Scripts/abc/common.es5.min.js"></script>
+    <script src="~/Scripts/abc/courseTable.es5.js"></script>
+    @*<script>
+        $(function () {
+            window.parent.$('#ContentFrame')
+                .css({
+                    height: 2200
+                });
+            member.myCourseListReady();
+        });
+    </script>*@
+
+</body>
+</html>

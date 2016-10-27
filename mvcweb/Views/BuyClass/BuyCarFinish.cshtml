@@ -1,0 +1,57 @@
+﻿<div class="g-bd">
+    <div class="g-in" id="container" data-init="pay_weixin">
+        <div class="g-mncw">
+            <div class="m-paycourse">
+                <div class="WeChat_order paytable">
+                    请您及时付款，以便订单尽快获得处理！ 应付金额 <b>￥7368</b><span id="openClosePay">订单详情<i class=""></i></span>
+                </div>
+                <div class="paytable part" style="display: none;" id="payTable">
+                    <div class="ordertable">
+                        <table class="u-tab">
+                            <thead>
+                                <tr>
+                                    <th width="35%">套餐类型</th>
+                                    <th width="30%">商品详情</th>
+                                    <th width="20%">价格</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- 次卡套餐 start -->
+                                <tr>
+                                    <td class="f-tal" rowspan="1"><b>次卡</b>(1次次卡可预约1节25分钟的课程)</td>
+                                    <td><b class="f-fs2">240次</b> 次卡学习套餐<br><em>有效期360天</em></td>
+                                    <td><i class="f-ff1">¥</i>8188</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 表格模块 start -->
+                    <div class="bill f-tar part">
+                        <p class="f-fs2">商品数量总计 <b class="redfont18">1</b> 份    金额共计：<b class="redfont18">8188元</b></p>
+
+                        <p class="f-fs2">
+                            优惠金额：
+                            <b>
+                                820元
+                            </b>
+                        </p>
+                        <p class="f-fs2">应付金额：<b id="discount_price"><i class="f-ff1">¥</i>7368</b><b>元</b></p>
+                    </div>
+                </div>
+                <div class="wx_pay clearfix">
+                    <h3>微信支付</h3>
+                    <div class="wx_paycon">
+                        <div class="wx_payimg">
+                            <div id="qrcode"><div><img src="data:image/gif;base64,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" height="130" width="130"></div><div><img src="data:image/gif;base64,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" width="130" height="130"></div></div>
+                            <span>请使用微信扫一扫，扫描二维码支付</span>
+                        </div>
+                        <p><img src="51Talk%E4%BC%9A%E5%91%98%E4%B8%AD%E5%BF%83_files/wx_img02.jpg"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- /购买课程 -->
+        </div>
+        <!-- /g-mncw -->
+    </div>
+</div>

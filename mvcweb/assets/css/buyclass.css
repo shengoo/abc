@@ -1,0 +1,44 @@
+﻿.coursetitle {
+    border-bottom: initial;
+}
+
+.course-desc {
+    height: 30px;
+    border-bottom: 1px dashed #000;
+    color: blue;
+}
+
+.add {
+    background-color: red;
+    background-image: initial;
+}
+
+.search {
+    background-color: #063f84;
+    background-image: initial;
+}
+
+.buy {
+    line-height: 39px;
+}
+
+.col_tab_ul2 {
+    margin-top: 10px;
+    background-color: #063f84;
+    background-image: initial;
+    height: 48px;
+}
+
+    .col_tab_ul2 li {
+        height: 55px;
+    }
+
+        .col_tab_ul2 li.on {
+            background: url(../image/sprite.png) no-repeat -650px -444px;
+            color: #fff;
+            border: none;
+        }
+
+.m2eBox {
+    height: auto;
+}

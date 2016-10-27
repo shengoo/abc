@@ -1,0 +1,310 @@
+body {
+  color: #929292;
+  font-size: 14px;
+  font-family: "microsoft yahei", Arial, "Helvetica Neue";
+  background-color: #fff;
+}
+a {
+  text-decoration: none;
+  color: #929292;
+}
+li {
+  list-style: none;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 984px;
+  margin: 0 auto;
+}
+.container:after {
+  content: " ";
+  display: table;
+  clear: right;
+}
+.btn {
+  display: block;
+  width: 109px;
+  height: 31px;
+  line-height: 31px;
+  color: #fff;
+  text-align: center;
+}
+.btn-danger {
+  background: url(../../image/sprite.png) no-repeat -109px -164px;
+}
+.btn-blue {
+  background: url(../../image/sprite.png) no-repeat 0 -164px;
+}
+.banner_one {
+  width: 100%;
+  height: 331px;
+  background: #fefefe url(../../image/free_course/banner.png) center center no-repeat;
+}
+.page-title {
+  text-align: center;
+}
+.page-title h1 {
+  font-size: 34px;
+  line-height: 34px;
+  margin-bottom: 30px;
+  color: #282828;
+}
+.page-title .divider {
+  margin: 0 auto;
+}
+.page-title p {
+  margin-top: 21px;
+  line-height: 35px;
+  font-size: 19px;
+}
+/*每页大标题*/
+.ad .title {
+  height: 34px;
+  margin-bottom: 7px;
+  font-size: 34px;
+  color: #282828;
+}
+.ad .sub-text {
+  height: 19px;
+  margin-bottom: 14px;
+  font-size: 19px;
+  font-weight: normal;
+}
+.ad .divider {
+  width: 71px;
+  height: 4px;
+  background-color: #063f84;
+  border: 1px solid #174a8b;
+}
+.divider {
+  width: 71px;
+  height: 4px;
+  background-color: #063f84;
+  border: 1px solid #174a8b;
+}
+.caret {
+  position: absolute;
+  border: 9px solid transparent;
+}
+.nav {
+  height: 72px;
+  border-top: 2px solid #e4e4e4;
+  border-bottom: 2px solid #dcdcdc;
+}
+.nav ul {
+  width: 984px;
+  height: 68px;
+  margin: 0 auto;
+  border-left: 2px solid #e4e4e4;
+  border-right: 2px solid #e4e4e4;
+}
+.nav ul:after {
+  content: " ";
+  display: table;
+  clear: right;
+}
+.nav ul li {
+  position: relative;
+  float: left;
+  width: 140px;
+  border-right: 2px solid #e4e4e4;
+}
+.nav ul li.no-border {
+  border-right: none;
+}
+.nav ul li a {
+  display: block;
+  height: 68px;
+  line-height: 68px;
+  text-align: center;
+}
+.nav ul li.active {
+  top: 0;
+}
+.nav ul li.active a {
+  height: 70px;
+  line-height: 70px;
+  color: #063f84;
+  border-bottom: 6px solid #063f84;
+}
+.section .page-title {
+  margin-top: 115px;
+}
+.section .ad .slide {
+  text-align: right;
+  height: 30px;
+  font-size: 0;
+}
+.section .ad .slide .prev,
+.section .ad .slide .next {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(../../image/sprite.png) no-repeat -705px 0;
+}
+.section .ad .slide .prev.disabled {
+  background-position: -705px 0;
+}
+.section .ad .slide .prev {
+  margin-right: 12px;
+}
+.section .ad .slide .next {
+  background-position: -735px 0;
+}
+.section .ad .like i {
+  display: inline-block;
+  width: 12px;
+  height: 11px;
+  margin-left: 12px;
+  background: url(../../image/sprite.png) no-repeat -826px -56px;
+}
+.section .ad-1 {
+  padding: 92px 0 0;
+}
+.section .ad-1 .slide {
+  margin-top: 18px;
+}
+.section .ad-1 .free-course {
+  margin-top: 27px;
+}
+.section .ad-1 .free-course .each-media {
+  background-color: #efefef;
+  margin-bottom: 14px;
+}
+.section .ad-1 .free-course .each-media:after {
+  content: " ";
+  display: table;
+  clear: left;
+}
+.section .ad-1 .free-course .each-media.active .media-img img {
+  -webkit-filter: none;
+  filter: none;
+}
+.section .ad-1 .free-course .each-media.active .media-text p {
+  color: #282828;
+}
+.section .ad-1 .free-course .each-media.active .media-text .tool .like i {
+  background-position: right -56px;
+}
+.section .ad-1 .free-course .each-media.active .media-text .tool .play-btn {
+  background-position: -218px -164px;
+}
+.section .ad-1 .free-course .each-media .media-img {
+  position: relative;
+  float: left;
+  width: 299px;
+  height: 191px;
+  overflow: hidden;
+}
+.section .ad-1 .free-course .each-media .media-img img {
+  -webkit-filter: grayscale(1);
+  filter: gray;
+  filter: grayscale(1);
+}
+.section .ad-1 .free-course .each-media .media-text {
+  position: relative;
+  float: right;
+  width: 685px;
+  height: 191px;
+  padding: 15px 30px 0 20px;
+}
+.section .ad-1 .free-course .each-media .media-text .caret {
+  top: 10px;
+  left: -18px;
+  border-right-color: #efefef;
+}
+.section .ad-1 .free-course .each-media .media-text h5 {
+  color: #282828;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 14px;
+}
+.section .ad-1 .free-course .each-media .media-text p {
+  padding-left: 2px;
+  font-size: 12px;
+  line-height: 18px;
+}
+.section .ad-1 .free-course .each-media .media-text .tool {
+  height: 31px;
+  line-height: 31px;
+  margin-top: 44px;
+  overflow: hidden;
+}
+.section .ad-1 .free-course .each-media .media-text .tool .like {
+  float: left;
+  line-height: 31px;
+  padding-left: 2px;
+}
+.section .ad-1 .free-course .each-media .media-text .tool .play-btn {
+  float: right;
+  width: 109px;
+  height: 31px;
+  text-align: center;
+  color: #fff;
+  background: url(../../image/sprite.png) no-repeat -218px -195px;
+    border: none;
+}
+.section .ad-1 .free-course .each-media .media-text .tool .play-btn:hover {
+    -ms-background-position: -68px -499px;
+    background-position: -68px -499px;
+}
+.section .ad-2 {
+  padding: 76px 0 173px;
+}
+.section .ad-2 .title {
+  margin-bottom: 10px;
+}
+.section .ad-2 .sentence {
+  margin-top: 29px;
+}
+.section .ad-2 .sentence .each-sentence {
+  padding: 0 30px 0 20px;
+  overflow: hidden;
+}
+.section .ad-2 .sentence .each-sentence .sen-left {
+  float: left;
+  font-size: 0;
+}
+.section .ad-2 .sentence .each-sentence .sen-left i {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  background: url(../../image/sprite.png) no-repeat right -28px;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+}
+.section .ad-2 .sentence .each-sentence .sen-left span {
+  margin-left: 22px;
+  font-size: 14px;
+}
+.section .ad-2 .sentence .each-sentence .like {
+  float: right;
+}
+.section .ad-2 .sentence .each-sentence.odd {
+  height: 71px;
+  line-height: 71px;
+  background-color: #fff;
+  color: #d83142;
+}
+.section .ad-2 .sentence .each-sentence.odd .sen-left i {
+  background-position: right -28px;
+}
+.section .ad-2 .sentence .each-sentence.odd .like i {
+  background-position: right -56px;
+}
+.section .ad-2 .sentence .each-sentence.even {
+  height: 60px;
+  line-height: 60px;
+  background-color: #efefef;
+  color: #464646;
+}
+.section .ad-2 .sentence .each-sentence.even .sen-left i {
+  background-position: right 0;
+}

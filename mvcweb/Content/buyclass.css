@@ -1,0 +1,388 @@
+﻿html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.content {
+    background-color: #fff;
+}
+
+li, a {
+    cursor: pointer;
+}
+
+.content {
+    width: 1000px;
+    margin: 10px auto;
+}
+
+.col_tab_ul {
+    list-style-type: none;
+    float: left;
+    height: 40px;
+    width: 1000px;
+}
+
+    .col_tab_ul li {
+        width: 160px;
+        margin: 10px;
+        padding: 10px;
+        float: left;
+        background-color: #46a5e6;
+        font-family: "Microsoft YaHei";
+    }
+
+        .col_tab_ul li .focus {
+            background-color: #e152dc;
+        }
+
+        .col_tab_ul li.selector {
+            background: #fff;
+            color: #30a0f6;
+        }
+
+.coursetype {
+    float: left;
+    width: 500px;
+    height: auto;
+}
+
+.flt {
+    float: left;
+    font-family: Microsoft YaHei,微软雅黑,arial,宋体;
+}
+
+.hidden {
+    display: none;
+}
+
+.coursetitle {
+    height: 60px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: "Microsoft YaHei","微软雅黑",arial,"宋体";
+}
+
+.courseinfo {
+    height: 180px;
+    font-family: Arial,Verdana,"宋体";
+}
+
+.price {
+    height: 50px;
+    width: 400px;
+    line-height: 50px;
+    color: #fff;
+    margin: 10px 0 10px 0px;
+}
+
+.m2eBox {
+    float: left;
+    width: 100%;
+    height: 200px;
+    height: 140px;
+}
+
+.buy {
+    cursor: pointer;
+    width: 171px;
+    height: 39px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    color: #fff;
+    float: left;
+}
+
+.add {
+    margin-left: 150px;
+    /*E:\MySelfProject\ABCWebProject\mvcweb\mvcweb\Content\icon\m2car.jpg*/
+    /*background-image: url(../Content/icon/m2car.jpg);*/
+}
+
+/*.add:hover {
+        background-image: url(../Images/add_car_on.png);
+        color: #1786DB;
+    }*/
+
+.search {
+    /*background: url(../Images/search_car_off.png) no-repeat;*/
+    /*background-image: url(../Content/icon/m2e_btn.jpg);*/
+}
+
+/*.search:hover {
+        background-image: url(../Images/search_car_on.png);
+        color: #f0940f;
+    }*/
+
+.course_t {
+    width: 70px;
+    min-height: 30px;
+    line-height: 30px;
+    text-align: right;
+}
+/* RL add */
+.clearfix:after {
+    content: "\200B";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+/*IE/7/6*/
+.col_tab_ul {
+    /*background: url(../Images/rl_buycar_bg.jpg) 0 0 repeat-x;*/
+    background-color: #F6F6F6;
+    height: 50px;
+    margin: 0;
+    width: 99%;
+    padding: 0 0 0 10px;
+}
+
+    .col_tab_ul li {
+        border: none;
+        margin: 10px 0 0 0;
+        background: #408ed6 none;
+        /*-ms-border-radius: 5px 5px 0 0;
+        border-radius: 5px 5px 0 0;*/
+        margin-left: 5px;
+        line-height: 40px;
+        color: #fff;
+        padding: 0;
+        height: 40px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+.col_tab_img {
+    float: left;
+    width: 423px;
+    text-align: left;
+    margin: 40px 10px;
+    padding: 0 0 0 0;
+}
+
+    .col_tab_img img {
+        border: 1px solid #efefef;
+    }
+
+.col_tab_imgtxt {
+    float: right;
+    width: 540px;
+    font-size: 14px;
+    margin: 40px 0;
+}
+
+.price, .course_t {
+    font-size: 14px;
+    font-family: simsun;
+    color: #666;
+    font-family: "Microsoft YaHei","微软雅黑",arial,"宋体";
+}
+
+.coursetitle {
+    text-align: left;
+    font-size: 18px;
+    color: #666;
+    font-weight: 700;
+    line-height: 40px;
+    border-bottom: 1px solid #efefef;
+    height: 40px;
+    margin: 0;
+}
+
+.course_ul {
+    padding: 0;
+    margin: 0px;
+    list-style-type: none;
+    float: left;
+}
+
+    .course_ul li {
+        padding: 10px 0 0 0;
+        margin-bottom: 10px;
+    }
+
+.price_num {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.courseinfo {
+    height: auto;
+}
+
+.number {
+    margin: 10px 0 2px 0px;
+    width: 100%;
+    font-family: simsun;
+    font-size: 12px;
+    color: #666;
+}
+
+.gift {
+    margin: 10px 0 10px 0px;
+    width: 100%;
+    min-height: 30px;
+    max-height: 70px;
+}
+
+.visible {
+    /*visibility: hidden;*/
+    display: none;
+}
+
+.buy {
+    margin: 0 30px 0 0;
+}
+
+.course {
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    float: left;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ddd;
+    position: relative;
+    color: #666;
+    font-family: "Microsoft YaHei","微软雅黑",arial,"宋体";
+    /*background-image: url(../Images/course_off.png);*/
+}
+
+    .course:hover {
+        background-color: #F3F3F3;
+        /*background-image: url(../Images/course_on.png);*/
+    }
+
+.selector {
+    border: 1px solid #E4393C;
+    /*background-image: url(../Images/course_on.png);*/
+}
+
+    .selector b {
+        background: rgba(0, 0, 0, 0) url(../Images/select.png) no-repeat scroll;
+        bottom: 0;
+        height: 12px;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        width: 12px;
+    }
+
+.col_tab_ulbox {
+    border: 1px solid #efefef;
+    border-top: none;
+    width: 100%;
+}
+
+.col_tab_ul2 {
+    background: url(../Images/rl_buycar_bg.jpg) 0 -60px repeat-x;
+    padding: 0;
+    margin: 0;
+    color: #666;
+}
+
+    .col_tab_ul2 li {
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        list-style: none;
+        padding: 0 30px;
+        margin: 0;
+        font-family: "Microsoft YaHei","微软雅黑",arial,"宋体";
+    }
+
+        .col_tab_ul2 li.on {
+            background: url(../Images/rl_buycar_bg.jpg) 0 -110px repeat-x;
+            border-right: 1px solid #efefef;
+            color: #408ED6;
+        }
+
+.m2eBox p {
+    line-height: 36px;
+    font-size: 36px;
+    padding-left: 30px;
+    background-color: #f00;
+    color: #fff;
+}
+
+.plus {
+    cursor: pointer;
+    width: 26px;
+    height: 20px;
+    font-size: 18px;
+    text-align: center;
+    padding: 3px;
+    background-color: #ededed;
+    border: 1px solid #ddd;
+}
+
+.reduce {
+    cursor: pointer;
+    width: 26px;
+    height: 20px;
+    padding: 3px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #ededed;
+    border: 1px solid #ddd;
+    margin-left: 5px;
+}
+
+.number_input {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 48px;
+    height: 28px;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #666;
+    border: 1px solid #CCC;
+    outline: 0;
+    background: #FFF;
+    ime-mode: disabled;
+}
+
+.gift_select div {
+    float: left;
+    width: 202px;
+    height: 30px;
+    padding-left: 5px;
+    font-size: 13px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    line-height: 30px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-family: "Microsoft YaHei","微软雅黑",arial,"宋体";
+    /*background: url(../Images/gift_off1.png) no-repeat;*/
+}
+    /*.giftcard {
+    position: relative;
+}
+.giftcard b{
+    background: rgba(0, 0, 0, 0) url(../Images/select.png) no-repeat scroll ;
+      bottom: 0;
+    height: 12px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    width: 12px; 
+}*/
+    .gift_select div:hover {
+        border: 1px solid #d0d0d0;
+        background-color: #F3F3F3;
+        /*background-image: url(../Images/gift_on1.png);*/
+    }

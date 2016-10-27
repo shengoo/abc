@@ -1,0 +1,314 @@
+﻿.container {
+    width: @width;
+    margin: 0 auto;
+
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+}
+
+//btn -- 立即预约按钮 109px*31px
+.btn {
+    display: block;
+    width: 109px;
+    height: 31px;
+    line-height: 31px;
+    color: #fff;
+    text-align: center;
+}
+
+.btn-danger {
+    background: url(../image/sprite.png) no-repeat -109px -164px;
+}
+
+.btn-blue {
+    background: url(../image/sprite.png) no-repeat 0 -164px;
+}
+
+// banner
+.banner {
+    width: 100%;
+    height: 331px;
+}
+
+// 页面介绍 标题-分割线-内容
+.page-title {
+    text-align: center;
+
+    h1 {
+        font-size: 34px;
+        line-height: 34px;
+        margin-bottom: 30px;
+        color: @detail-title-color;
+    }
+
+    .divider {
+        margin: 0 auto;
+    }
+
+    p {
+        margin-top: 21px;
+        line-height: 35px; //36px
+        font-size: @detail-page-title-font-size;
+    }
+}
+
+/*每页大标题*/
+// 大标题 - 小标题  - 分割线
+.ad {
+    .title {
+        height: 34px;
+        margin-bottom: 7px;
+        font-size: 34px;
+        color: @detail-title-color;
+    }
+
+    .sub-text {
+        height: 19px; //20px
+        margin-bottom: 14px;
+        font-size: 19px; // 20px
+        font-weight: normal;
+    }
+
+    .divider {
+        width: @detail-title-underline-width;
+        height: @detail-title-underline-height;
+        background-color: @detail-title-underline-bg;
+        border: 1px solid @detail-title-underline-border;
+    }
+}
+
+.divider {
+    width: @detail-title-underline-width;
+    height: @detail-title-underline-height;
+    background-color: @detail-title-underline-bg;
+    border: 1px solid @detail-title-underline-border;
+}
+
+.caret {
+    position: absolute;
+    border: 9px solid transparent;
+}
+
+.header {
+    position: relative;
+    height: @header-height;
+    line-height: @header-height;
+
+    &:before {
+        content: " ";
+        display: table;
+        clear: right;
+    }
+
+    .contach-info,
+    .login {
+        float: left;
+        font-size: 0;
+
+        a {
+            display: inline-block;
+            font-size: @font-size;
+
+            i {
+                display: inline-block;
+                vertical-align: middle;
+                background: url(../image/sprite.png) right 0 no-repeat;
+            }
+
+            &.user-info {
+                color: #e84019;
+                margin-right: 20px;
+            }
+
+            &.email,
+            &.tel {
+                i {
+                    margin-right: 10px;
+                }
+            }
+
+            &.email {
+                margin-right: 14px;
+
+                i {
+                    width: 22px;
+                    height: 16px;
+                    background-position: right -96px;
+                }
+            }
+
+            &.tel {
+                i {
+                    width: 15px;
+                    height: 15px;
+                    background-position: right -112px;
+                }
+            }
+
+            &.xinlang {
+                margin-right: 22px;
+
+                i {
+                    width: 22px;
+                    height: 18px;
+                    background-position: right -127px;
+                }
+            }
+
+            &.weibo {
+                i {
+                    width: 23px;
+                    height: 19px;
+                    background-position: right -145px;
+                }
+            }
+        }
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        margin-left: -61px;
+        height: 42px;
+
+        a {
+            position: relative;
+            z-index: 20;
+            display: block;
+            width: 132px;
+            height: 85px;
+            background: url(../image/sprite.png) no-repeat -68px -530px;
+        }
+
+        .logo-bg {
+            position: absolute;
+            z-index: 10;
+            top: 100%;
+            left: 50%;
+            margin-left: -155px;
+            width: 311px;
+            height: 70px;
+            line-height: 10px;
+            text-align: center;
+            background: url(../image/sprite.png) no-repeat -540px -599px;
+        }
+    }
+
+    .login {
+        float: right;
+    }
+}
+
+.nav {
+    height: @nav-height;
+    border-top: 2px solid @nav-border-top;
+    border-bottom: 2px solid @nav-border-bottom;
+
+    ul {
+        &:after {
+            content: " ";
+            display: table;
+            clear: right;
+        }
+
+        width: @width;
+        height: @nav-height - 4;
+        margin: 0 auto;
+        border-left: 2px solid @nav-border-top;
+        /*border-right: 2px solid @nav-border-top;*/
+        border-right: none;
+
+        li {
+            position: relative;
+            float: left;
+            width: (@width - 4)/7;
+            border-right: 2px solid @nav-border-top;
+
+            &.no-border {
+                /*border-right: none;*/
+                border-right: 2px solid #e4e4e4;
+            }
+
+            a {
+                display: block;
+                height: @nav-height - 4;
+                line-height: @nav-height - 4;
+                text-align: center;
+            }
+
+            &.active {
+                top: 0;
+
+                a {
+                    height: @nav-height - 2;
+                    line-height: @nav-height - 2;
+                    color: @nav-active-border-color-1;
+                    border-bottom: 6px solid @nav-active-border-color-1;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    position: relative;
+    height: @footer-height;
+    background-color: @footer-bg;
+    font-size: @footer-font-size;
+    color: @footer-color;
+
+    &:after {
+        content: " ";
+        display: table;
+        clear: left;
+    }
+
+    .footer-icon {
+        position: absolute;
+        width: 68px;
+        height: 78px;
+        top: -39px;
+        left: 50%;
+        margin-left: -34px;
+        background: url(../image/sprite.png) no-repeat 0 -443px;
+        cursor:pointer;
+    }
+
+    .copy {
+        float: left;
+        margin-top: 47px;
+        line-height: 16px;
+    }
+
+    .logo-intro {
+        float: right;
+        margin-top: 35px;
+        margin-right: 158px;
+
+        .footer-logo {
+            margin-bottom: 11px;
+            width: 130px;
+            height: 43px;
+            background: url(../image/sprite.png) no-repeat -69px -656px;
+        }
+
+        a {
+            color: @footer-color;
+        }
+    }
+}
+
+
+.flt {
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+    display: table;
+    content: ' ';
+}

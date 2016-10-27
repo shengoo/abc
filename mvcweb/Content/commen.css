@@ -1,0 +1,147 @@
+﻿html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    color: #333;
+    font-family: "Microsoft YaHei","微软雅黑",arial,"宋体";
+}
+
+textarea {
+    resize: none;
+    border-color: rgba(36,34,38,0.15);
+}
+
+.flt {
+    float: left;
+}
+
+.frt {
+    float: right;
+}
+
+.hidden {
+    display: none;
+}
+
+.selector {
+    border: 1px solid #f00;
+}
+
+.focus {
+    background-color: #f00;
+    color: #fff;
+}
+
+.btn {
+    border-radius: 3px;
+    background-color: #30a0f6;
+    cursor: pointer;
+    border: 0px;
+    color: #FFF;
+    text-align: center;
+    padding: 5px 10px;
+    margin-left: 50px;
+}
+
+    .btn:hover {
+        background-color: #2080f6;
+    }
+
+
+.label {
+    width: 90px;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 15px;
+    height: 34px;
+    color: #808080;
+    line-height: 34px;
+    padding-right: 5px;
+}
+
+.descibe {
+    height: 30px;
+    line-height: 30px;
+    text-indent: 1em;
+    color: gray;
+    /*font-family: "Open Sans";*/
+}
+
+    .descibe.error {
+        color: #f00;
+    }
+
+.input {
+    margin-left: 16px;
+    width: 212px;
+    font-size: 14px;
+    outline: hidden;
+    shape-outside: border-box;
+    padding: 8px 8px;
+    color: #808080;
+    padding: 7px;
+    border: 1px solid;
+    border-color: rgba(36,34,38,0.15);
+}
+
+    .input:focus {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #F6F6F6;
+        border-color: lightgray;
+    }
+
+    .input.error {
+        border-color: rgba(255,34,38,0.85);
+    }
+
+.gray {
+    color: gray;
+    cursor: default;
+}
+
+.btngray {
+    background-color: #acacac;
+}
+
+.page {
+    margin-top: 10px;
+    height: 45px;
+    float: right;
+}
+
+    .page a {
+        float: left;
+        cursor: pointer;
+        display: block;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #e8e8e8;
+        text-align: center;
+        line-height: 40px;
+        margin-left: -1px;
+        display: inline;
+    }
+
+        /* update start */
+        .page a:hover {
+            background: #0875c8;
+            color: #fff;
+            font-weight: bold;
+        }
+
+.page_for {
+    background: #efefef;
+    color: #fff;
+}
+
+.page_focus {
+    background: #0875c8;
+    color: #fff;
+    font-weight: bold;
+}
+
+.page_for:hover {
+    background: #0875c8;
+    color: #fff;
+}

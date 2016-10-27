@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>个人设置</title>
+    <link href="~/assets/css/common.css" rel="stylesheet" />
+
+    <style>
+    </style>
+</head>
+<body>
+    <div class="banner_one"></div>
+    @Html.Partial("UserCenterNav", 1)
+    <div class="section">
+        <div class="ad ad-1">
+            <div class="container safe">
+                <div class="page-title">
+                    <h1>PERSONAL SETTINGS</h1>
+                    <div class="divider"></div>
+                    <ul class="tab">
+                        <li><a href="@Url.Action("Member", "Member")">个人信息</a></li>
+                        <li class="active">修改密码</li>
+                        <li><a href="@Url.Action("ChangePhone", "Member")">修改手机</a></li>
+                    </ul>
+                </div>
+
+                <div class="single-body member-page-content">
+                    <div class="form-group" style="height: 50px; margin-top: 36px">
+                        <label class="label" style="float: left;">原密码：</label>
+                        <input type="password" name="pwd" class="input flt" placeholder="请输入原密码" />
+                    </div>
+
+                    <div class="form-group" style="height: 70px;">
+                        <label class="label" style="float: left;"><span id="name">新密码：</span></label>
+                        <input type="password" name="newpwd" class="input flt" placeholder="输入新密码" />
+                        <div class="descibe flt password-description">密码必须是以数字、字母或字符组成，且不能少于6位</div>
+                    </div>
+                    <div class="form-group" style="height: 70px;">
+                        <label class="label" style="float: left;">确认密码：</label>
+                        <input type="password" name="confirmpwd" class="input flt" placeholder="请再次输入新密码" />
+                        <div class="descibe flt password-description">确认密码与新密码必须相同</div>
+                    </div>
+                    <div class="form-group" style="height: 50px;">
+                        <button method="updatePassword" class="btn middle" style="margin-left: 112px;">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery-2.2.4.min.js"></script>
+    <script src="~/Scripts/abc/base.es5.min.js"></script>
+    <script src="~/Scripts/jquery.cookie.js"></script>
+    <script src="~/Scripts/layer/layer.js"></script>
+    <script src="~/Scripts/abc/common.es5.js"></script>
+    <script src="~/Scripts/abc/member.js"></script>
+    <script>
+        $(function () {
+            member.safeReady();
+        });
+    </script>
+</body>
+</html>

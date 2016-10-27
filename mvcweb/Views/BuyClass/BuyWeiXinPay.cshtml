@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Content/buycarsubmit.css" rel="stylesheet" />
+    <link href="~/assets/css/common.css" rel="stylesheet" />
+    <title>ABC在线英语</title>
+    <link href="@ViewBag.Path/Content/up_p_style.css" rel="stylesheet" />
+    <link href="@ViewBag.Path/Content/commen.css" rel="stylesheet" />
+    <link href="@ViewBag.Path/Content/buycarsubmit.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="banner_one"></div>
+    @Html.Partial("UserCenterNav", 3)
+    <div class="content">
+        <div class="car_process" style="height:80px; background-image: url(@ViewBag.Path/assets/image/car_process_3.png)"></div>
+        <div class="m-paycourse" style="height: 695px">
+            <div class="WeChat_order paytable" style="height:40px;">
+                请您及时付款，以便订单尽快获得处理！ 应付金额 <b>@ViewBag.Price</b>元
+            </div>
+            <div class="wx_pay clearfix">
+                <h3>微信支付</h3>
+                <div class="wx_paycon">
+                    <div class="wx_payimg">
+                        <div id="qrcode">
+                            <div>
+                                <img alt="二维码获取失败！点击图片重新获取" onclick="this.src='@ViewBag.Path/Home/WeiXinPayImgPath?OrderId=@ViewBag.OrderId'" src="@ViewBag.Path/Home/WeiXinPayImgPath?OrderId=@ViewBag.OrderId" height="130" width="130">
+
+                                            <!-- <img alt="二维码获取失败！点击图片重新获取" onclick="this.src='@ViewBag.Path/Home/WeiXinPayImgPath?OrderId=@ViewBag.OrderId'" src="@ViewBag.Path/Home/WeiXinPayImgPath?OrderId=@ViewBag.OrderId" height="130" width="130"> -->
+
+
+                            </div>
+                        </div>
+
+                        <span>请使用微信扫一扫，扫描二维码支付</span>
+                        <span>支付完成，返回<a href="@Url.Action("Orders","Member")">我的订单</a></span>
+                        <input type="hidden" id="OrderId" name="OrderId" value="@ViewBag.OrderId" />
+                    </div>
+                    <p><img src="@ViewBag.Path/Images/wx_img02.jpg"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<script src="~/Scripts/jquery-1.8.2.min.js"></script>*@
+    <script src="@ViewBag.Path/js/jquery-1.8.3.min.js"></script>
+    <script>
+        //$().ready(function () {
+        //    $("#ContentFrame", parent.document).height("740px");
+        //})
+        //window.ready =function () {
+        //    window.parent.document.getElementById("ContentFrame").style.height = "740px";
+        //    //$("#ContentFrame", parent.document).height("740px");
+        //}
+        if (document.addEventListener) {
+            document.addEventListener("DOMContentLoaded", function () {
+                document.removeEventListener("DOMContentLoaded", arguments.callee, false);
+                window.parent.document.getElementById("ContentFrame").style.height = "1240px";//调用参数函数
+            }, false);
+        } else if (document.attachEvent) {
+            document.attachEvent("onreadystatechange", function () {
+                if (document.readyState === "complete") {
+                    document.detachEvent("onreadystatechange", arguments.callee);
+                    window.parent.document.getElementById("ContentFrame").style.height = "1240px";;
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            setInterval("ajaxstatus()", 3000);
+        });
+
+        function ajaxstatus() {
+            if ($("#OrderId").val() != 0) {
+                var OrderId = $("#OrderId").val();
+                $.ajax({
+                    url: '/BuyClass/GetOrderEnable',
+                    type: "post",
+                    dataType: "json",
+                    data: {
+                        orderId: OrderId
+                    },
+
+                    success: function (rel) {
+                        //debugger;
+                        //if (rel.IsSuccess) {
+                        if (rel.Result) {
+                            window.location.href = "/Member/Member?action=orderform";
+                        }
+                    }
+                });
+            }
+        }
+
+        $(function () {
+            window.top.$('#ContentFrame').css({
+                height: document.body.scrollHeight
+            }); 
+        });
+
+    </script>
+</body>
+</html>

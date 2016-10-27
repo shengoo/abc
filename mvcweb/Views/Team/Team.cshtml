@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="ABC,English online," />
+    <meta name="description" content="ABC English Online Education Platform, ABC在线英语" />
+    <title>ABC在线英语首页</title>
+    @*<link href="~/static/css/foreign_teacher.css" rel="stylesheet" />*@
+    @*<link href="~/assets/css/StyleSheet1.css" rel="stylesheet" />*@
+    <link href="~/Content/adult/foreign_teacher.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="banner"></div>
+    @Html.Partial("AdultNav", 3)
+    <div class="section">
+        <div class="container">
+            <div class="page-title">
+                <h1>EXCELLENT TEACHERS</h1>
+                <div class="divider"></div>
+                <div class="teacher-feature">
+                    <div class="each-feature">
+                        <span class="general">北美外教</span>
+                        <span class="detail">100%来自美国、加拿大，众多老师旅居世界各地，熟悉北美文化，拥有国际视野</span>
+                    </div>
+                    <div class="each-feature">
+                        <span class="general">名校毕业</span>
+                        <span class="detail">90%名校毕业，众多老师来自于哈佛、耶鲁、皇后等国际著名学府</span>
+                    </div>
+                    <div class="each-feature">
+                        <span class="general">口音 纯正</span>
+                        <span class="detail">所有老师经过严格的口语测试，发音标准</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ad ad-1">
+            <div class="container">
+                <div class="page-title">
+                    <h1>FOREIGN TEACHERS</h1>
+                    <div class="divider"></div>
+                    @*<ul class="teacher-type">
+                            <li>青少年讲师</li>
+                            <li class="active">成人讲师</li>
+                            <li>留学讲师</li>
+                            <li>企业讲师</li>
+                        </ul>*@
+                    <p>外教团队</p>
+                </div>
+                <div class="teacher-info">
+                    <div class="col">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-2.2.4.min.js"></script>
+    <script src="~/Scripts/layer/layer.js"></script>
+    <script src="~/Scripts/abc/common.es5.min.js"></script>
+    <script src="~/Scripts/abc/base.es5.min.js"></script>
+    <script src="~/Scripts/abc/team.es5.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Content/buyclass.css" rel="stylesheet" />
+    <link href="~/assets/css/common.css" rel="stylesheet" />
+    <link href="~/assets/css/buyclass.css" rel="stylesheet" />
+    <title>ABC在线英语</title>
+    <style>
+        .col_tab_imgtxt .label-left {
+            width: 75px;
+            text-align: left;
+        }
+
+            .col_tab_imgtxt .label-left::after {
+                content: ':';
+                float: right;
+                margin-right: 5px;
+            }
+            .price_num {
+                margin: 0 10px;
+                color: #da1f1a;
+            }
+    </style>
+</head>
+<body>
+    <div class="banner_one"></div>
+    @Html.Partial("UserCenterNav", 4)
+
+    <div class="section">
+        <div class="ad">
+            <div class="container">
+                <div class="page-title">
+                    <h1>MY Orders</h1>
+                    <div class="divider"></div>
+                    <ul class="tab"></ul>
+                </div>
+                <div>
+                    <div class="clearfix" style="height: 450px;">
+                        <div class="col_tab_img">
+                            <!--Rl mod-->
+                            <img src="~/assets/image/purchase.png" width="423" height="297">
+                        </div>
+                        <div class="col_tab_imgtxt">
+                            <!--Rl mod-->
+                            <div class="coursetitle">一对六小班授课</div>
+                            <div class="course-desc">高性价比</div>
+                            <div class="price clearfix" style="margin-top: 10px;">
+                                <div class="flt label-left">价&nbsp;&nbsp;格</div>
+                                ￥<span class="price_num">0.01</span>元
+                            </div>
+                            <div class="courseinfo">
+                                <div class="clearfix">
+                                    <ul class="course_ul clearfix">
+                                        <li class="clearfix">
+                                            <div class="hidden coursetype">
+
+                                                <div class="course_t flt">课程类型：</div>
+                                                <div data="1" name="type" class="course flt selector">
+                                                    <b></b>次卡
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li name="1" class="clearfix">
+
+                                            <div class="coursetype">
+                                                <div class="course_t flt label-left">课程套餐</div>
+                                                <div type="6" name="time" class="course flt selector">
+                                                    <b></b>半年套餐
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="number clearfix">
+                                <div style="height: 30px; display:none;">
+                                    <div class="flt" style="width: 70px; text-align: right; height: 30px;font-size: 13px; line-height: 30px;">数&nbsp;量：</div>
+                                    <div title="减1" class="reduce flt">-</div>
+                                    <input type="text" class="number_input flt" value="1" size="2" maxlength="3" title="请输入购买量">
+                                    <div class="plus flt" title="加1">+</div>
+                                    <div style="height: 26px; line-height: 26px; float: left; margin-left: 3px;">件</div>
+                                </div>
+                                <div class="gift clearfix">
+                                    <div class="flt label-left" id="label_addcard">课程详情</div>
+                                    <div style="margin-left: 35px; margin-top: 10px;" class="gift_select"><div class="giftcard" value="3"><b></b>实践课50次</div></div>
+                                </div>
+                                <div style="margin-top: 10px; height: 30px;">
+                                    <div method="buy" class="buy add">加入购物车</div>
+                                    <div method="search" class="buy search">查看购物车</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col_tab_ulbox clearfix">
+                        <ul class="col_tab_ul2 clearfix" style="margin-top: 10px;">
+                            <li class="on" onmouseover="showtab(1,event)">套餐详情</li>
+
+                        </ul>
+                        <div class="m2eBox">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <ul class="col_tab_ul clearfix">
+            <!--课程卡种类-->
+        </ul>
+
+    </div>
+    <script src="~/Scripts/jquery-2.2.4.min.js"></script>
+    <script src="~/Scripts/abc/base.es5.min.js"></script>
+    <script src="~/Scripts/jquery.cookie.js"></script>
+    <script src="~/Scripts/layer/layer.js"></script>
+    <script src="~/Scripts/abc/common.es5.min.js"></script>
+    <script src="~/Scripts/abc/buyclass.es5.min.js"></script>
+</body>
+</html>

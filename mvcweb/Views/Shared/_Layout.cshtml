@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>ABC在线英语</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header>
+        <div class="top">
+            <div class="w1000">
+                <!--left begin-->
+                <div class="left flt">
+                    <ul>
+                        <li class="left-01"><a href="javascript:;">移动版ABC</a></li>
+                        <li class="left-02"><a href="javascript:;">ABC微信</a></li>
+                        <li class="left-03"><a href="javascript:;">切换至少儿版</a></li>
+                        <li class="left-04">400-661-9888</li>
+                    </ul>
+                </div>
+                <!--left end-->
+                <!--right begin-->
+                <div class="right frt">
+                    <ul>
+                        <li class="right-01"><a href="javascript:;">请登录</a></li>
+                        <li class="right-02"><a href="javascript:;">立即注册</a></li>
+                    </ul>
+                    <div class="user hidden"></div>
+                </div>
+                <!--right end-->
+            </div>
+        </div>
+        <!--top end-->
+        <!--header begin-->
+        <div class="header">
+            <div class="w1000">
+                <!--logo begin-->
+                <div class="logo flt">
+                    <a href="/">
+                        <img src="../Images/logo.jpg" width="272" height="98" /></a>
+                </div>
+                <!--logo end-->
+                <!--nav begin-->
+                <div class="nav flt">
+                    <ul>
+                        <li><a target="ContentFrame" href="/Home/Home">首页</a></li>
+                        <li>@Html.ActionLink("免费公开课", "Open", "Open")</li>
+                        <li><a target="ContentFrame" href="/Feature/Feature">课程特色</a></li>
+                        <li><a target="ContentFrame" href="/Team/Team">外教团队</a></li>
+                        <li><a target="ContentFrame" href="/Free/Free">免费答疑</a></li>
+                        <li><a target="ContentFrame" href="/Flow/Flow">上课流程</a></li>
+                        <li><a target="ContentFrame" href="/Voice/Voice">学员心声</a></li>
+                    </ul>
+                    <div class="hover"></div>
+                    <div class="focus"></div>
+                </div>
+                <!--nav end-->
+            </div>
+        </div>
+    </header>
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+    </div>
+    <footer>
+        <!--footer begin-->
+        <div class="footer">
+            <div class="w1000">
+                <!--footer-list begin-->
+                <div class="footer-list" style="margin: 0 0 0 20px;">
+                    <h3>ABC的优势 </h3>
+                    <ul>
+                        <li><a href="#">纯正英美外教</a></li>
+                        <li><a href="#">一对一VIP</a></li>
+                        <li><a href="#">课程内容广泛</a></li>
+                        <li><a href="#">专属学习顾问</a></li>
+                    </ul>
+                </div>
+                <!--footer-list end-->
+                <!--footer-list begin-->
+                <div class="footer-list">
+                    <h3>ABC的实力</h3>
+                    <ul>
+                        <li><a href="#">二十几年线下教学经验</a></li>
+                        <li><a href="#">全国三十几家连锁学校</a></li>
+                        <li><a href="#">上千名优秀中外教师资</a></li>
+                        <li><a href="#">数十万优秀毕业生</a></li>
+                    </ul>
+                </div>
+                <!--footer-list end-->
+                <!--footer-list begin-->
+                <div class="footer-list">
+                    <h3>ABC的团队</h3>
+                    <ul>
+                        <li><a href="#">中教团队</a></li>
+                        <li><a href="#">外教团队</a></li>
+                        <li><a href="#">课程顾问团队</a></li>
+                        <li><a href="#">学习顾问团队</a></li>
+                    </ul>
+                </div>
+                <!--footer-list end-->
+                <!--footer-list begin-->
+                <div class="footer-list">
+                    <h3>帮助中心</h3>
+                    <ul>
+                        <li><a href="#">400客服电话</a></li>
+                        <li><a href="#">在线客服</a></li>
+                    </ul>
+                </div>
+                <!--footer-list end-->
+            </div>
+        </div>
+        <!--footer end-->
+        <!--cr begin-->
+        <div class="cr">
+            <p>COPYRIGHT © 2014-9-1 ABC.COM.CN, ALL RIGHTS RESERVED</p>
+            <p>京ICP备12029524号-1 京ICP证130137号 京公网安备11010802012731号</p>
+        </div>
+        <!--cr end-->
+
+        <!--register begin-->
+        <div class="register">
+            <div class="w1000">
+                <div class="tips flt"><span>现在注册</span>  立即获取北美外教一对一免费体验课！</div>
+                <div class="opts frt">
+                    <ul>
+                        <li class="opt-one"><a href="javascript:;">登陆</a></li>
+                        <li class="opt-two"><a href="javascript:;">立即注册</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="close"></div>
+        </div>
+        <!--register end-->
+
+        <!--mask begin-->
+        <div class="mask">
+            <!--mask-title begin-->
+            <div class="mask-title">
+                <div class="mask-logo flt">
+                    <img src="Images/maskLogo.jpg" width="125" height="60" />
+                </div>
+                <!--sel-title begin-->
+                <div class="sel-title">
+                    <ul>
+                        <li id="taba1" onclick="setTab('taba',1,2)" class="hover">会员登陆</li>
+                        <li id="taba2" onclick="setTab('taba',2,2)">会员注册</li>
+                    </ul>
+                </div>
+                <!--sel-title end-->
+            </div>
+            <!--mask-title end-->
+            <!--mask-con begin-->
+            <div class="mask-con">
+                <!--con-tab-1 begin-->
+                <div id="con-taba-1">
+                    <div id="Form1">
+                        <div class="mask-tr" style="margin-top: 20px;">
+                            <div class="icon email flt"></div>
+                            <div style="height:40px; float:left;">
+                                <input type="text" name="UserName" placeholder="请输入您注册时的E-mail账号" />
+                            </div>
+                        </div>
+                        <div class="mask-tr">
+                            <div class="icon pwd"></div>
+                            <div style="height:40px; float:left;">
+                                <input type="password" name="Pwd" placeholder="您的密码" />
+                            </div>
+                        </div>
+                        <div class="mask-remember">
+                            <div class="left flt">
+                                <input type="checkbox" />下次自动登陆（维持14日）
+                            </div>
+                            <div class="right frt"><a href="javascript:;">忘记密码</a></div>
+                        </div>
+                        <button>登录</button>
+                    </div>
+                </div>
+                <!--con-tab-1 end-->
+                <!--con-tab-2 begin-->
+                <div id="con-taba-2" style="display: none;">
+                    <div id="Form2">
+                        <div class="mask-tr" style="margin-top: 20px;">
+                            <div class="icon email"></div>
+                            <div style="height:40px; float:left;">
+                                <input type="text" name="UserName" placeholder="请填写您的常用信箱，以设定登陆的用户名" />
+                            </div>
+                        </div>
+                        <div class="mask-tr">
+                            <div class="icon mobile"></div>
+                            <div style="height:40px; float:left;">
+                                <input type="text" name="Mobile" placeholder="请填写您的手机号码" />
+                            </div>
+                        </div>
+                        <div class="mask-tr">
+                            <div class="icon name"></div>
+                            <div style="height:40px; float:left;">
+                                <input type="text" name="CNName" placeholder="请填写您的姓名" />
+                            </div>
+                        </div>
+                        <div class="mask-tr">
+                            <div class="icon pwd"></div>
+                            <div style="height:40px; float:left;">
+                                <input type="password" name="Pwd" placeholder="请输入6~14位数字或英文的密码，不含空格" />
+                            </div>
+                        </div>
+                        <div class="mask-tr">
+                            <div class="icon pwd"></div>
+                            <div style="height:40px; float:left;">
+                                <input type="password" name="Pwd" placeholder="请您再次输入密码" />
+                            </div>
+                        </div>
+                        <button>注册</button>
+                    </div>
+                </div>
+                <!--con-tab-2 end-->
+            </div>
+            <!--mask-con end-->
+        </div>
+        <!--mask end-->
+
+        <div class="login hidden" style="top: 50px; margin-top: 30px;">
+            <ul>
+                <li>***，您好</li>
+                <li><a href='Member/Member' target="ContentFrame">会员中心</a></li>
+            </ul>
+        </div>
+
+        <!--back begin-->
+        <a href="#my-top" class="back"></a>
+        <!--back end-->
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+
+<script src="@Url.Content("~/js/jquery-1.8.3.min.js")"></script>
+<script src="@Url.Content("~/js/base.js")"></script>
+<script src="@Url.Content("~/js/jquery.cookie.js")"></script>
+<script src="@Url.Content("~/js/layer/layer.js")"></script>
+<script src="@Url.Content("~/js/layer/layer.js")"></script>
+<script src="@Url.Content("~/js/index.js")"></script>
+<script src="@Url.Content("~/js/nav.js")"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".right-01,.right-02,.opts li").bind("click", function () {
+
+            $.layer({
+                area: ['440px', 'auto'],
+                border: [0],
+                type: 1,
+                title: false,
+                page: { dom: '.mask' }
+            });
+        });
+    });
+    $(document).scroll(function (e, n) {
+        $('.login')[0].style.top = document.body.scrollTop + 50 + 'px';
+    });
+    function setTab(name, cursel, n) {
+        for (var i = 1; i <= n; i++) {
+            var main_menu = document.getElementById(name + i);
+            var sub_menu = document.getElementById('con-' + name + '-' + i);
+            main_menu.className = (i == cursel) ? 'hover' : '';
+            sub_menu.style.display = (i == cursel) ? 'block' : 'none';
+        }
+    }
+</script>
+</html>

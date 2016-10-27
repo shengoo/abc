@@ -1,0 +1,313 @@
+﻿button:focus {outline:0;}
+button:active {outline:0;border-style: none;}
+.header .set {
+    float: right;
+    display: none;
+}
+
+    .header .set span {
+        display: inline-block;
+        font-size: 14px;
+        color: #ff6a00;
+    }
+
+    .header .set a {
+        display: inline-block;
+        font-size: 14px;
+        color: #ff6a00;
+        margin-right: 20px;
+    }
+
+.header .get {
+    float: right;
+    text-align: center;
+}
+
+    .header .get a {
+        display: inline-block;
+        font-size: 14px;
+        margin-right: 30px;
+        color: #ff6a00;
+        cursor: pointer;
+    }
+
+.header .child {
+    float: left;
+    cursor: pointer;
+    cursor: hand;
+    text-align: center;
+}
+
+    .header .child a {
+        display: inline-block;
+        font-size: 14px;
+        margin-left: 10px;
+        color: #ff6a00;
+    }
+
+.mask-bg {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1001;
+    background-color: #dddddd;
+    background-color: rgba(0,0,0,.5);
+}
+
+.site-select {
+    position: fixed;
+    width: 840px;
+    height: 520px;
+    z-index: 9999999;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: -260px auto 0;
+    /*background-color: #fff;*/
+}
+
+    .site-select > div {
+        cursor: pointer;
+        width: 25%;
+        height: 100%;
+        float: left;
+        padding: 2px;
+        -ms-transform: skew(-20deg); /* IE 9 */
+        -webkit-transform: skew(-20deg); /* Safari */
+        transform: skew(-20deg); /* Standard syntax */
+    }
+
+    .site-select img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .site-select .hover-color {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+        .site-select .hover-color:hover {
+            background-color: crimson;
+            -ms-opacity: .6;
+            opacity: .6;
+        }
+
+.header .login a.xinlang i {
+    background-image: url('../image/weibo.png');
+    -ms-background-size: contain;
+    background-size: contain;
+    -ms-background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    -ms-background-position: inherit;
+    background-position: inherit;
+    width: 25px;
+    height: 25px;
+}
+
+    .header .login a.xinlang i:hover {
+        background-image: url('../image/weibo_open.png');
+    }
+
+.header .login a.weixin i {
+    background-image: url('../image/weixin.png');
+    -ms-background-size: contain;
+    background-size: contain;
+    -ms-background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    -ms-background-position: inherit;
+    background-position: inherit;
+    width: 25px;
+    height: 25px;
+}
+
+    .header .login a.weixin i:hover {
+        background-image: url('../image/weixin_open.png');
+    }
+
+.header .login a:hover .ewm {
+    display: block;
+}
+
+.header .ewm {
+    display: none;
+    position: absolute;
+    z-index: 1001;
+    background-color: #fff;
+    width: 140px;
+    height: 150px;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    top: 100%;
+}
+
+    .header .ewm img {
+        width: 120px;
+        height: 120px;
+    }
+
+.appDown_title {
+    width: 100%;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    color: #333;
+}
+
+.section .ad-4 .course .each-course {
+    cursor: pointer;
+}
+
+    .section .ad-4 .course .each-course:hover .course-mask {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+        .section .ad-4 .course .each-course:hover .course-mask .mask {
+            width: 100%;
+            height: 100%;
+            background-color: #da1f1a;
+            -ms-opacity: 0.4;
+            opacity: 0.4;
+            -moz-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+            -webkit-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+            filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+        }
+
+        .section .ad-4 .course .each-course:hover .course-mask .play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -25.5px;
+            margin-left: -27.5px;
+            width: 55px;
+            height: 51px;
+            background: url(../image/sprite.png) no-repeat -762px -537px;
+        }
+
+    .section .ad-4 .course .each-course:hover .course-feature .course-intro .btn {
+        background: url(../image/sprite.png) no-repeat 0 -164px;
+    }
+
+.tutor .each-tutor .tutor-img {
+    position: relative;
+}
+
+.tutor .each-tutor:hover .tutor-img .tutor-btn {
+    display: block;
+}
+
+.tutor .each-tutor .tutor-img .tutor-btn {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: red;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+    .tutor .each-tutor .tutor-img .tutor-btn a {
+        color: #fff;
+        line-height: 180px;
+        text-align: center;
+        width: 100%;
+        display: block;
+        font-size: large;
+        cursor: pointer;
+    }
+
+.btn {
+    padding: 0;
+}
+
+.nav ul {
+    width: 1124px;
+}
+
+
+
+.extb {
+    margin: 0 auto;
+}
+
+    .extb tr {
+        display: block;
+        -ms-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    .extb .odd {
+        background: #f1f1f1;
+    }
+
+    .extb tr td, .extb tr th {
+        width: 134px;
+        height: 40px;
+        color: #333;
+        border-left: 1px solid #fff;
+        text-align: center;
+    }
+
+    .extb .opp {
+        background: #dcdcdc;
+    }
+
+    .extb .odd {
+        background: #f1f1f1;
+    }
+
+    .extb .add {
+        font-size: 15px;
+        background: #bbbbbb;
+    }
+
+.ul_yueke_left {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.btntiny {
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    line-height: 18px;
+    height: 18px;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: #428bca;
+    font-weight: normal;
+    font-size: 12px;
+    margin-left: 3px;
+    color: white !important;
+    padding: 3px;
+}
+
+    .btntiny:hover {
+        background-color: #978bca;
+    }
+
+.nav ul li.no-border {
+    border-right: 2px solid #e4e4e4;
+}
+
+.nav ul {
+    border-right: none;
+}

@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>个人设置</title>
+    <link href="~/Content/UserCenter/profile.min.css" rel="stylesheet" />
+    <link href="~/Scripts/laydate/need/laydate.css" rel="stylesheet" />
+</head>
+<body style="height: 1489px;">
+    <div class="banner"></div>
+    @Html.Partial("UserCenterNav", 1)
+    <div class="section">
+        <div class="ad ad-1">
+            <div class="container single">
+                <div class="page-title">
+                    <h1>PERSONAL SETTINGS</h1>
+                    <div class="divider"></div>
+                    <ul class="tab">
+                        <li class="active"><a href="@Url.Action("Member", "Member")">个人信息</a></li>
+                        <li><a href="@Url.Action("ChangePwd", "Member")">修改密码</a></li>
+                        <li><a href="@Url.Action("ChangePhone", "Member")">修改手机</a></li>
+                    </ul>
+                </div>
+                <div class="profile-page-content">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label>中文名:</label>
+                            <input type="text" class="form-control input flt" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label>英文名:</label>
+                            <input type="text" class="form-control input flt" name="sign">
+                        </div>
+                        <div class="form-group">
+                            <label>头&nbsp;&nbsp;&nbsp;&nbsp;像:</label>
+                            <iframe frameborder="0" style="border: 0; width: 300px; height: 119px; overflow: hidden; margin-left: 13px;" src="ModifyPhoto" scrolling="no"></iframe>
+                        </div>
+                        <div class="form-group">
+                            <label>性&nbsp;&nbsp;&nbsp;&nbsp;别:</label>
+                            <div class="flt" style="height: 26px; text-align: left; vertical-align: middle; padding-top: 8px; margin-left: 16px; color: #808080;">
+                                <input type="radio" value="0" name="sex" style="width: 20px;" />男<input value="1" type="radio" name="sex" style="margin-left: 10px; width: 20px;" />女
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>手机号:</label>
+                            <div class="flt" id="myphone" style="margin-left: 16px;padding: 7px;">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>生&nbsp;&nbsp;&nbsp;日:</label>
+                            <input type="text" class="input flt" readonly="readonly" name="birth" onclick="laydate()" />
+                            <div class="descibe hidden flt"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>邮&nbsp;&nbsp;&nbsp;箱:</label>
+                            <input type="text" class="form-control input flt" name="email">
+                        </div>
+                        <div id="userVoice" class="form-group" style="display: none;">
+                            <label>学员心声:</label>
+                            <div class="flt" style="height: 34px; text-align: left; vertical-align: middle; padding-top: 10px;">
+                                <textarea name="Voice" cols="40" rows="5" style="margin-top: 2px; width: 314px; height: 83px; resize: none; margin-left: 12px;"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>详细地址:</label>
+                            <div class="flt" style="margin-left: 16px;">
+                                <textarea name="address" cols="40" rows="5" style="margin-top: 2px; width: 300px; height: 74px; resize: none; color: #808080; border: 1px solid rgba(36, 34, 38, 0.15);"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button id="sbm1" class="btn middle flt" style="margin-left: 112px;" method="saveSingle">保存</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-2.2.4.min.js"></script>
+    <script src="~/Scripts/abc/base.es5.min.js"></script>
+    <script src="~/Scripts/jquery.cookie.js"></script>
+    <script src="~/Scripts/layer/layer.js"></script>
+    <script src="~/Scripts/laydate/laydate.js"></script>
+    <script src="~/Scripts/abc/common.es5.min.js"></script>
+    <script src="~/Scripts/abc/profile.es5.min.js"></script>
+
+</body>
+</html>

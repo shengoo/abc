@@ -1,0 +1,6 @@
+﻿<ul class="teacher-type tab">
+    <li class="@((int)ViewData["index"] == 0 ? "active":"")"><a href="@Url.Action("Purchase", "Purchase")">我的卡次</a></li>
+    <li class="@((int)ViewData["index"] == 1 ? "active":"")"><a href="@Url.Action("CourseList", "Purchase")">我的课程</a></li>
+    <li class="@((int)ViewData["index"] == 2 ? "active":"")"><a href="@Url.Action("CourseTable", "Purchase")">我的课表</a></li>
+    <li class="@((int)ViewData["index"] == 3 ? "active":"")"><a href="@Url.Action("Evaluate", "Purchase")">课后评分</a></li>
+</ul>

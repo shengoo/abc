@@ -1,0 +1,87 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Feature</title>
+    <link href="~/static/css/curriculum_advantage.css" rel="stylesheet" />
+    <link href="~/assets/css/StyleSheet1.css" rel="stylesheet" />
+    <link href="~/Content/adult/feature.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="banner"></div>
+    @Html.Partial("AdultNav", 2)
+    <div class="section">
+        <div class="page-title">
+            <h1>FEATURE COURSES</h1>
+            <div class="divider"></div>
+            <p>
+                一对一VIP教学，让学习更有效果和针对性，在最短的时间内达到学员期待的学习目标！<br />
+                一对六选修课和大课堂给学员更多的练习机会，浸保式训练，达到最佳效果。
+            </p>
+        </div>
+        <div class="banner-2"></div>
+        <div class="container">
+            <div class="advantage-details">
+                <div class="ad each-advantage adv-1">
+                    <h1 class="title">[一对一]课程</h1>
+                    <h2 class="sub-text">1对1，ABC远程最核心教学方式</h2>
+                    <div class="divider"></div>
+                    <p class="advantage">
+                        @*专业级中外籍师资集多年线上线下教学经验，根据您的个性化学习方案，专业教学帮助您实现高校学习效果！经典ABC王牌课程抑或完全个性化的学习需求（如：专业原版教材，职场实战英语），多年的流利口语夙愿，ABC远程1对1，统统帮您实现！*@
+                        无论是零基础学员，还是商务口语学员，ABC在线英语一对一VIP课<br />
+                        程都可以为学员量身定做最适合的课程内容和学习计划。让学习更<br />
+                        有针对性，更轻松效果更好。专属的VIP教学服务，让学员感受到超<br />
+                        值的学习体验和贴心的服务。让学习也可以变成一种品质生活！
+
+                    </p>
+                    <a class="btn btn-danger buy-lesson">购买课程</a>
+                </div>
+                <div class="ad each-advantage adv-2">
+                    <h1 class="title">[一对六]小班授课</h1>
+                    <h2 class="sub-text">更多练习，更多交流</h2>
+                    <div class="divider"></div>
+                    <p class="advantage">
+                        @*ABC远程“一对六外教小班授课”给您最佳互动课堂！让您在同学的“英文头脑风暴”中获得更多新鲜IDEA和表达方法！小班远程授课，每班6人以下，中外教不同主题丰富您的多彩在线学习生活*@
+                        一对六小班课程，不仅增加了学员与外教的练习，更是一个学员之间交流的平台。一个人学习不孤单，大家一起说起来！
+
+
+                    </p>
+                    <a class="btn btn-danger buy-lesson">购买课程</a>
+                </div>
+                <div class="ad each-advantage adv-3">
+                    <h1 class="title">[ABC]超级大课堂</h1>
+                    <h2 class="sub-text">了解更多北美文化知识尽在ABC大课堂</h2>
+                    <div class="divider"></div>
+                    <p class="advantage">
+                        @*想要比BBC和VOA更贴近生活的英文知识拓展方式？ABC远程大课堂，您的不二选择！热门话题分享、启发式主题内容、各类新鲜时尚而又贴近生活的英文知识积累，专业外籍教师带您一起进入最时尚地道的空中课堂！*@
+                        学习在于坚持，每天20分钟ABC大课堂，让你快速成为英语达人。<br />
+                        学习北美文化，只要每天坚持20分钟哦！
+                    </p>
+                    <a class="btn btn-danger buy-lesson">购买课程</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-2.2.4.min.js"></script>
+    <script src="~/js/base.js"></script>
+    <script src="~/js/common.js"></script>
+    <script src="~/js/feature.js"></script>
+    <script src="~/Scripts/abc/feature.es5.min.js"></script>
+    <script>
+        window.onload = function () {
+            if (!webAbc.judgeSystem()) {
+                if (window.parent.$('iframe')[0]) {
+                    window.parent.$('iframe')[0].style.height = '2800px';
+                    window.parent.scrollTo(0, 0);
+                }
+            }
+        }
+    </script>
+    <script src="~/assets/js/JavaScript1.js"></script>
+</body>
+</html>

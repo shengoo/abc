@@ -1,0 +1,9 @@
+﻿@{
+    Layout = null;
+    var path = System.Configuration.ConfigurationManager.AppSettings["BaseVirtualPath"].ToString();
+}
+
+<h2>Error</h2>
+<script>
+    window.parent.location.href =@path + '/home/index';
+</script> 

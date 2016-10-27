@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="ABC,English online," />
+    <meta name="description" content="ABC English Online Education Platform, ABC在线英语" />
+    <title>ABC在线英语首页</title>
+    @Styles.Render("~/bundles/styles")
+</head>
+<body>
+
+
+    <div class="header">
+        <div class="container">
+            <div class="contach-info">
+                <a class="email"><i></i>abc_online@abc.com.cn</a>
+                <a class="tel"><i></i>400-661-9888</a>
+            </div>
+            <div class="logo">
+                <a href="index.html"></a>
+                <div class="logo-bg"></div>
+            </div>
+            <div class="login">
+                <a class="xinlang">
+                    <i></i>
+                    <div class="ewm">
+                        <img src="@Url.Content("~/assets/image/twodimensioncode.jpg")" />
+                        <div class="appDown_title">扫码关注</div>
+                    </div>
+                </a>
+                <a class="weixin">
+                    <i></i>
+                    <div class="ewm">
+                        <img src="@Url.Content("~/assets/image/twodimensioncode.jpg")" />
+                        <div class="appDown_title">关注Abc微信</div>
+                    </div>
+                </a>
+            </div>
+            <div class="child">
+                <a href="@Url.Action("Index","Young")">切换至少儿版</a>
+            </div>
+            <div class="get">
+                <a class="exit right-01">登录</a>
+                <a class="enroll right-02">注册</a>
+            </div>
+            <div class="set">
+                <span class="span">个人中心&nbsp;,&nbsp;</span>
+                <a class="exit">退出</a>
+            </div>
+        </div>
+    </div>
+
+    @RenderBody()
+
+<div class="footer">
+    <div class="container">
+        <i class="footer-icon"></i>
+        <p class="copy">
+            COPYRIGHT &copy; 2014-9-1 ABC.COM.CN, ALL RIGHTS RESERVED<br>京ICP备12029524号-1 京ICP证130137号
+            京公网安备11010802012731号
+        </p>
+        <div class="logo-intro">
+            <div class="footer-logo"></div>
+        </div>
+    </div>
+</div>
+    @Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/scripts")
+    @RenderSection("scripts",false)
+</body>
+</html>

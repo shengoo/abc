@@ -1,0 +1,18 @@
+.container {
+  width: 984px;
+  height: 71px;
+}
+.header:before {
+  content: " ";
+  display: table;
+  clear: right;
+}
+.header .contach-info {
+  float: left;
+}
+.header .contach-info a {
+  display: inline;
+}
+.header .login {
+  float: right;
+}

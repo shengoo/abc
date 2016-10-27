@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ABC在线英语</title>
+    <link href="~/static/css/index.css" rel="stylesheet" />
+    <link href="~/assets/css/navmenu.css" rel="stylesheet" />
+    <link href="~/assets/css/StyleSheet1.css" rel="stylesheet" />
+    <style>
+        .section .ad-1 .pc img {
+            margin-left: 10px;
+        }
+
+        .section .ad-1 .pc .img-text {
+            position: absolute;
+            top: 0;
+            left: 437px;
+        }
+
+            .section .ad-1 .pc .img-text p {
+                height: auto;
+                background-color: #EFE5DA;
+                -ms-border-radius: 10px;
+                border-radius: 10px;
+                padding: 2px 20px;
+                display: inline-block;
+            }
+
+                .section .ad-1 .pc .img-text p:hover {
+                    background-color: #D02422;
+                    color: #fff;
+                }
+
+                .section .ad-1 .pc .img-text p.second {
+                    margin-top: 24px;
+                }
+
+                .section .ad-1 .pc .img-text p.third {
+                    margin-top: 30px;
+                }
+
+                .section .ad-1 .pc .img-text p.fourth {
+                    margin-top: 35px;
+                }
+
+                .section .ad-1 .pc .img-text p.fifth {
+                    margin-top: 30px;
+                }
+
+                .section .ad-1 .pc .img-text p.sxith {
+                    margin-top: 27px;
+                }
+
+                .section .ad-1 .pc .img-text p .know-more {
+                    font-size: 9px;
+                    color: #000;
+                    margin-left: 15px;
+                    cursor: pointer;
+                }
+
+                .section .ad-1 .pc .img-text p:hover .know-more {
+                    color: #fff;
+                }
+
+        .section .ad-6 .honor .slide .prev {
+            left: -17px;
+        }
+
+        .section .ad-6 .honor .slide .next {
+            right: -17px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner"></div>
+    @Html.Partial("AdultNav", 0)
+    <div class="section">
+        <div class="ad ad-1">
+            <div class="container">
+                <h1 class="title">WELCOME TO ABC</h1>
+                <h2 class="sub-text">SOME GREAT FACTS</h2>
+                <div class="divider"></div>
+                <div class="pc">
+                    <img src="@Url.Content("~/image/index/pc.png")" />
+                    <div class="img-text">
+                        <p class="first">中国首家100%美加外教在线教育平台<a class="know-more">了解更多</a></p>
+                        <p class="second">王牌零起点课程，从零开始不用怕，四个月流利口语脱口而出<a class="know-more">了解更多</a></p>
+                        <p class="third">高效率的培训模式，网上真人教学一对一效果更好<a class="know-more">了解更多</a></p>
+                        <p class="fourth">五星级学管团队全程监督学习效果，还有丰富课外内容供您选修<a class="know-more">了解更多</a></p>
+                        <p class="fifth">独特的教育手段，"兴趣教学法"让你享受学习的乐趣<a class="know-more">了解更多</a></p>
+                        <p class="sxith">20年强大的线下实体教学累计，学员满意度99.2%<a class="know-more">了解更多</a></p>
+                    </div>
+                </div>
+                <div class="why">
+                    <h2>Why Choose ABC</h2>
+                    <p>
+                        ABC远程，隶属于ABC教育集团。以遍布全国的近30家实体教学中心为依托，数十万优秀学员卓越学习成果是ABC创建20余年来程碑似的见证。"神奇的音标教学法"、"兴趣教学法"、"动感教学法"和"三维口语训练法"，是ABC独创的英语教学方法，帮助了无数学员从被动学习到主动灵活学习。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="ad ad-2">
+            <div class="container">
+                <h1 class="title">WHAT WE OFFER</h1>
+                <h2 class="sub-text">SOME GREAT FACTS</h2>
+                <div class="divider"></div>
+                <div class="plan">
+                    <dl>
+                        <dt>
+                            <img src="~/image/index/red.png" alt="" />
+                        </dt>
+                        <dd>
+                            <h3>零基础学习方案</h3>
+                            <p>
+                                五大模块基础学习<br />循序渐进,生动形象<br />打造完美发音体系
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="~/image/index/blue.png" alt="" />
+                        </dt>
+                        <dd>
+                            <h3>实用口语提升方案</h3>
+                            <p>
+                                常用情景再现，身临其境<br />课后人物卡，输入输出同步进行<br />科学方法、从词汇到句型
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="~/image/index/orange.png" alt="" />
+                        </dt>
+                        <dd>
+                            <h3>旅游英语速成方案</h3>
+                            <p>
+                                经典城市介绍<br />旅游攻略情景再现<br />常见问题解答
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="~/image/index/green.png" alt="" />
+                        </dt>
+                        <dd>
+                            <h3>刘学英语专项方案</h3>
+                            <p>
+                                托福，雅思，私人定制<br />外教全程授课、模拟<br />学管师全程管理、辅助
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <img src="~/image/index/purple.png" alt="" />
+                        </dt>
+                        <dd>
+                            <h3>商务英语突破方案</h3>
+                            <p>
+                                商务词汇拓展<br />商务背景资深外教匹配<br />现实案例分析
+                            </p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="ad ad-6">
+            <div class="container" style="width: 985px;">
+                <h1 class="title">我们的荣誉</h1>
+                <h2 class="sub-text">载誉20余年致力打造品质教学</h2>
+                <div class="divider"></div>
+                <div class="honor">
+                    <div class="slide">
+                        <i id="left" class="prev"></i>
+                        <div id="pic">
+                            <img src="~/Content/adult/home/1.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/2.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/3.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/4.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/5.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/6.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/7.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/8.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/9.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/10.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/11.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/12.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/13.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/14.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/15.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/16.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/17.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/18.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/19.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/20.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/21.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/22.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/23.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/24.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/25.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/26.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/27.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/28.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/29.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/30.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/31.png" style="width: 187px; height: 157px;" />
+                            <img src="~/Content/adult/home/32.png" style="width: 187px; height: 157px;" />
+                        </div>
+                        <i id="right" class="next"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ad ad-7">
+            <div class="container">
+                <h1 class="title">我们的客户</h1>
+                <h2 class="sub-text">与全国多家品牌名企战略合作</h2>
+                <div class="divider"></div>
+                <div class="client">
+                    <img src="~/Content/image/clients.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-2.2.4.min.js"></script>
+    <script src="~/Scripts/abc/common.es5.min.js"></script>
+    <script src="~/Scripts/abc/base.es5.min.js"></script>
+    <script src="~/Scripts/abc/home.es5.min.js"></script>
+    <script src="~/Scripts/scrollpic.js"></script>
+</body>
+</html>

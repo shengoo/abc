@@ -1,0 +1,1677 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{95942EC1-4F44-44AC-9A9C-04F3C24C09EE}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mvcweb</RootNamespace>
+    <AssemblyName>mvcweb</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.0\lib\net40\System.Web.Http.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="ThoughtWorks.QRCode">
+      <HintPath>Lib\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="UPOPSDK">
+      <HintPath>Lib\UPOPSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="WxPayAPI">
+      <HintPath>Lib\WxPayAPI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="alipay\AlipayConfig.cs" />
+    <Compile Include="alipay\AlipayCore.cs" />
+    <Compile Include="alipay\AlipayNotify.cs" />
+    <Compile Include="alipay\AlipaySubmit.cs" />
+    <Compile Include="alipay\MD5.cs" />
+    <Compile Include="Controllers\AbroadController.cs" />
+    <Compile Include="Controllers\BascVirtualController.cs" />
+    <Compile Include="Controllers\MyContentController.cs" />
+    <Compile Include="Controllers\OptionController.cs" />
+    <Compile Include="Controllers\PurchaseController.cs" />
+    <Compile Include="Controllers\PurchaseNoController.cs" />
+    <Compile Include="Controllers\PurchaseThController.cs" />
+    <Compile Include="Controllers\PurchaseToController.cs" />
+    <Compile Include="Controllers\TeacherController.cs" />
+    <Compile Include="Logger\ILogger.cs" />
+    <Compile Include="Logger\Logger4Net.cs" />
+    <Compile Include="Logger\LoggerManager.cs" />
+    <Compile Include="payResult.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>payResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="unionpay\UnionpayConfig.cs" />
+    <Content Include="assets\css\buyclass.css" />
+    <Content Include="assets\css\choosepage.css" />
+    <Content Include="assets\css\common.css" />
+    <Content Include="assets\css\login.css" />
+    <Content Include="assets\css\navmenu.css" />
+    <Content Include="assets\css\StyleSheet1.css" />
+    <Content Include="assets\css\table.css" />
+    <Content Include="assets\css\teacher.css" />
+    <Content Include="assets\css\young.css" />
+    <Content Include="assets\image\alipay.jpg" />
+    <Content Include="assets\image\banner-young-home.png" />
+    <Content Include="assets\image\banner-young-open.png" />
+    <Content Include="assets\image\banner_1.png" />
+    <Content Include="assets\image\banner-feature-2.png" />
+    <Content Include="assets\image\car_process_3.png" />
+    <Content Include="assets\image\choose_page\adult.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\image\choose_page\corporate.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\image\choose_page\overseas.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\image\choose_page\young.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\image\class-intro.png" />
+    <Content Include="assets\image\img1.jpg" />
+    <Content Include="assets\image\img2.jpg" />
+    <Content Include="assets\image\img3.jpg" />
+    <Content Include="assets\image\img4.jpg" />
+    <Content Include="assets\image\car_process_2.png" />
+    <Content Include="assets\image\car_process_1.png" />
+    <Content Include="assets\image\purchase.png" />
+    <Content Include="assets\image\sprite.png" />
+    <Content Include="assets\image\sprite2.png" />
+    <Content Include="assets\image\twodimensioncode.jpg" />
+    <Content Include="assets\image\unionpay.png" />
+    <Content Include="assets\image\weibo-active.png" />
+    <Content Include="assets\image\weibo.png" />
+    <Content Include="assets\image\weibo_open.png" />
+    <Content Include="assets\image\weixin-active.png" />
+    <Content Include="assets\image\weixin-pay.png" />
+    <Content Include="assets\image\weixin.png" />
+    <Content Include="assets\image\weixin_open.png" />
+    <Content Include="assets\image\young\banner-team.png" />
+    <Content Include="assets\image\_on-line成人.png" />
+    <Content Include="assets\young\css\class_process.css" />
+    <Content Include="assets\young\css\common.css" />
+    <Content Include="assets\young\css\css3.css" />
+    <Content Include="assets\young\css\curriculum_advantage.css" />
+    <Content Include="assets\young\css\expert_faq.css" />
+    <Content Include="assets\young\css\foreign_teacher.css" />
+    <Content Include="assets\young\css\free_course.css" />
+    <Content Include="assets\young\css\index.css" />
+    <Content Include="assets\young\css\login.css" />
+    <Content Include="assets\young\css\reset.css" />
+    <Content Include="assets\young\css\student_voice.css" />
+    <Content Include="assets\young\css\variable.css" />
+    <Content Include="assets\young\image\class_process\arrange.png" />
+    <Content Include="assets\young\image\class_process\banner.png" />
+    <Content Include="assets\young\image\curriculum_advantage\banner.png" />
+    <Content Include="assets\young\image\curriculum_advantage\banner_2.png" />
+    <Content Include="assets\young\image\curriculum_advantage\img_1.png" />
+    <Content Include="assets\young\image\curriculum_advantage\img_2.png" />
+    <Content Include="assets\young\image\curriculum_advantage\img_3.png" />
+    <Content Include="assets\young\image\curriculum_advantage\图层-12-拷贝-2.png" />
+    <Content Include="assets\young\image\curriculum_advantage\图层-34-拷贝-2.png" />
+    <Content Include="assets\young\image\expert_faq\android.png" />
+    <Content Include="assets\young\image\expert_faq\banner.png" />
+    <Content Include="assets\young\image\expert_faq\intro.png" />
+    <Content Include="assets\young\image\expert_faq\iphone.png" />
+    <Content Include="assets\young\image\foreign_teacher\banner-team.png" />
+    <Content Include="assets\young\image\foreign_teacher\banner.png" />
+    <Content Include="assets\young\image\foreign_teacher\teacher_1.png" />
+    <Content Include="assets\young\image\foreign_teacher\teacher_2.png" />
+    <Content Include="assets\young\image\foreign_teacher\teacher_3.png" />
+    <Content Include="assets\young\image\foreign_teacher\teacher_4.png" />
+    <Content Include="assets\young\image\foreign_teacher\teacher_5.png" />
+    <Content Include="assets\young\image\foreign_teacher\teacher_6.png" />
+    <Content Include="assets\young\image\free_course\banner-young-open.png" />
+    <Content Include="assets\young\image\free_course\banner.png" />
+    <Content Include="assets\young\image\free_course\video_1.png" />
+    <Content Include="assets\young\image\free_course\video_2.png" />
+    <Content Include="assets\young\image\free_course\video_3.png" />
+    <Content Include="assets\young\image\index\banner-young-home.png" />
+    <Content Include="assets\young\image\index\banner.png" />
+    <Content Include="assets\young\image\index\banner_2.png" />
+    <Content Include="assets\young\image\index\client.png" />
+    <Content Include="assets\young\image\index\course1.png" />
+    <Content Include="assets\young\image\index\course2.png" />
+    <Content Include="assets\young\image\index\course3.png" />
+    <Content Include="assets\young\image\index\course4.png" />
+    <Content Include="assets\young\image\index\course_1.png" />
+    <Content Include="assets\young\image\index\course_2.png" />
+    <Content Include="assets\young\image\index\course_3.png" />
+    <Content Include="assets\young\image\index\honor_1.png" />
+    <Content Include="assets\young\image\index\honor_2.png" />
+    <Content Include="assets\young\image\index\honor_3.png" />
+    <Content Include="assets\young\image\index\honor_4.png" />
+    <Content Include="assets\young\image\index\honor_5.png" />
+    <Content Include="assets\young\image\index\lightyellow.png" />
+    <Content Include="assets\young\image\index\pc.png" />
+    <Content Include="assets\young\image\index\pink.png" />
+    <Content Include="assets\young\image\index\purple.png" />
+    <Content Include="assets\young\image\index\skyblue.png" />
+    <Content Include="assets\young\image\index\star_stu.png" />
+    <Content Include="assets\young\image\index\tutor_1.png" />
+    <Content Include="assets\young\image\index\tutor_2.png" />
+    <Content Include="assets\young\image\index\tutor_3.png" />
+    <Content Include="assets\young\image\index\tutor_hover_img.png" />
+    <Content Include="assets\young\image\logo_bg.png" />
+    <Content Include="assets\young\image\sprite.png" />
+    <Content Include="assets\young\image\student_voice\banner.png" />
+    <Content Include="assets\young\image\student_voice\map.png" />
+    <Content Include="assets\young\image\student_voice\stu_1.png" />
+    <Content Include="assets\young\image\student_voice\stu_2.png" />
+    <Content Include="assets\young\image\student_voice\stu_3.png" />
+    <Content Include="assets\young\image\student_voice\stu_4.png" />
+    <Content Include="assets\young\image\student_voice\stu_5.png" />
+    <Content Include="assets\young\image\student_voice\stu_6.png" />
+    <Content Include="assets\young\image\student_voice\stu_7.png" />
+    <Content Include="assets\young\image\student_voice\图层-154.png" />
+    <Content Include="Content\abroad\banner2.png" />
+    <Content Include="Content\abroad\abroad.css">
+      <DependentUpon>abroad.less</DependentUpon>
+    </Content>
+    <Content Include="Content\abroad\abroad.min.css">
+      <DependentUpon>abroad.css</DependentUpon>
+    </Content>
+    <Content Include="Content\abroad\Anytime-you-want-to-learn.png" />
+    <Content Include="Content\abroad\a1.png" />
+    <Content Include="Content\abroad\a4.png" />
+    <Content Include="Content\abroad\a3.png" />
+    <Content Include="Content\abroad\a2.png" />
+    <Content Include="Content\abroad\a5.png" />
+    <Content Include="Content\abroad\service.png" />
+    <Content Include="Content\abroad\banner.png" />
+    <Content Include="Content\adult\feature.css">
+      <DependentUpon>feature.less</DependentUpon>
+    </Content>
+    <Content Include="Content\adult\feature.min.css">
+      <DependentUpon>feature.css</DependentUpon>
+    </Content>
+    <Content Include="Content\adult\foreign_teacher.css">
+      <DependentUpon>foreign_teacher.less</DependentUpon>
+    </Content>
+    <Content Include="Content\adult\foreign_teacher.min.css">
+      <DependentUpon>foreign_teacher.css</DependentUpon>
+    </Content>
+    <Content Include="Content\adult\home\1.png" />
+    <Content Include="Content\adult\home\10.png" />
+    <Content Include="Content\adult\home\11.png" />
+    <Content Include="Content\adult\home\12.png" />
+    <Content Include="Content\adult\home\13.png" />
+    <Content Include="Content\adult\home\14.png" />
+    <Content Include="Content\adult\home\15.png" />
+    <Content Include="Content\adult\home\16.png" />
+    <Content Include="Content\adult\home\17.png" />
+    <Content Include="Content\adult\home\18.png" />
+    <Content Include="Content\adult\home\19.png" />
+    <Content Include="Content\adult\home\2.png" />
+    <Content Include="Content\adult\home\20.png" />
+    <Content Include="Content\adult\home\21.png" />
+    <Content Include="Content\adult\home\22.png" />
+    <Content Include="Content\adult\home\23.png" />
+    <Content Include="Content\adult\home\24.png" />
+    <Content Include="Content\adult\home\25.png" />
+    <Content Include="Content\adult\home\26.png" />
+    <Content Include="Content\adult\home\27.png" />
+    <Content Include="Content\adult\home\28.png" />
+    <Content Include="Content\adult\home\29.png" />
+    <Content Include="Content\adult\home\3.png" />
+    <Content Include="Content\adult\home\30.png" />
+    <Content Include="Content\adult\home\31.png" />
+    <Content Include="Content\adult\home\32.png" />
+    <Content Include="Content\adult\home\4.png" />
+    <Content Include="Content\adult\home\5.png" />
+    <Content Include="Content\adult\home\6.png" />
+    <Content Include="Content\adult\home\7.png" />
+    <Content Include="Content\adult\home\8.png" />
+    <Content Include="Content\adult\home\9.png" />
+    <Content Include="Content\adult\image\class_process\arrange.png" />
+    <Content Include="Content\adult\image\class_process\banner.png" />
+    <Content Include="Content\adult\image\curriculum_advantage\banner_2.png" />
+    <Content Include="Content\adult\image\curriculum_advantage\img_1.png" />
+    <Content Include="Content\adult\image\curriculum_advantage\img_2.png" />
+    <Content Include="Content\adult\image\curriculum_advantage\img_3.png" />
+    <Content Include="Content\adult\image\expert_faq\android.png" />
+    <Content Include="Content\adult\image\expert_faq\banner.png" />
+    <Content Include="Content\adult\image\expert_faq\intro.png" />
+    <Content Include="Content\adult\image\expert_faq\iphone.png" />
+    <Content Include="Content\adult\image\foreign_teacher\banner.png" />
+    <Content Include="Content\adult\image\foreign_teacher\teacher_1.png" />
+    <Content Include="Content\adult\image\foreign_teacher\teacher_2.png" />
+    <Content Include="Content\adult\image\foreign_teacher\teacher_3.png" />
+    <Content Include="Content\adult\image\foreign_teacher\teacher_4.png" />
+    <Content Include="Content\adult\image\foreign_teacher\teacher_5.png" />
+    <Content Include="Content\adult\image\foreign_teacher\teacher_6.png" />
+    <Content Include="Content\adult\image\free_course\video.png" />
+    <Content Include="Content\adult\image\free_course\video_1.png" />
+    <Content Include="Content\adult\image\free_course\video_2.png" />
+    <Content Include="Content\adult\image\free_course\video_3.png" />
+    <Content Include="Content\adult\image\index\banner.png" />
+    <Content Include="Content\adult\image\index\blue.png" />
+    <Content Include="Content\adult\image\index\client.png" />
+    <Content Include="Content\adult\image\index\course_1.png" />
+    <Content Include="Content\adult\image\index\course_2.png" />
+    <Content Include="Content\adult\image\index\course_3.png" />
+    <Content Include="Content\adult\image\index\green.png" />
+    <Content Include="Content\adult\image\index\honor_1.png" />
+    <Content Include="Content\adult\image\index\honor_2.png" />
+    <Content Include="Content\adult\image\index\honor_3.png" />
+    <Content Include="Content\adult\image\index\honor_4.png" />
+    <Content Include="Content\adult\image\index\honor_5.png" />
+    <Content Include="Content\adult\image\index\orange.png" />
+    <Content Include="Content\adult\image\index\pc.png" />
+    <Content Include="Content\adult\image\index\purple.png" />
+    <Content Include="Content\adult\image\index\red.png" />
+    <Content Include="Content\adult\image\index\tutor_1.png" />
+    <Content Include="Content\adult\image\index\tutor_2.png" />
+    <Content Include="Content\adult\image\index\tutor_3.png" />
+    <Content Include="Content\adult\image\index\tutor_hover_img.png" />
+    <Content Include="Content\adult\image\login\close_btn.png" />
+    <Content Include="Content\adult\image\login\login_btn.png" />
+    <Content Include="Content\adult\image\login\logo.png" />
+    <Content Include="Content\adult\image\login\vali_code_btn.png" />
+    <Content Include="Content\adult\image\logo_bg.png" />
+    <Content Include="Content\adult\image\sprite.png" />
+    <Content Include="Content\adult\image\student_voice\banner.png" />
+    <Content Include="Content\adult\image\student_voice\map.png" />
+    <Content Include="Content\adult\image\student_voice\stu_1.png" />
+    <Content Include="Content\adult\image\student_voice\stu_2.png" />
+    <Content Include="Content\adult\image\student_voice\stu_3.png" />
+    <Content Include="Content\adult\image\student_voice\stu_4.png" />
+    <Content Include="Content\adult\image\student_voice\stu_5.png" />
+    <Content Include="Content\adult\image\student_voice\图层-154.png" />
+    <Content Include="Content\adult\image\user_center\banner.png" />
+    <Content Include="Content\adult\image\user_center\purchase.png" />
+    <Content Include="Content\adult\index.css">
+      <DependentUpon>index.less</DependentUpon>
+    </Content>
+    <Content Include="Content\adult\index.min.css">
+      <DependentUpon>index.css</DependentUpon>
+    </Content>
+    <Content Include="Content\icons.png" />
+    <Content Include="Content\image\clients.png" />
+    <Content Include="Content\image\logo.png" />
+    <Content Include="Content\image\sprite.png" />
+    <Content Include="Content\image\head.png" />
+    <Content Include="Content\test.css">
+      <DependentUpon>test.less</DependentUpon>
+    </Content>
+    <Content Include="Content\test.min.css">
+      <DependentUpon>test.css</DependentUpon>
+    </Content>
+    <Content Include="Content\train\a4.png" />
+    <Content Include="Content\train\a1.png" />
+    <Content Include="Content\train\a2.png" />
+    <Content Include="Content\train\c1.png" />
+    <Content Include="Content\train\c2.png" />
+    <Content Include="Content\train\c3.png" />
+    <Content Include="Content\train\c4.png" />
+    <Content Include="Content\train\c5.png" />
+    <Content Include="Content\train\c6.png" />
+    <Content Include="Content\train\banner-2.png" />
+    <Content Include="Content\train\train.css">
+      <DependentUpon>train.less</DependentUpon>
+    </Content>
+    <Content Include="Content\train\train.min.css">
+      <DependentUpon>train.css</DependentUpon>
+    </Content>
+    <Content Include="Content\train\banner.png" />
+    <Content Include="Content\train\a4on.png" />
+    <Content Include="Content\train\a1on.png" />
+    <Content Include="Content\train\a3on.png" />
+    <Content Include="Content\train\a2on.png" />
+    <Content Include="Content\train\a3.png" />
+    <Content Include="Content\train\clients.png" />
+    <Content Include="Content\UserCenter\banner.png" />
+    <Content Include="Content\UserCenter\course-table.css">
+      <DependentUpon>course-table.less</DependentUpon>
+    </Content>
+    <Content Include="Content\UserCenter\course-table.min.css">
+      <DependentUpon>course-table.css</DependentUpon>
+    </Content>
+    <Content Include="Content\UserCenter\profile.css">
+      <DependentUpon>profile.less</DependentUpon>
+    </Content>
+    <Content Include="Content\UserCenter\profile.min.css">
+      <DependentUpon>profile.css</DependentUpon>
+    </Content>
+    <Content Include="Content\young\feature.css">
+      <DependentUpon>feature.less</DependentUpon>
+    </Content>
+    <Content Include="Content\young\feature.min.css">
+      <DependentUpon>feature.css</DependentUpon>
+    </Content>
+    <Content Include="Content\young\home.css">
+      <DependentUpon>home.less</DependentUpon>
+    </Content>
+    <Content Include="Content\young\home.min.css">
+      <DependentUpon>home.css</DependentUpon>
+    </Content>
+    <Content Include="Content\young\image\class_process\arrange.png" />
+    <Content Include="Content\young\image\class_process\banner.png" />
+    <Content Include="Content\young\image\curriculum_advantage\banner.png" />
+    <Content Include="Content\young\image\curriculum_advantage\banner_2.png" />
+    <Content Include="Content\young\image\curriculum_advantage\img_1.png" />
+    <Content Include="Content\young\image\curriculum_advantage\img_2.png" />
+    <Content Include="Content\young\image\curriculum_advantage\img_3.png" />
+    <Content Include="Content\young\image\curriculum_advantage\图层-12-拷贝-2.png" />
+    <Content Include="Content\young\image\curriculum_advantage\图层-34-拷贝-2.png" />
+    <Content Include="Content\young\image\expert_faq\android.png" />
+    <Content Include="Content\young\image\expert_faq\banner.png" />
+    <Content Include="Content\young\image\expert_faq\intro.png" />
+    <Content Include="Content\young\image\expert_faq\iphone.png" />
+    <Content Include="Content\young\image\foreign_teacher\banner-team.png" />
+    <Content Include="Content\young\image\foreign_teacher\banner.png" />
+    <Content Include="Content\young\image\foreign_teacher\teacher_1.png" />
+    <Content Include="Content\young\image\foreign_teacher\teacher_2.png" />
+    <Content Include="Content\young\image\foreign_teacher\teacher_3.png" />
+    <Content Include="Content\young\image\foreign_teacher\teacher_4.png" />
+    <Content Include="Content\young\image\foreign_teacher\teacher_5.png" />
+    <Content Include="Content\young\image\foreign_teacher\teacher_6.png" />
+    <Content Include="Content\young\image\free_course\banner-young-open.png" />
+    <Content Include="Content\young\image\free_course\banner.png" />
+    <Content Include="Content\young\image\free_course\video_1.png" />
+    <Content Include="Content\young\image\free_course\video_2.png" />
+    <Content Include="Content\young\image\free_course\video_3.png" />
+    <Content Include="Content\young\image\index\banner-young-home.png" />
+    <Content Include="Content\young\image\index\banner.png" />
+    <Content Include="Content\young\image\index\banner_2.png" />
+    <Content Include="Content\young\image\index\client.png" />
+    <Content Include="Content\young\image\index\course_1.png" />
+    <Content Include="Content\young\image\index\course_2.png" />
+    <Content Include="Content\young\image\index\course_3.png" />
+    <Content Include="Content\young\image\index\honor_1.png" />
+    <Content Include="Content\young\image\index\honor_2.png" />
+    <Content Include="Content\young\image\index\honor_3.png" />
+    <Content Include="Content\young\image\index\honor_4.png" />
+    <Content Include="Content\young\image\index\honor_5.png" />
+    <Content Include="Content\young\image\index\lightyellow.png" />
+    <Content Include="Content\young\image\index\pc.png" />
+    <Content Include="Content\young\image\index\pink.png" />
+    <Content Include="Content\young\image\index\purple.png" />
+    <Content Include="Content\young\image\index\skyblue.png" />
+    <Content Include="Content\young\image\index\star_stu.png" />
+    <Content Include="Content\young\image\index\tutor_1.png" />
+    <Content Include="Content\young\image\index\tutor_2.png" />
+    <Content Include="Content\young\image\index\tutor_3.png" />
+    <Content Include="Content\young\image\index\tutor_hover_img.png" />
+    <Content Include="Content\young\image\logo_bg.png" />
+    <Content Include="Content\young\image\sprite.png" />
+    <Content Include="Content\young\image\student_voice\banner.png" />
+    <Content Include="Content\young\image\student_voice\map.png" />
+    <Content Include="Content\young\image\student_voice\stu_1.png" />
+    <Content Include="Content\young\image\student_voice\stu_2.png" />
+    <Content Include="Content\young\image\student_voice\stu_3.png" />
+    <Content Include="Content\young\image\student_voice\stu_4.png" />
+    <Content Include="Content\young\image\student_voice\stu_5.png" />
+    <Content Include="Content\young\image\student_voice\stu_6.png" />
+    <Content Include="Content\young\image\student_voice\stu_7.png" />
+    <Content Include="Content\young\image\student_voice\图层-154.png" />
+    <Content Include="Content\young\index.css">
+      <DependentUpon>index.less</DependentUpon>
+    </Content>
+    <Content Include="Content\young\index.min.css">
+      <DependentUpon>index.css</DependentUpon>
+    </Content>
+    <Content Include="Content\young\student_voice.css">
+      <DependentUpon>student_voice.less</DependentUpon>
+    </Content>
+    <Content Include="Content\young\student_voice.min.css">
+      <DependentUpon>student_voice.css</DependentUpon>
+    </Content>
+    <Content Include="image\class_process\banner1.png" />
+    <Content Include="image\curriculum_advantage\banner.png" />
+    <Content Include="image\curriculum_advantage\banner1.png" />
+    <Content Include="image\curriculum_advantage\_on-line.png" />
+    <Content Include="image\index\banner_2.png" />
+    <Content Include="image\index\banner_3.png" />
+    <Content Include="image\index\lightyellow.png" />
+    <Content Include="image\index\pink.png" />
+    <Content Include="image\index\purplo.png" />
+    <Content Include="image\index\skyblue.png" />
+    <Content Include="image\index\star_stu.png" />
+    <Content Include="image\login\close_btn.png" />
+    <Content Include="image\login\login_btn.png" />
+    <Content Include="image\login\logo.png" />
+    <Content Include="image\login\vali_code_btn.png" />
+    <Content Include="image\option\banner.png" />
+    <Content Include="image\foreign_teacher\banner1.png" />
+    <Content Include="image\free_course\banner1.png" />
+    <Content Include="image\free_course\vedio4.png" />
+    <Content Include="image\free_course\vedio5.png" />
+    <Content Include="image\free_course\vedio6.png" />
+    <Content Include="image\index\banner_1.png" />
+    <Content Include="image\index\ok.png" />
+    <Content Include="image\index\women.png" />
+    <Content Include="image\student_voice\banner1.png" />
+    <Content Include="image\student_voice\child.png" />
+    <Content Include="image\student_voice\ste_1.png" />
+    <Content Include="image\student_voice\ste_2.png" />
+    <Content Include="image\student_voice\ste_3.png" />
+    <Content Include="image\student_voice\ste_4.png" />
+    <Content Include="image\student_voice\ste_5.png" />
+    <Content Include="image\student_voice\ste_6.png" />
+    <Content Include="image\student_voice\ste_7.png" />
+    <Content Include="image\student_voice\ste_8.png" />
+    <Content Include="App_Code\LogHelper.cs" />
+    <Content Include="App_Code\PayResultEnum.cs" />
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="Controllers\BuyClassController.cs" />
+    <Compile Include="Controllers\CommonController.cs" />
+    <Compile Include="Controllers\FeatureController.cs" />
+    <Compile Include="Controllers\FlowController.cs" />
+    <Compile Include="Controllers\FreeController.cs" />
+    <Compile Include="Controllers\GenseeController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MemberController.cs" />
+    <Compile Include="Controllers\MemberSemController.cs" />
+    <Compile Include="Controllers\OpenController.cs" />
+    <Compile Include="Controllers\PayNoticeController.cs" />
+    <Compile Include="Controllers\TeamController.cs" />
+    <Compile Include="Controllers\VoiceController.cs" />
+    <Compile Include="Controllers\YoungController.cs" />
+    <Compile Include="Filters\ActionFilter.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\banner.css" />
+    <Content Include="Content\buycar.css" />
+    <Content Include="Content\buycarsubmit.css" />
+    <Content Include="Content\buyclass.css" />
+    <Content Include="Content\commen.css" />
+    <Content Include="Content\dayword.css" />
+    <Content Include="Content\icon\abccon.jpg" />
+    <Content Include="Content\icon\abi-icon_03.png" />
+    <Content Include="Content\icon\abi-icon_07.png" />
+    <Content Include="Content\icon\abi-icon_10.png" />
+    <Content Include="Content\icon\ico01a.jpg" />
+    <Content Include="Content\icon\ico02a.jpg" />
+    <Content Include="Content\icon\ico03a.jpg" />
+    <Content Include="Content\icon\ico04a.jpg" />
+    <Content Include="Content\icon\ico05a.jpg" />
+    <Content Include="Content\icon\ico06a.jpg" />
+    <Content Include="Content\icon\ico07a.jpg" />
+    <Content Include="Content\icon\ico08a.jpg" />
+    <Content Include="Content\icon\ico09a.jpg" />
+    <Content Include="Content\icon\ico10a.jpg" />
+    <Content Include="Content\icon\ico11a.jpg" />
+    <Content Include="Content\icon\ico12a.jpg" />
+    <Content Include="Content\icon\ico13a.jpg" />
+    <Content Include="Content\icon\ico14a.jpg" />
+    <Content Include="Content\icon\ico15a.jpg" />
+    <Content Include="Content\icon\ico16a.jpg" />
+    <Content Include="Content\icon\ico17a.png" />
+    <Content Include="Content\icon\m2bl_bg.jpg" />
+    <Content Include="Content\icon\m2car.jpg" />
+    <Content Include="Content\icon\m2e_btn.jpg" />
+    <Content Include="Content\img\ABC-IMG_03.png" />
+    <Content Include="Content\img\ABC-IMG_05.png" />
+    <Content Include="Content\img\ABC-IMG_09.png" />
+    <Content Include="Content\img\ABC-IMG_11.png" />
+    <Content Include="Content\img\arc.png" />
+    <Content Include="Content\img\banner01.jpg" />
+    <Content Include="Content\img\ban_feature.png" />
+    <Content Include="Content\img\ban_flow.png" />
+    <Content Include="Content\img\ban_free.png" />
+    <Content Include="Content\img\ban_open.png" />
+    <Content Include="Content\img\ban_team.png" />
+    <Content Include="Content\img\bot-icon.png" />
+    <Content Include="Content\img\btn.png" />
+    <Content Include="Content\img\carousel_child_1.jpg" />
+    <Content Include="Content\img\carousel_child_2.jpg" />
+    <Content Include="Content\img\carousel_child_3.jpg" />
+    <Content Include="Content\img\carousel_child_4.jpg" />
+    <Content Include="Content\img\course_child_1.jpg" />
+    <Content Include="Content\img\Device.png" />
+    <Content Include="Content\img\fea1.png" />
+    <Content Include="Content\img\flow1.png" />
+    <Content Include="Content\img\flow2.png" />
+    <Content Include="Content\img\flow3.png" />
+    <Content Include="Content\img\free1.png" />
+    <Content Include="Content\img\free2.png" />
+    <Content Include="Content\img\free3.png" />
+    <Content Include="Content\img\honor.png" />
+    <Content Include="Content\img\icons.png" />
+    <Content Include="Content\img\im1.png" />
+    <Content Include="Content\img\img_feature.png" />
+    <Content Include="Content\img\logo.jpg" />
+    <Content Include="Content\img\logo_new.png" />
+    <Content Include="Content\img\maskLogo.jpg" />
+    <Content Include="Content\img\media.jpg" />
+    <Content Include="Content\img\media_1.jpg" />
+    <Content Include="Content\img\member.jpg" />
+    <Content Include="Content\img\peo-bj.png" />
+    <Content Include="Content\img\peo-bj1.png" />
+    <Content Include="Content\img\peo-bj2.png" />
+    <Content Include="Content\img\peo-bj3.png" />
+    <Content Include="Content\img\peo1.jpg" />
+    <Content Include="Content\img\pic1.png" />
+    <Content Include="Content\img\pic2.png" />
+    <Content Include="Content\img\pic3.png" />
+    <Content Include="Content\img\pic4.png" />
+    <Content Include="Content\img\regIcons.png" />
+    <Content Include="Content\img\san.png" />
+    <Content Include="Content\img\slideNumBg.png" />
+    <Content Include="Content\img\stu-1.png" />
+    <Content Include="Content\img\stu-2.png" />
+    <Content Include="Content\img\stu-3.png" />
+    <Content Include="Content\img\stu-4.png" />
+    <Content Include="Content\img\stu-active.jpg" />
+    <Content Include="Content\img\stu-banner.jpg" />
+    <Content Include="Content\img\tag1.png" />
+    <Content Include="Content\img\tea1.png" />
+    <Content Include="Content\img\tea2.png" />
+    <Content Include="Content\img\tea3.png" />
+    <Content Include="Content\img\team1-1.png" />
+    <Content Include="Content\img\team1-2.png" />
+    <Content Include="Content\img\team1-3.png" />
+    <Content Include="Content\img\title.png" />
+    <Content Include="Content\Jcrop\Jcrop.gif" />
+    <Content Include="Content\Jcrop\jquery.Jcrop.css" />
+    <Content Include="Content\js\index.js" />
+    <Content Include="Content\js\jquery-1.8.3.min.js" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="Content\js\layer-v1.8.5\extend\layer.ext.js" />
+    <Content Include="Content\js\layer-v1.8.5\layer.min.js" />
+    <Content Include="Content\js\layer-v1.8.5\skin\default\icon_ext.png" />
+    <Content Include="Content\js\layer-v1.8.5\skin\default\textbg.png" />
+    <Content Include="Content\js\layer-v1.8.5\skin\default\xubox_ico0.png" />
+    <Content Include="Content\js\layer-v1.8.5\skin\default\xubox_loading0.gif" />
+    <Content Include="Content\js\layer-v1.8.5\skin\default\xubox_loading1.gif" />
+    <Content Include="Content\js\layer-v1.8.5\skin\default\xubox_loading2.gif" />
+    <Content Include="Content\js\layer-v1.8.5\skin\default\xubox_loading3.gif" />
+    <Content Include="Content\js\layer-v1.8.5\skin\default\xubox_title0.png" />
+    <Content Include="Content\js\layer-v1.8.5\skin\layer.css" />
+    <Content Include="Content\js\layer-v1.8.5\skin\layer.ext.css" />
+    <Content Include="Content\js\lrtk.js" />
+    <Content Include="Content\js\nav.js" />
+    <Content Include="Content\js\reg.js" />
+    <Content Include="Content\js\swiper.3.1.7.jquery.min.js" />
+    <Content Include="Content\master.css" />
+    <Content Include="Content\member.css" />
+    <Content Include="Content\orderlist.css" />
+    <Content Include="Content\question.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\style\banner.css" />
+    <Content Include="Content\style\master.css" />
+    <Content Include="Content\style\swiper.3.1.7.min.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\up_p_style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\conTab2.jpg" />
+    <Content Include="Images\course_new_1.jpg" />
+    <Content Include="Images\Feature.jpg" />
+    <Content Include="Images\Flow.jpg" />
+    <Content Include="Images\Free.jpg" />
+    <Content Include="Images\gift_off1.png" />
+    <Content Include="Images\gift_on1.png" />
+    <Content Include="Images\online_class.jpg" />
+    <Content Include="Images\play_student.png" />
+    <Content Include="Images\play_teacher.png" />
+    <Content Include="Images\select.png" />
+    <Content Include="Images\Team.jpg" />
+    <Content Include="Images\Voice.jpg" />
+    <Content Include="Images\weibo.png" />
+    <Content Include="Images\weibo_open.png" />
+    <Content Include="Images\weixin_index.png" />
+    <Content Include="Images\weixin_index_open.png" />
+    <Content Include="image\class_process\arrange.png" />
+    <Content Include="image\class_process\banner.png" />
+    <Content Include="image\curriculum_advantage\banner_2.png" />
+    <Content Include="image\curriculum_advantage\img_1.png" />
+    <Content Include="image\curriculum_advantage\img_2.png" />
+    <Content Include="image\curriculum_advantage\img_3.png" />
+    <Content Include="image\expert_faq\android.png" />
+    <Content Include="image\expert_faq\banner.png" />
+    <Content Include="image\expert_faq\intro.png" />
+    <Content Include="image\expert_faq\iphone.png" />
+    <Content Include="image\foreign_teacher\banner.png" />
+    <Content Include="image\foreign_teacher\teacher_1.png" />
+    <Content Include="image\foreign_teacher\teacher_2.png" />
+    <Content Include="image\foreign_teacher\teacher_3.png" />
+    <Content Include="image\foreign_teacher\teacher_4.png" />
+    <Content Include="image\foreign_teacher\teacher_5.png" />
+    <Content Include="image\foreign_teacher\teacher_6.png" />
+    <Content Include="image\free_course\banner.png" />
+    <Content Include="image\free_course\video.png" />
+    <Content Include="image\free_course\video_1.png" />
+    <Content Include="image\free_course\video_2.png" />
+    <Content Include="image\free_course\video_3.png" />
+    <Content Include="image\index\banner.png" />
+    <Content Include="image\index\blue.png" />
+    <Content Include="image\index\client.png" />
+    <Content Include="image\index\course_1.png" />
+    <Content Include="image\index\course_2.png" />
+    <Content Include="image\index\course_3.png" />
+    <Content Include="image\index\green.png" />
+    <Content Include="image\index\honor_1.png" />
+    <Content Include="image\index\honor_2.png" />
+    <Content Include="image\index\honor_3.png" />
+    <Content Include="image\index\honor_4.png" />
+    <Content Include="image\index\honor_5.png" />
+    <Content Include="image\index\orange.png" />
+    <Content Include="image\index\pc.png" />
+    <Content Include="image\index\purple.png" />
+    <Content Include="image\index\red.png" />
+    <Content Include="image\index\tutor_1.png" />
+    <Content Include="image\index\tutor_2.png" />
+    <Content Include="image\index\tutor_3.png" />
+    <Content Include="image\index\tutor_hover_img.png" />
+    <Content Include="image\logo_bg.png" />
+    <Content Include="image\sprite.png" />
+    <Content Include="image\student_voice\banner.png" />
+    <Content Include="image\student_voice\map.png" />
+    <Content Include="image\student_voice\stu_1.png" />
+    <Content Include="image\student_voice\stu_2.png" />
+    <Content Include="image\student_voice\stu_3.png" />
+    <Content Include="image\student_voice\stu_4.png" />
+    <Content Include="image\student_voice\stu_5.png" />
+    <Content Include="image\student_voice\stu_6.png" />
+    <Content Include="image\student_voice\stu_7.png" />
+    <Content Include="image\student_voice\stu_8.png" />
+    <Content Include="image\student_voice\图层-154.png" />
+    <Content Include="image\user_center\banner.png" />
+    <Content Include="image\user_center\purchase.png" />
+    <Content Include="assets\js\JavaScript1.js" />
+    <Content Include="js\layer\skin\abc\abc.png" />
+    <Content Include="js\layer\skin\abc\close.png" />
+    <Content Include="js\layer\skin\abc\style.css">
+      <DependentUpon>style.less</DependentUpon>
+    </Content>
+    <Content Include="js\layer\skin\abc\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\abroad.es5.js">
+      <DependentUpon>abroad.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\abroad.es5.min.js">
+      <DependentUpon>abroad.es5.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\base.es5.js">
+      <DependentUpon>base.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\base.es5.min.js">
+      <DependentUpon>base.es5.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\base.js" />
+    <Content Include="Scripts\abc\buyclass.es5.js">
+      <DependentUpon>buyclass.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\buyclass.es5.min.js">
+      <DependentUpon>buyclass.es5.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\buyclass.js" />
+    <Content Include="Scripts\abc\courseTable.es5.js">
+      <DependentUpon>courseTable.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\courseTable.es5.min.js">
+      <DependentUpon>courseTable.es5.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\courseTable.js" />
+    <Content Include="Scripts\abc\easemobIM.js" />
+    <Content Include="Scripts\abc\feature.es5.js">
+      <DependentUpon>feature.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\feature.es5.min.js">
+      <DependentUpon>feature.es5.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\feature.js" />
+    <Content Include="Scripts\abc\index.es5.js">
+      <DependentUpon>index.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\index.es5.min.js">
+      <DependentUpon>index.es5.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\index.js" />
+    <Content Include="Scripts\abc\common.es5.js">
+      <DependentUpon>common.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\common.es5.min.js">
+      <DependentUpon>common.es5.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\common.js" />
+    <Content Include="Scripts\abc\abroad.js" />
+    <Content Include="Scripts\abc\member.es5.js">
+      <DependentUpon>member.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\member.es5.min.js">
+      <DependentUpon>member.es5.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\member.js" />
+    <Content Include="Scripts\abc\profile.es5.js">
+      <DependentUpon>profile.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\profile.es5.min.js">
+      <DependentUpon>profile.es5.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\profile.js" />
+    <Content Include="Scripts\abc\team.es5.js">
+      <DependentUpon>team.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\team.es5.min.js">
+      <DependentUpon>team.es5.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\team.js" />
+    <Content Include="Scripts\abc\train.es5.js">
+      <DependentUpon>train.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\train.es5.min.js">
+      <DependentUpon>train.es5.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\train.js" />
+    <Content Include="Scripts\abc\voice.es5.js">
+      <DependentUpon>voice.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\voice.es5.min.js">
+      <DependentUpon>voice.es5.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\voice.js" />
+    <Content Include="Scripts\abc\young.es5.js">
+      <DependentUpon>young.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\young.es5.min.js">
+      <DependentUpon>young.es5.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\young.js" />
+    <Content Include="Scripts\abc\home.es5.js">
+      <DependentUpon>home.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\home.es5.min.js">
+      <DependentUpon>home.es5.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\home.js" />
+    <Content Include="js\layer\skin\abc\style.less" />
+    <Content Include="Content\adult\feature.less" />
+    <None Include="Content\adult\index.less" />
+    <Content Include="Content\base\form.less" />
+    <None Include="Content\base\variable.less" />
+    <None Include="Content\base\reset.less" />
+    <None Include="Content\base\common.less" />
+    <None Include="Content\base\fixed-register.less" />
+    <Content Include="Content\UserCenter\profile.less" />
+    <Content Include="Content\UserCenter\UserCenterCommon.less" />
+    <Content Include="Content\UserCenter\course-table.less" />
+    <Content Include="Content\young\feature.less" />
+    <None Include="Content\young\index.less" />
+    <Content Include="Content\train\train.less" />
+    <Content Include="Content\abroad\abroad.less" />
+    <None Include="Content\young\home.less" />
+    <None Include="Content\young\variable.less" />
+    <None Include="Content\base\css3.less" />
+    <None Include="Content\young\common.less" />
+    <None Include="Content\young\class_process.less" />
+    <None Include="Content\young\curriculum_advantage.less" />
+    <None Include="Content\young\expert_faq.less" />
+    <None Include="Content\young\foreign_teacher.less" />
+    <None Include="Content\young\free_course.less" />
+    <None Include="Content\young\login.less" />
+    <None Include="Content\young\student_voice.less" />
+    <None Include="Content\adult\foreign_teacher.less" />
+    <None Include="Scripts\jquery-2.2.4.intellisense.js" />
+    <Content Include="Scripts\easemob.js" />
+    <Content Include="Scripts\fullcalendar\fullcalendar.css" />
+    <Content Include="Scripts\fullcalendar\fullcalendar.js" />
+    <Content Include="Scripts\fullcalendar\fullcalendar.min.css" />
+    <Content Include="Scripts\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Scripts\fullcalendar\fullcalendar.print.css" />
+    <Content Include="Scripts\fullcalendar\gcal.js" />
+    <Content Include="Scripts\fullcalendar\lang-all.js" />
+    <Content Include="Scripts\fullcalendar\lang\ar-ma.js" />
+    <Content Include="Scripts\fullcalendar\lang\ar-sa.js" />
+    <Content Include="Scripts\fullcalendar\lang\ar-tn.js" />
+    <Content Include="Scripts\fullcalendar\lang\ar.js" />
+    <Content Include="Scripts\fullcalendar\lang\bg.js" />
+    <Content Include="Scripts\fullcalendar\lang\ca.js" />
+    <Content Include="Scripts\fullcalendar\lang\cs.js" />
+    <Content Include="Scripts\fullcalendar\lang\da.js" />
+    <Content Include="Scripts\fullcalendar\lang\de-at.js" />
+    <Content Include="Scripts\fullcalendar\lang\de.js" />
+    <Content Include="Scripts\fullcalendar\lang\el.js" />
+    <Content Include="Scripts\fullcalendar\lang\en-au.js" />
+    <Content Include="Scripts\fullcalendar\lang\en-ca.js" />
+    <Content Include="Scripts\fullcalendar\lang\en-gb.js" />
+    <Content Include="Scripts\fullcalendar\lang\en-ie.js" />
+    <Content Include="Scripts\fullcalendar\lang\en-nz.js" />
+    <Content Include="Scripts\fullcalendar\lang\es.js" />
+    <Content Include="Scripts\fullcalendar\lang\fa.js" />
+    <Content Include="Scripts\fullcalendar\lang\fi.js" />
+    <Content Include="Scripts\fullcalendar\lang\fr-ca.js" />
+    <Content Include="Scripts\fullcalendar\lang\fr-ch.js" />
+    <Content Include="Scripts\fullcalendar\lang\fr.js" />
+    <Content Include="Scripts\fullcalendar\lang\he.js" />
+    <Content Include="Scripts\fullcalendar\lang\hi.js" />
+    <Content Include="Scripts\fullcalendar\lang\hr.js" />
+    <Content Include="Scripts\fullcalendar\lang\hu.js" />
+    <Content Include="Scripts\fullcalendar\lang\id.js" />
+    <Content Include="Scripts\fullcalendar\lang\is.js" />
+    <Content Include="Scripts\fullcalendar\lang\it.js" />
+    <Content Include="Scripts\fullcalendar\lang\ja.js" />
+    <Content Include="Scripts\fullcalendar\lang\ko.js" />
+    <Content Include="Scripts\fullcalendar\lang\lt.js" />
+    <Content Include="Scripts\fullcalendar\lang\lv.js" />
+    <Content Include="Scripts\fullcalendar\lang\nb.js" />
+    <Content Include="Scripts\fullcalendar\lang\nl.js" />
+    <Content Include="Scripts\fullcalendar\lang\pl.js" />
+    <Content Include="Scripts\fullcalendar\lang\pt-br.js" />
+    <Content Include="Scripts\fullcalendar\lang\pt.js" />
+    <Content Include="Scripts\fullcalendar\lang\ro.js" />
+    <Content Include="Scripts\fullcalendar\lang\ru.js" />
+    <Content Include="Scripts\fullcalendar\lang\sk.js" />
+    <Content Include="Scripts\fullcalendar\lang\sl.js" />
+    <Content Include="Scripts\fullcalendar\lang\sr-cyrl.js" />
+    <Content Include="Scripts\fullcalendar\lang\sr.js" />
+    <Content Include="Scripts\fullcalendar\lang\sv.js" />
+    <Content Include="Scripts\fullcalendar\lang\th.js" />
+    <Content Include="Scripts\fullcalendar\lang\tr.js" />
+    <Content Include="Scripts\fullcalendar\lang\uk.js" />
+    <Content Include="Scripts\fullcalendar\lang\vi.js" />
+    <Content Include="Scripts\fullcalendar\lang\zh-cn.js" />
+    <Content Include="Scripts\fullcalendar\lang\zh-tw.js" />
+    <Content Include="Scripts\fullcalendar\lib\cupertino\images\animated-overlay.gif" />
+    <Content Include="Scripts\fullcalendar\lib\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Scripts\fullcalendar\lib\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="Scripts\fullcalendar\lib\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Scripts\fullcalendar\lib\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Scripts\fullcalendar\lib\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Scripts\fullcalendar\lib\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Scripts\fullcalendar\lib\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Scripts\fullcalendar\lib\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Scripts\fullcalendar\lib\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Scripts\fullcalendar\lib\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Scripts\fullcalendar\lib\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\fullcalendar\lib\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Scripts\fullcalendar\lib\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Scripts\fullcalendar\lib\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\fullcalendar\lib\cupertino\jquery-ui.min.css" />
+    <Content Include="Scripts\fullcalendar\lib\jquery-ui.custom.min.js" />
+    <Content Include="Scripts\fullcalendar\lib\jquery.min.js" />
+    <Content Include="Scripts\fullcalendar\lib\moment.min.js" />
+    <Content Include="Scripts\jquery-2.2.4.js" />
+    <Content Include="Scripts\jquery-2.2.4.min.js" />
+    <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\laydate\laydate.js" />
+    <Content Include="Scripts\laydate\need\laydate.css" />
+    <Content Include="Scripts\laydate\skins\dahong\icon.png" />
+    <Content Include="Scripts\laydate\skins\dahong\laydate.css" />
+    <Content Include="Scripts\laydate\skins\default\icon.png" />
+    <Content Include="Scripts\laydate\skins\default\laydate.css" />
+    <Content Include="Scripts\laydate\skins\molv\icon.png" />
+    <Content Include="Scripts\laydate\skins\molv\laydate.css" />
+    <Content Include="Scripts\layer\layer.js" />
+    <Content Include="Scripts\layer\skin\abccart\abc.png" />
+    <Content Include="Scripts\layer\skin\abccart\close.png" />
+    <Content Include="Scripts\layer\skin\abccart\style.css">
+      <DependentUpon>style.less</DependentUpon>
+    </Content>
+    <Content Include="Scripts\layer\skin\abccart\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\layer\skin\abccart\check.png" />
+    <Content Include="Scripts\layer\skin\abc\abc.png" />
+    <Content Include="Scripts\layer\skin\abc\close.png" />
+    <Content Include="Scripts\layer\skin\abc\style.css">
+      <DependentUpon>style.less</DependentUpon>
+    </Content>
+    <Content Include="Scripts\layer\skin\abc\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\layer\skin\default\icon-ext.png" />
+    <Content Include="Scripts\layer\skin\default\icon.png" />
+    <Content Include="Scripts\layer\skin\default\loading-0.gif" />
+    <Content Include="Scripts\layer\skin\default\loading-1.gif" />
+    <Content Include="Scripts\layer\skin\default\loading-2.gif" />
+    <Content Include="Scripts\layer\skin\layer.css" />
+    <Content Include="Scripts\scrollpic.js" />
+    <Content Include="static\css\login.css" />
+    <Content Include="js\train.js" />
+    <Content Include="js\abroad.js" />
+    <Content Include="js\free.js" />
+    <Content Include="js\Jcrop\jquery.Jcrop.js" />
+    <Content Include="js\Jcrop\jquery.Jcrop.min.js" />
+    <Content Include="js\Jcrop\jquery.min.js" />
+    <Content Include="js\teacherlogin.js" />
+    <Content Include="js\teachermember.js" />
+    <Content Include="Lib\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="Lib\log4net.dll" />
+    <Content Include="Lib\Newtonsoft.Json 4.dll" />
+    <Content Include="log4net.config" />
+    <Content Include="Lib\log4net.config" />
+    <Content Include="App_Data\conf.xml.config" />
+    <Content Include="Logger\log4net.config" />
+    <Content Include="apiapp.json" />
+    <Content Include="image\sprite.psd" />
+    <Content Include="assets\young\image\expert_faq\.DS_Store" />
+    <Content Include="assets\young\image\free_course\.DS_Store" />
+    <Content Include="assets\young\image\index\.DS_Store" />
+    <Content Include="assets\young\image\sprite_new.psd" />
+    <Content Include="assets\young\image\sprite_original.psd" />
+    <Content Include="Content\test.less" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="Content\variable.less" />
+    <None Include="Properties\PublishProfiles\mvcweb.pubxml" />
+    <None Include="Properties\PublishProfiles\publish.pubxml" />
+    <None Include="Properties\PublishProfiles\web.pubxml" />
+    <Content Include="Images\add_car_off.png" />
+    <Content Include="Images\add_car_on.png" />
+    <Content Include="Images\alipay.png" />
+    <Content Include="Images\banner.jpg" />
+    <Content Include="Images\banner01.jpg" />
+    <Content Include="Images\ban_feature.png" />
+    <Content Include="Images\ban_flow.png" />
+    <Content Include="Images\ban_free.png" />
+    <Content Include="Images\ban_open.png" />
+    <Content Include="Images\ban_team.png" />
+    <Content Include="Images\btn.png" />
+    <Content Include="Images\buyclass_1.jpg" />
+    <Content Include="Images\buyclass_2.jpg" />
+    <Content Include="Images\buyclass_3.jpg" />
+    <Content Include="Images\buyclass_4.jpg" />
+    <Content Include="Images\calender.png" />
+    <Content Include="Images\calender_focu.png" />
+    <Content Include="Images\calender_hover.png" />
+    <Content Include="Images\car.jpg" />
+    <Content Include="Images\car.png" />
+    <Content Include="Images\carousel_1.jpg" />
+    <Content Include="Images\carousel_2.jpg" />
+    <Content Include="Images\carousel_3.jpg" />
+    <Content Include="Images\carousel_4.jpg" />
+    <Content Include="Images\car_process_1.png" />
+    <Content Include="Images\car_process_2.png" />
+    <Content Include="Images\car_process_3.png" />
+    <Content Include="Images\classtime.png" />
+    <Content Include="Images\classtime_focu.png" />
+    <Content Include="Images\class_finish.png" />
+    <Content Include="Images\class_start.png" />
+    <Content Include="Images\close-black.png" />
+    <Content Include="Images\close-white.png" />
+    <Content Include="Images\conTab1.jpg" />
+    <Content Include="Images\course_off.png" />
+    <Content Include="Images\course_on.png" />
+    <Content Include="Images\customer1.jpg" />
+    <Content Include="Images\customer2.jpg" />
+    <Content Include="Images\customer3.jpg" />
+    <Content Include="Images\customer4.jpg" />
+    <Content Include="Images\customer5.jpg" />
+    <Content Include="Images\Device.png" />
+    <Content Include="Images\fea1.png" />
+    <Content Include="Images\flow1.png" />
+    <Content Include="Images\flow2.png" />
+    <Content Include="Images\flow3.png" />
+    <Content Include="Images\foreignteacher.png" />
+    <Content Include="Images\free1.png" />
+    <Content Include="Images\free2.png" />
+    <Content Include="Images\free3.png" />
+    <Content Include="Images\gift_off.png" />
+    <Content Include="Images\gift_on.png" />
+    <Content Include="Images\honor.png" />
+    <Content Include="Images\icons.png" />
+    <Content Include="Images\im1.png" />
+    <Content Include="Images\img_feature.png" />
+    <Content Include="Images\logo.jpg" />
+    <Content Include="Images\m2car.jpg" />
+    <Content Include="Images\m2chg3.jpg" />
+    <Content Include="Images\m2eprice.jpg" />
+    <Content Include="Images\m2e_bg2.jpg" />
+    <Content Include="Images\m2e_bg3.jpg" />
+    <Content Include="Images\m2e_btn.jpg" />
+    <Content Include="Images\m2line1.jpg" />
+    <Content Include="Images\maskLogo.jpg" />
+    <Content Include="Images\media.jpg" />
+    <Content Include="Images\member.png" />
+    <Content Include="Images\member_default.png" />
+    <Content Include="Images\menu-cjts.png" />
+    <Content Include="Images\onlineBg.png" />
+    <Content Include="Images\parter\CCTV.png" />
+    <Content Include="Images\parter\LG电子.png" />
+    <Content Include="Images\parter\三星.png" />
+    <Content Include="Images\parter\中国人寿.png" />
+    <Content Include="Images\parter\中国国际航空.png" />
+    <Content Include="Images\parter\中国工商.png" />
+    <Content Include="Images\parter\中国烟草.png" />
+    <Content Include="Images\parter\中国石化.png" />
+    <Content Include="Images\parter\中国石油.png" />
+    <Content Include="Images\parter\中粮集团.png" />
+    <Content Include="Images\parter\乐视.png" />
+    <Content Include="Images\parter\北京建工.png" />
+    <Content Include="Images\parter\国家会议中心.png" />
+    <Content Include="Images\parter\国家博物馆.png" />
+    <Content Include="Images\parter\国家开发银行.png" />
+    <Content Include="Images\parter\国家核电.png" />
+    <Content Include="Images\parter\国家药监局.png" />
+    <Content Include="Images\parter\大众汽车.png" />
+    <Content Include="Images\parter\微软.png" />
+    <Content Include="Images\parter\德赛梅斯-奔驰_03.png" />
+    <Content Include="Images\parter\施耐德_03.png" />
+    <Content Include="Images\parter\澳门铁克.png" />
+    <Content Include="Images\parter\百度_.png" />
+    <Content Include="Images\parter\美国使馆.png" />
+    <Content Include="Images\parter\金茂大酒店.png" />
+    <Content Include="Images\parter\飞信.png" />
+    <Content Include="Images\parter\首都机场.png" />
+    <Content Include="Images\parter\首钢集团.png" />
+    <Content Include="Images\regIcons.png" />
+    <Content Include="Images\rl_buycar_bg.jpg" />
+    <Content Include="Images\rl_buycar_bg_01.jpg" />
+    <Content Include="Images\rl_buycar_bg_02.jpg" />
+    <Content Include="Images\san.png" />
+    <Content Include="Images\search_car_off.png" />
+    <Content Include="Images\search_car_on.png" />
+    <Content Include="Images\slideNumBg.png" />
+    <Content Include="Images\star-off.png" />
+    <Content Include="Images\star-on.png" />
+    <Content Include="Images\stu-1.png" />
+    <Content Include="Images\stu-2.png" />
+    <Content Include="Images\stu-3.png" />
+    <Content Include="Images\stu-4.png" />
+    <Content Include="Images\stu-active.jpg" />
+    <Content Include="Images\stu-banner.jpg" />
+    <Content Include="Images\tag1.png" />
+    <Content Include="Images\tea1.png" />
+    <Content Include="Images\tea2.png" />
+    <Content Include="Images\tea3.png" />
+    <Content Include="Images\team1-1.png" />
+    <Content Include="Images\team1-2.png" />
+    <Content Include="Images\team1-3.png" />
+    <Content Include="Images\title.png" />
+    <Content Include="Images\twodimensioncode.jpg" />
+    <Content Include="Images\member_type.png" />
+    <Content Include="Images\unionpay.png" />
+    <Content Include="Images\weixin.png" />
+    <Content Include="Images\wx_img02.jpg" />
+    <Content Include="js\base.js" />
+    <Content Include="js\buycar.js" />
+    <Content Include="js\buycarsubmit.js" />
+    <Content Include="js\buyclass.js" />
+    <Content Include="js\calender.js" />
+    <Content Include="js\CommoboDiv.js" />
+    <Content Include="js\common.js" />
+    <Content Include="js\feature.js" />
+    <Content Include="js\fullcalendar\fullcalendar.css" />
+    <Content Include="js\fullcalendar\fullcalendar.js" />
+    <Content Include="js\fullcalendar\fullcalendar.min.css" />
+    <Content Include="js\fullcalendar\fullcalendar.min.js" />
+    <Content Include="js\fullcalendar\fullcalendar.print.css" />
+    <Content Include="js\fullcalendar\gcal.js" />
+    <Content Include="js\fullcalendar\lang-all.js" />
+    <Content Include="js\fullcalendar\lang\ar-ma.js" />
+    <Content Include="js\fullcalendar\lang\ar-sa.js" />
+    <Content Include="js\fullcalendar\lang\ar-tn.js" />
+    <Content Include="js\fullcalendar\lang\ar.js" />
+    <Content Include="js\fullcalendar\lang\bg.js" />
+    <Content Include="js\fullcalendar\lang\ca.js" />
+    <Content Include="js\fullcalendar\lang\cs.js" />
+    <Content Include="js\fullcalendar\lang\da.js" />
+    <Content Include="js\fullcalendar\lang\de-at.js" />
+    <Content Include="js\fullcalendar\lang\de.js" />
+    <Content Include="js\fullcalendar\lang\el.js" />
+    <Content Include="js\fullcalendar\lang\en-au.js" />
+    <Content Include="js\fullcalendar\lang\en-ca.js" />
+    <Content Include="js\fullcalendar\lang\en-gb.js" />
+    <Content Include="js\fullcalendar\lang\en-ie.js" />
+    <Content Include="js\fullcalendar\lang\en-nz.js" />
+    <Content Include="js\fullcalendar\lang\es.js" />
+    <Content Include="js\fullcalendar\lang\fa.js" />
+    <Content Include="js\fullcalendar\lang\fi.js" />
+    <Content Include="js\fullcalendar\lang\fr-ca.js" />
+    <Content Include="js\fullcalendar\lang\fr-ch.js" />
+    <Content Include="js\fullcalendar\lang\fr.js" />
+    <Content Include="js\fullcalendar\lang\he.js" />
+    <Content Include="js\fullcalendar\lang\hi.js" />
+    <Content Include="js\fullcalendar\lang\hr.js" />
+    <Content Include="js\fullcalendar\lang\hu.js" />
+    <Content Include="js\fullcalendar\lang\id.js" />
+    <Content Include="js\fullcalendar\lang\is.js" />
+    <Content Include="js\fullcalendar\lang\it.js" />
+    <Content Include="js\fullcalendar\lang\ja.js" />
+    <Content Include="js\fullcalendar\lang\ko.js" />
+    <Content Include="js\fullcalendar\lang\lt.js" />
+    <Content Include="js\fullcalendar\lang\lv.js" />
+    <Content Include="js\fullcalendar\lang\nb.js" />
+    <Content Include="js\fullcalendar\lang\nl.js" />
+    <Content Include="js\fullcalendar\lang\pl.js" />
+    <Content Include="js\fullcalendar\lang\pt-br.js" />
+    <Content Include="js\fullcalendar\lang\pt.js" />
+    <Content Include="js\fullcalendar\lang\ro.js" />
+    <Content Include="js\fullcalendar\lang\ru.js" />
+    <Content Include="js\fullcalendar\lang\sk.js" />
+    <Content Include="js\fullcalendar\lang\sl.js" />
+    <Content Include="js\fullcalendar\lang\sr-cyrl.js" />
+    <Content Include="js\fullcalendar\lang\sr.js" />
+    <Content Include="js\fullcalendar\lang\sv.js" />
+    <Content Include="js\fullcalendar\lang\th.js" />
+    <Content Include="js\fullcalendar\lang\tr.js" />
+    <Content Include="js\fullcalendar\lang\uk.js" />
+    <Content Include="js\fullcalendar\lang\vi.js" />
+    <Content Include="js\fullcalendar\lang\zh-cn.js" />
+    <Content Include="js\fullcalendar\lang\zh-tw.js" />
+    <Content Include="js\fullcalendar\lib\cupertino\images\animated-overlay.gif" />
+    <Content Include="js\fullcalendar\lib\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="js\fullcalendar\lib\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="js\fullcalendar\lib\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="js\fullcalendar\lib\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="js\fullcalendar\lib\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="js\fullcalendar\lib\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="js\fullcalendar\lib\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="js\fullcalendar\lib\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="js\fullcalendar\lib\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="js\fullcalendar\lib\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="js\fullcalendar\lib\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="js\fullcalendar\lib\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="js\fullcalendar\lib\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="js\fullcalendar\lib\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="js\fullcalendar\lib\cupertino\jquery-ui.min.css" />
+    <Content Include="js\fullcalendar\lib\jquery-ui.custom.min.js" />
+    <Content Include="js\fullcalendar\lib\jquery.min.js" />
+    <Content Include="js\fullcalendar\lib\moment.min.js" />
+    <Content Include="js\gensee.js" />
+    <Content Include="js\index.js" />
+    <Content Include="js\jquery-1.8.3.min.js" />
+    <Content Include="js\jquery.cookie.js" />
+    <Content Include="js\laydate\laydate.js" />
+    <Content Include="js\laydate\need\laydate.css" />
+    <Content Include="js\laydate\skins\dahong\icon.png" />
+    <Content Include="js\laydate\skins\dahong\laydate.css" />
+    <Content Include="js\laydate\skins\default\icon.png" />
+    <Content Include="js\laydate\skins\default\laydate.css" />
+    <Content Include="js\laydate\skins\molv\icon.png" />
+    <Content Include="js\laydate\skins\molv\laydate.css" />
+    <Content Include="js\layer\extend\layer.ext.js" />
+    <Content Include="js\layer\layer.js" />
+    <Content Include="js\layer\skin\default\close_off.png" />
+    <Content Include="js\layer\skin\default\close_on.png" />
+    <Content Include="js\layer\skin\default\icon-ext.png" />
+    <Content Include="js\layer\skin\default\icon.png" />
+    <Content Include="js\layer\skin\default\loading-0.gif" />
+    <Content Include="js\layer\skin\default\loading-1.gif" />
+    <Content Include="js\layer\skin\default\loading-2.gif" />
+    <Content Include="js\layer\skin\layer.css" />
+    <Content Include="js\layer\skin\layer.ext.css" />
+    <Content Include="js\lrtk.js" />
+    <Content Include="js\member.js" />
+    <Content Include="js\nav.js" />
+    <Content Include="js\noopsycheorder.js" />
+    <Content Include="js\open.js" />
+    <Content Include="js\team.js" />
+    <Content Include="js\voice.js" />
+    <Content Include="payResult.aspx" />
+    <Content Include="Scripts\jquery-2.2.4.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="static\css\child.css" />
+    <Content Include="static\css\PurchaseNo.css" />
+    <Content Include="static\css\Option.css" />
+    <Content Include="static\css\Purchase.css" />
+    <Content Include="static\css\MyContent.css" />
+    <Content Include="static\css\class_process.css" />
+    <Content Include="static\css\curriculum_advantage.css" />
+    <Content Include="static\css\expert_faq.css" />
+    <Content Include="static\css\font\aa.html" />
+    <Content Include="static\css\font\iconfont.svg" />
+    <Content Include="static\css\foreign_teacher.css" />
+    <Content Include="static\css\free_course.css" />
+    <Content Include="static\css\im.css" />
+    <Content Include="static\css\index.css" />
+    <Content Include="static\css\PurchaseTh.css" />
+    <Content Include="static\css\PurchaseTo.css" />
+    <Content Include="static\css\student_voice.css" />
+    <Content Include="static\img\avatar.png" />
+    <Content Include="static\img\faces\ee_1.png" />
+    <Content Include="static\img\faces\ee_10.png" />
+    <Content Include="static\img\faces\ee_11.png" />
+    <Content Include="static\img\faces\ee_12.png" />
+    <Content Include="static\img\faces\ee_13.png" />
+    <Content Include="static\img\faces\ee_14.png" />
+    <Content Include="static\img\faces\ee_15.png" />
+    <Content Include="static\img\faces\ee_16.png" />
+    <Content Include="static\img\faces\ee_17.png" />
+    <Content Include="static\img\faces\ee_18.png" />
+    <Content Include="static\img\faces\ee_19.png" />
+    <Content Include="static\img\faces\ee_2.png" />
+    <Content Include="static\img\faces\ee_20.png" />
+    <Content Include="static\img\faces\ee_21.png" />
+    <Content Include="static\img\faces\ee_22.png" />
+    <Content Include="static\img\faces\ee_23.png" />
+    <Content Include="static\img\faces\ee_24.png" />
+    <Content Include="static\img\faces\ee_25.png" />
+    <Content Include="static\img\faces\ee_26.png" />
+    <Content Include="static\img\faces\ee_27.png" />
+    <Content Include="static\img\faces\ee_28.png" />
+    <Content Include="static\img\faces\ee_29.png" />
+    <Content Include="static\img\faces\ee_3.png" />
+    <Content Include="static\img\faces\ee_30.png" />
+    <Content Include="static\img\faces\ee_31.png" />
+    <Content Include="static\img\faces\ee_32.png" />
+    <Content Include="static\img\faces\ee_33.png" />
+    <Content Include="static\img\faces\ee_34.png" />
+    <Content Include="static\img\faces\ee_35.png" />
+    <Content Include="static\img\faces\ee_4.png" />
+    <Content Include="static\img\faces\ee_5.png" />
+    <Content Include="static\img\faces\ee_6.png" />
+    <Content Include="static\img\faces\ee_7.png" />
+    <Content Include="static\img\faces\ee_8.png" />
+    <Content Include="static\img\faces\ee_9.png" />
+    <Content Include="static\img\loading.gif" />
+    <Content Include="static\img\notify.png" />
+    <Content Include="static\js\easemob.js" />
+    <Content Include="static\js\im.js" />
+    <Content Include="static\mp3\msg.m4a" />
+    <Content Include="static\mp3\msg.mp3" />
+    <Content Include="Views\BuyClass\BuyClass.aspx" />
+    <Content Include="Views\BuyClass\PayAccount.aspx" />
+    <Content Include="Views\Feature\feature.html" />
+    <Content Include="Views\Flow\Flow.aspx" />
+    <Content Include="Views\Flow\flow.html" />
+    <Content Include="Views\Free\Free.aspx" />
+    <Content Include="Views\Free\free.html" />
+    <Content Include="Views\Home\Home2.aspx" />
+    <Content Include="Views\Home\Index2.aspx" />
+    <Content Include="Views\Member\MemberSem.aspx" />
+    <Content Include="Views\Member\Member2.aspx" />
+    <Content Include="Views\Member\NoopsycheOrder.aspx" />
+    <Content Include="Views\MyContent\Home.aspx" />
+    <Content Include="Views\MyContent\MyContent.aspx" />
+    <Content Include="Views\Open\Open2.aspx" />
+    <Content Include="Views\Open\open2.html" />
+    <Content Include="Views\Option\Option.aspx" />
+    <Content Include="Views\PurchaseNo\PurchaseNo.aspx" />
+    <Content Include="Views\PurchaseTh\PurchaseTh.aspx" />
+    <Content Include="Views\PurchaseTo\PurchaseTo.aspx" />
+    <Content Include="Views\Purchase\Purchase2.aspx" />
+    <Content Include="Views\Voice\Voice.aspx" />
+    <Content Include="Views\Voice\voice.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Gensee\Gensee.cshtml" />
+    <Content Include="Views\Open\DayWord.cshtml" />
+    <Content Include="Views\Young\Home.cshtml" />
+    <Content Include="Views\Member\ModifyPhoto.cshtml" />
+    <Content Include="Views\BuyClass\BuyCarSubmit.cshtml" />
+    <Content Include="Views\BuyClass\BuyCarFinish.cshtml" />
+    <Content Include="Views\BuyClass\NotifyAop.cshtml" />
+    <Content Include="Views\Home\Error.cshtml" />
+    <Content Include="Views\Gensee\AssignGenSee.cshtml" />
+    <Content Include="Views\BuyClass\BuyWeiXinPay.cshtml" />
+    <Content Include="Views\PayNotice\ReturnUnion.cshtml" />
+    <Content Include="Views\PayNotice\NotifyUnion.cshtml" />
+    <Content Include="Views\PayNotice\ReturnAop.cshtml" />
+    <Content Include="Views\PayNotice\NotifyAop.cshtml" />
+    <Content Include="static\css\font\iconfont.eot" />
+    <Content Include="static\css\font\iconfont.ttf" />
+    <Content Include="static\css\font\iconfont.woff" />
+    <Content Include="Views\Home\Teacher.cshtml" />
+    <Content Include="Views\Home\TeacherLogin.cshtml" />
+    <Content Include="Views\Member\CommonQuestion.cshtml" />
+    <Content Include="Views\Member\TeacherMember.cshtml" />
+    <Content Include="Views\Home\Index.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Shared\_AdultLayout.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
+    <Content Include="Views\Open\Open.cshtml" />
+    <Content Include="Views\Member\Member.cshtml" />
+    <Content Include="Views\Home\Teacher - Copy.cshtml" />
+    <Content Include="Views\Home\TeacherLogin - Copy.cshtml" />
+    <Content Include="Views\Member\ChangePhone.cshtml" />
+    <Content Include="Views\Member\ChangePwd.cshtml" />
+    <Content Include="Views\Purchase\Purchase.cshtml" />
+    <Content Include="Views\Shared\UserCenterNav.cshtml" />
+    <Content Include="Views\Purchase\PurchaseTabs.cshtml" />
+    <Content Include="Views\Purchase\CourseList.cshtml" />
+    <Content Include="Views\Purchase\CourseTable.cshtml" />
+    <Content Include="Views\Purchase\Evaluate.cshtml" />
+    <Content Include="Views\Member\Orders.cshtml" />
+    <Content Include="Views\Purchase\Buy.cshtml" />
+    <Content Include="Views\Shared\AdultNav.cshtml" />
+    <Content Include="Views\Young\Index.cshtml" />
+    <Content Include="Views\Shared\YoungNav.cshtml" />
+    <Content Include="Views\Young\Free.cshtml" />
+    <Content Include="Views\Young\Open.cshtml" />
+    <Content Include="Views\Young\Feature.cshtml" />
+    <Content Include="Views\Young\Team.cshtml" />
+    <Content Include="Views\Young\Flow.cshtml" />
+    <Content Include="Views\Young\Voice.cshtml" />
+    <Content Include="Views\Teacher\ChangePassword.cshtml" />
+    <Content Include="Views\Teacher\TeacherNav.cshtml" />
+    <Content Include="Views\Teacher\CourseList.cshtml" />
+    <Content Include="Views\Teacher\CourseTable.cshtml" />
+    <Content Include="Views\Teacher\Evaluate.cshtml" />
+    <Content Include="Views\Team\Team.cshtml" />
+    <Content Include="Views\BuyClass\BuyCar.cshtml" />
+    <Content Include="Views\Feature\Feature.cshtml" />
+    <Content Include="Views\Abroad\Index.cshtml" />
+    <Content Include="Views\Abroad\Train.cshtml" />
+    <Content Include="Scripts\layer\skin\abc\style.less" />
+    <Content Include="Scripts\layer\skin\abccart\style.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="filt\" />
+    <Folder Include="Log\" />
+    <Folder Include="Metadata\deploymentTemplates\" />
+    <Folder Include="Upload\Member\201511\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataBase\DataBase.csproj">
+      <Project>{8489221b-75be-4d85-92ba-1e1dc0f0e137}</Project>
+      <Name>DataBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{c55b8983-5eca-484e-856c-2d3bb338b69f}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Service\Service.csproj">
+      <Project>{c806a08f-34d9-44f2-bb76-8e0d53e0cf81}</Project>
+      <Name>Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>11884</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:19307/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

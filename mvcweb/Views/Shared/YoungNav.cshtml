@@ -1,0 +1,28 @@
+﻿<div class="nav">
+    <ul style="width: 1124px;">
+        <li class="@((int)Model == 0 ? "active" : "")">
+            <a href="@Url.Action("Home","Young")">首页</a>
+        </li>
+        <li class="@((int)Model == 1 ? "active" : "")">
+            <a href="@Url.Action("Open", "Young")">免费课程</a>
+        </li>
+        <li class="@((int)Model == 2 ? "active" : "")">
+            <a href="@Url.Action("Feature", "Young")">课程特色</a>
+        </li>
+        <li class="@((int)Model == 3 ? "active" : "")">
+            <a href="@Url.Action("Team", "Young")">外教团队</a>
+        </li>
+        <li class="@((int)Model == 4 ? "active" : "")">
+            <a href="@Url.Action("Free", "Young")">免费答疑</a>
+        </li>
+        <li class="@((int)Model == 5 ? "active" : "")">
+            <a href="@Url.Action("Flow", "Young")">上课流程</a>
+        </li>
+        <li class="no-border @((int)Model == 6 ? "active" : "")">
+            <a href="@Url.Action("Voice", "Young")">学员心声</a>
+        </li>
+        <li class="no-border @((int)Model == 7 ? "active" : "")">
+            <a id="hidTab" href="@Url.Action("Buy", "Purchase")"></a>
+        </li>
+    </ul>
+</div>

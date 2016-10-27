@@ -1,0 +1,116 @@
+﻿@{
+    Layout = null;
+    var path = @ViewBag.Path;
+}
+<link href="@ViewBag.Path/Content/commen.css" rel="stylesheet" />
+<script>
+    window.parent.parent.CurrentUser.Logo = "@ViewBag.Logo";
+</script>
+@*new { enctype = "multipart/form-data" } *@
+@using (Html.BeginForm("SavePhoto", "Member", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div style="width:240px;">
+        <div style="width:100%; text-align:center;" class="flt">
+            <table>
+                <tr>
+                    <td><img id="photo" src="@ViewBag.Logo"  width="100" height="100" style="border:0px;border-radius:100px; outline:none;"  /></td>
+                    <td><input type="button" class="btn" style="width:80px;margin-top: 70px;" onclick="file.click()" value="选择头像" /></td>
+                </tr>
+            </table>
+
+            
+            @*<div id="word" style="width:240px;height:30px; line-height:30px; text-align:center;">@ViewBag.Title</div>*@
+        </div>
+        <div style="width:100%; text-align:center;" class="flt">
+            <input type="file" id="file" name="file" value="选择图片" onchange=" pic_cut(this, photo);" style="display:none"  />
+            <input type="hidden" name="size" value="0,0,0,0" />
+            @*<input type="button" class="btn" style="width:80px;" onclick="fileclick()" value="选择头像" />*@
+            <input type="submit" class="btn" style="width:80px; margin-top:10px;" name="Upload" value="保存" hidden="hidden" />
+        </div>
+    </div>
+    @*<div style="width:100px;height:100px;border:1px dashed #334455 ;position:absolute;"></div>*@
+}
+<link href="~/Content/Jcrop/jquery.Jcrop.css" rel="stylesheet" />
+<script src="~/js/Jcrop/jquery.min.js"></script>
+<script src="~/js/Jcrop/jquery.Jcrop.js"></script>
+<script src="~/js/Jcrop/jquery.Jcrop.min.js"></script>
+<script>
+    $().ready(function () {
+        //$('input[type="submit"]').click(function () {
+        //    preventDefault();
+        //    debugger;
+
+        //})
+
+    })
+
+    var h = 1, w = 1; var v = 1;
+    function showCoords(c) {
+        //$("[name=size]").val((c.x * w).toFixed() + "," + (c.y * h).toFixed() + "," + (c.w * w).toFixed() + "," + (c.h * h).toFixed());
+
+        $("[name=size]").val((c.x * v).toFixed() + "," + (c.y * v).toFixed() + "," + (c.w * v).toFixed() + "," + (c.h * v).toFixed());
+        //c.x, c.y, c.x2, c.y2, c.w, c.h;
+    }
+
+    function pic_cut(obj, photo) {
+
+        var img = new Image();
+
+        photo.src = window.URL.createObjectURL(obj.files[0]);
+        try { destroy(); } catch (e) { };
+
+        img.src = photo.src;
+
+        img.onload = function () {
+            var maxh = 250;
+            var maxw = 400;
+
+            var imgh = img.height.toString();
+            var imgw = img.width.toString();
+            var vh = imgh / maxh;
+            var vw = imgw / maxw;
+            if (vh > vw)
+            { if (vh > 1) { v = vh; } } else
+            { if (vw > 1) { v = vw; } }
+
+            //$("#photo").width("auto"); $("#photo").height("auto");
+            if (v > 1) {
+                $("#photo").width((imgw / v) + "px"); $("#photo").height((imgh / v) + "px");
+                imgh = maxh;
+            }
+            else {
+                $("#photo").width(imgw + "px"); $("#photo").height(imgh + "px");
+            }
+            $("#photo").css("border-radius", 0);
+
+
+            //h = imgh / 180;
+            //w = imgw / 240;
+
+
+
+            h = imgh;
+            w = imgw;
+            $("iframe", parent.document).height((parseInt(h) + 25) + "px");
+            //$("[value=选择头像]").css("margin-top", ((parseInt(h)-34) + "px"));
+            $("[name=size]").val("0,0," + (100 * w).toFixed() + "," + (100 * h).toFixed());
+            $("[name='size']").val("0,0," +( 100 * v).toFixed() + "," +( 100 * v).toFixed());
+            $("input[value='选择头像'").css("display", "none");
+            jQuery('#photo').Jcrop({
+                onSelect: showCoords,
+                setSelect: [0, 0, 100, 100],
+                minSize: [100, 100],
+                maxSize: [200, 200],
+                aspectRatio: 1
+            });
+
+
+        }
+
+
+
+
+    }
+
+
+</script>

@@ -1,0 +1,152 @@
+﻿.content {
+    width: 1000px;
+    margin: 15px auto;
+}
+
+.ul_car {
+    list-style-type: none;
+    font-size: 13px;
+    padding: 0;
+}
+
+    .ul_car li {
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        /*height: 46px;*/
+    }
+
+    .ul_car li {
+        float:left;
+        width:100%;
+        background-color: #EEF7FF;
+        /*min-height: 46px;*/
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+
+        .ul_car li:first-child {
+            background-color: #efefef;
+            font-weight: bold;
+            height: 30px;
+            padding-top: 0px;
+        }
+
+.ul_menu_top {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+}
+
+    .ul_menu_top li {
+        width: 30%;
+        cursor: pointer;
+        height: 30px;
+        line-height: 30px;
+        border-bottom: 3px solid #333;
+        float: left;
+        text-align: center;
+    }
+
+.chk_car {
+    width: 90px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.car_name {
+    text-align: center;
+    width: 300px;
+    font-weight: bold;
+}
+
+.car_gift {
+    text-align: center;
+    width: 250px;
+    font-weight: bold;
+}
+
+.car_price {
+    text-align: center;
+    width: 150px;
+    font-weight: bold;
+}
+
+.car_opera {
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    width: 100px;
+}
+
+.car_chk {
+    width: 100px;
+}
+
+.car_del {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.car_process {
+    width: 965px;
+    height: 47px;
+    background-image: url(../../Images/car_process_1.png);
+    background-repeat: no-repeat;
+}
+
+.car_logo {
+    width: 36px;
+    height: 30px;
+    background-image: url(../../Images/car.png);
+    background-repeat: no-repeat;
+}
+
+.car_number {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+}
+
+.car_bottom {
+    background-color: #efefef;
+    font-weight: bold;
+    height: 50px;
+    float: left;
+    vertical-align: middle;
+    line-height: 50px;
+    width: 100%;
+    padding: 3px;
+}
+
+.continue_buy {
+    height: 30px;
+    line-height: 20px;
+    padding-top: 10px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.batch_delete {
+    height: 50px;
+    line-height: 50px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-left: 10px;
+    width: 100px;
+}
+
+.total_price {
+    color: #FF6600;
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.car_nogoods {
+    margin-left: 5%;
+}

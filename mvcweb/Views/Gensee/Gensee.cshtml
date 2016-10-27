@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:gs="http://www.gensee.com/ec">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>ABC在线英语 展示互动</title>
+    <script type="text/javascript" src="http://static.gensee.com/webcast/static/sdk/js/gssdk.js"></script>
+    <link href="@ViewBag.Path/Content/commen.css" rel="stylesheet" />
+    <style type="text/css">
+        .btn {
+            padding: 10px;
+            margin-right: 5px;
+            height: auto;
+        }
+    </style>
+    <script src="~/js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <script>
+        var url =  '@Html.Raw(ViewBag.Url)';
+        if (url != '') {
+            location.href = url;
+        } else {
+            document.write('@ViewBag.Message');
+            @*'<gs:video-live height="' + $(window).height + 'px" site="abc.gensee.com:80" ctx="webcast" ownerid="@ViewBag.WebCastId" authcode="@ViewBag.Token" uid="" uname="@ViewBag.Name" password="" k="" group="" logip="" logport="" logid="" completed="onCompleted" compress="false" />'*@
+        }
+    </script>
+</body>
+
+
+<script src="@ViewBag.Path/js/jquery-1.8.3.min.js"></script>
+<script src="@ViewBag.Path/js/base.js"></script>
+<script src="@ViewBag.Path/js/gensee.js"></script>
+</html>

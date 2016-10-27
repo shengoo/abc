@@ -1,0 +1,320 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+@{
+    Layout = null;
+}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>ABC Online</title>
+    <link href="@ViewBag.Path/Content/banner.css" rel="stylesheet" />
+    <link href="@ViewBag.Path/Content/master.css" rel="stylesheet" />
+    <link href="@ViewBag.Path/Content/commen.css" rel="stylesheet" />
+    <style type="text/css">
+        .login {
+            position: absolute;
+            right: 20px;
+            top: 80px;
+            background-color: #7C7E7F;
+            width: 260px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .login ul {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        .login li {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 30px;
+            height: 30px;
+        }
+
+        .login .footer {
+            width: 100%;
+            height: 20px;
+            cursor: pointer;
+            text-align: center;
+            background-color: #ebf5d5;
+        }
+    </style>
+
+    <style type="text/css">
+        .masktip {
+            width: 100%;
+            height: 100%;
+            background: #2d2c2b;
+            overflow: hidden;
+            opacity: 0.9;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10000;
+        }
+
+            .masktip .tip {
+                height: auto;
+                width: 360px;
+                margin: 20% auto;
+                border-radius: 6px;
+            }
+
+        .maskheader {
+            height: 24px;
+            line-height: 24px;
+            font-weight: bold;
+            text-indent: 1em;
+            background-color: #ebf5d5;
+            font-size: 16px;
+            vertical-align: middle;
+            padding: 3px;
+        }
+
+        .maskcontent {
+            text-align: left;
+            background-color: #fff;
+            font-size: 14px;
+            line-height: 1.5em;
+            text-indent: 4em;
+            height: auto;
+            min-height: 96px;
+        }
+
+        .masktip .btn {
+            padding: 3px 6px;
+            margin-bottom: 10px;
+            margin-right: 20px;
+            width: 50px;
+            height: 20px;
+        }
+
+        .maskfooter {
+            background-color: #00ffff;
+        }
+
+        .clearfix:after {
+            content: "\200B";
+            display: block;
+            height: 0;
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+    </style>
+
+    <!-- 登录 -->
+    <style type="text/css">
+        .register_title {
+            width: 100%;
+            background-color: #000;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: left;
+            text-indent: 1em;
+            height: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            float: left;
+        }
+
+        .register_close {
+            width: 19%;
+            height: 43px;
+            float: left;
+        }
+
+        .content {
+            width: 1000px;
+            height: 100%;
+            font-size: 14px;
+            top: 7%;
+            margin:0 auto;
+            /*position: absolute;*/
+            /*z-index: 1001;*/
+        }
+
+            .content p {
+                font-size: 14px;
+                line-height: 24px;
+                margin-top: 10px;
+                color: #fff;
+                text-indent: 1em;
+            }
+
+            .content member {
+                margin-top: 15px;
+                width: 100%;
+                height: 45px;
+                line-height: 45px;
+                text-align: center;
+            }
+
+        .appDown {
+            position: absolute;
+            z-index: 1001;
+            background-color: #fff;
+            width: 140px;
+            height: 150px;
+            border: 1px solid #ddd;
+        }
+
+        .appDown_title {
+            width: 100%;
+            text-align: center;
+            height: 20px;
+            line-height: 20px;
+            color: #333;
+        }
+
+        .w1000 .weibo {
+            cursor: pointer;
+            background-image: url(../../Images/weibo.png);
+            background-repeat: no-repeat;
+            background-position: 0 8px;
+            padding-left: 35px;
+        }
+
+            .w1000 .weibo:hover {
+                color: #f00;
+                background-image: url(../../Images/weibo_open.png);
+            }
+
+        .w1000 .weixin {
+            cursor: pointer;
+            padding: 0 0 0 21px;
+            background-image: url(../../Images/weixin_index.png);
+            background-repeat: no-repeat;
+            background-position: 0 8px;
+            padding-left: 35px;
+        }
+
+            .w1000 .weixin:hover {
+                color: #0f0;
+                background-image: url(../../Images/weixin_index_open.png);
+            }
+
+         .login-banner-teacher {
+            float: left;
+            display: block;
+            width: 531px;
+            height: 313px;
+            /*padding-left:250px;*/
+        }
+        /*.teacherdiv {
+            width: 400px;
+        }*/
+    </style>
+
+</head>
+<body>
+    <div class="content">
+        <!--mask begin-->
+        <div class="login-banner-teacher">
+            <img width="423" height="297" src="/Images/buyclass_1.jpg" />
+        </div>
+        <div class="mask mask_login" style="display: block; float: right;">
+            <!--mask-title begin-->
+            <div class="mask-title">
+                <div class="mask-logo flt">
+                    <img src="/Images/maskLogo.jpg" width="125" height="60" />
+                </div>
+                <!--sel-title begin-->
+                <div class="sel-title">
+                    <ul>
+                        <li id="taba1" @*onclick="setTab('taba',1,2)"*@ style="width:200px; text-align:left;">Teacher Login</li>
+                        @*<li id="taba2" onclick="setTab('taba',2,2)">会员注册</li>*@
+                    </ul>
+                </div>
+                <!--sel-title end-->
+            </div>
+            <!--mask-title end-->
+            <!--mask-con begin-->
+            <div class="mask-con">
+                <!--con-tab-1 begin-->
+                <div id="con-taba-1">
+                    <div id="Form1">
+                        <div class="mask-tr" style="margin-top: 20px;">
+                            <div class="icon name"></div>
+                            <div class="mask-input">
+                                <input type="text" name="UserName" placeholder="please enter your name" />
+                            </div>
+                        </div>
+                        <div class="mask-tr">
+                            <div class="icon pwd"></div>
+                            <div class="mask-input">
+                                <input type="password" name="Pwd" placeholder=" please enter your password" />
+                            </div>
+                        </div>
+                        <div class="mask-remember">
+                            <div class="left flt">
+                                <input type="checkbox" class="autologin" />Auto Login
+                            </div>
+                            <div class="right frt"><a href="javascript:searchPassword();">forget password?</a></div>
+                        </div>
+                        <button method="login">Login</button>
+                    </div>
+                </div>
+                <!--con-tab-2 end-->
+            </div>
+            <!--mask-con end-->
+        </div>
+        <!--mask end-->
+    </div>
+    <div class="mask searchPassword hidden" style="width: 480px;">
+        <div class="mask-title">
+            <div class="mask-logo flt">
+                <img src="@ViewBag.Path/Images/maskLogo.jpg" width="125" height="60" />
+            </div>
+        </div>
+        <div style="width: 100%; height: 10px"></div>
+        <div class="mask-tr" style="width: 400px;">
+            <div class="icon mobile"></div>
+            <div class="mask-input">
+                <input type="text" name="UserName" placeholder="please enter your phone number" />
+            </div>
+        </div>
+        <div class="mask-tr" style="width: 400px;">
+            <div class="icon pwd"></div>
+            <div class="mask-input">
+                <input type="password" name="Pwd" placeholder="Set a new password" />
+            </div>
+        </div>
+        <div class="mask-tr" style="width: 400px;">
+            <div class="icon pwd"></div>
+            <div class="mask-input">
+                <input type="password" name="Pwd" placeholder="Please enter your password again" />
+            </div>
+        </div>
+        <div class="mask-tr" style="margin-left: 40px; float: left; width: 254px">
+            <input type="text" name="Validate" style="padding-left: 10px; float: left; height: 40px; width: 254px; border: 1px solid #ddd;" placeholder="Please entry the sms verification code" />
+        </div>
+        <div style="margin-left: 10px; float: left; width: 140px; height: 40px;">
+            <button method="sendValid" data="2" style="width: 140px; height: 40px;">Verification code</button>
+        </div>
+        <button method="modifyPassword" style="width:400px;">Modify password</button>
+    </div>
+    <script src="@ViewBag.Path/js/jquery-1.8.3.min.js"></script>
+    <script src="@ViewBag.Path/js/base.js"></script>
+    <script src="@ViewBag.Path/js/jquery.cookie.js"></script>
+    <script src="@ViewBag.Path/js/layer/layer.js"></script>
+    <script src="@ViewBag.Path/js/common.js"></script>
+    <script src="@ViewBag.Path/js/teacherlogin.js"></script>
+    @*<script src="@ViewBag.Path/js/nav.js"></script>*@
+</body>
+</html>
+
+
+
+
+

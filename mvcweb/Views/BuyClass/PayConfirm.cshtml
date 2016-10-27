@@ -1,0 +1,37 @@
+﻿@{
+    Layout = null;
+}
+<link href="~/Content/buycarsubmit.css" rel="stylesheet" />
+<div class="m-dialog" id="orderDialog">
+    <div class="in" >
+        <div class="hd">
+            <a class="close" href="javascript:void(0)" title="关闭">x</a>
+            @*<h4 class="u-tt-md">支付结果确认</h4>*@
+        </div>
+        <div class="bd">
+            <div class="paying f-tac">
+                请您到新打开网银页面上进行支付，支付完成前请不要关闭该窗口。
+            </div>
+        </div>
+        <div class="ft">
+            <div class="sibmit f-tac">
+                <a class="u-btn md active w154" id="pay_successed1" href="#">我已完成支付</a>
+                <a class="u-btn md hover w154" id="pay_successed2" href="#">付款遇到问题</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/jquery-1.8.3.min.js"></script>
+<script src="/js/base.js"></script>
+<script src="/js/layer/layer.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#pay_successed1").click(function () {
+            layer.closeAll('iframe');
+            window.parent.location.href = "/Member/Member?action=orderform";
+        });
+        $("#pay_successed2").click(function () {
+            layer.closeAll('iframe');
+        });
+    });
+</script>

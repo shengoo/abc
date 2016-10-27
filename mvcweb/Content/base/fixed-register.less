@@ -1,0 +1,30 @@
+﻿@fixed-register-height: 132px;
+
+.fixed-register{
+    position: fixed;
+    bottom:0;
+    width:100%;
+    height:@fixed-register-height;
+    background-color:rgba(0,0,0,.5);
+    .container{
+        width: @width;
+        height:100%;
+        color:#fff;
+        .tips{
+            float:left;
+            font-weight:bold;
+            line-height:@fixed-register-height;
+            font-size:30px;
+        }
+        .buttons{
+            float:right;
+            margin-top:@fixed-register-height/4;
+            line-height:@fixed-register-height/2;
+            padding: 0 40px;
+            background-color: #DB1E1A;
+            border-radius: 4px;
+            cursor:pointer;
+            font-size: 20px;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="ABC,English online," />
+    <meta name="description" content="ABC English Online Education Platform, ABC在线英语" />
+    <title>ABC在线英语首页</title>
+    <link href="~/assets/young/css/expert_faq.css" rel="stylesheet" />
+    <link href="~/assets/css/navmenu.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="banner"></div>
+    @Html.Partial("YoungNav", 4)
+
+    <div class="section">
+        <div class="page-title">
+            <h1>ABC EXPERT TEACHERS</h1>
+            <div class="divider"></div>
+            <p>
+                ABC在线VIP学员享有专家老师在线答疑服务，随时随地解决学员在英语学习中遇到的问题，提升VIP学员用户体验！<br/>
+                更有在线客服为学员24小时解决问题，贴心服务！
+
+            </p>
+        </div>
+        <div class="intro"></div>
+        <div class="download-app">
+            <div class="page-title">
+                <h1>轻松下载，名师常伴左右</h1>
+                <div class="divider"></div>
+            </div>
+            <div class="app-url">
+                <a class="iphone"><img src="~/assets/young/image/expert_faq/iphone.png" /></a>
+                <a class="andriod"><img src="~/assets/young/image/expert_faq/android.png" /></a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="~/js/base.js"></script>
+    <script src="~/js/common.js"></script>
+    <script src="~/assets/js/JavaScript1.js"></script>
+    <script>
+        $(function () {
+            if (window.top && window.top.updateContentFrameHeight) {
+                window.top.updateContentFrameHeight(1900);
+            }
+        });
+    </script>
+</body>
+</html>

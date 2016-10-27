@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Content/buycarsubmit.css" rel="stylesheet" />
+    <link href="~/assets/css/common.css" rel="stylesheet" />
+    <title>ABC在线英语</title>
+    <style>
+        .btn:hover {
+            background-color: #2895e8;
+        }
+
+        .btn {
+            background-color: #0875c8;
+        }
+
+        .car_process {
+            background-image: url('../../assets/image/car_process_2.png');
+            height: 67px;
+        }
+
+        .u-tt-md {
+            color: #0875c8;
+        }
+
+        .f-tar {
+            text-align: right;
+            background-color: #ccc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner_one"></div>
+    @Html.Partial("UserCenterNav", 3)
+    <div class="content">
+        <div class="car_process"></div>
+        <div class="u-tit part" style="text-indent:12px; line-height:60px;">
+            <span class="u-tt-md">订单信息</span>
+        </div>
+        <div class="ordertable part">
+            <table class="u-tabx new_tabx add_new_tx extb" style="width:100%;">
+                <thead class="add_bc_nonex">
+                    <tr class="odd add">
+                        <th width="35%" class="add_l_p35">课程卡类型</th>
+                        <th width="25%">套餐详情</th>
+                        <th width="26%">购买数量</th>
+                        <th>单价</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @Html.Raw(ViewBag.OrderDetails)
+                </tbody>
+            </table>
+        </div>
+        <div class="bill f-tar part">
+            <div class="f-fs2" style="color:#000;">
+                课程卡总数<b style="color:#f00">&nbsp;@ViewBag.Count&nbsp;</b>张&nbsp;&nbsp;&nbsp;
+                金额总计：<b><i class="f-ff1">¥</i><font id="total" style="color:#f00">@ViewBag.Price</font></b>
+            </div>
+        </div>
+        <div class="u-tit part pay">
+            <ul class="uls" style="padding: 30px 250px;">
+                <li class="icon weixin" title="weixin" style="width:100px;height:100px;">
+                    <div class="pay_normal">
+                        <input name="payMethod" checked="checked" value="weixin" type="radio" style="margin-top:32px;float:left;" />
+                        <img src="~/assets/image/weixin-pay.png" height="80" width="80" style="float:left;margin-left:3px;" />
+                    </div>
+                </li>
+                <li class="icon alipay" title="alipay" style="width:100px;height:100px;">
+                    <div class="pay_normal selector">
+                        <input name="payMethod" value="alipay" type="radio" style="margin-top:32px; float:left;" />
+                        <img src="~/assets/image/alipay.jpg" height="80" width="80" style="float:left;margin-left:3px;" />
+                    </div>
+                </li>
+                <li class="icon unionpay" title="unionpay" style="width:140px;height:100px;">
+                    <div class="pay_normal">
+                        <input name="payMethod" value="unionpay" type="radio" style="margin-top:32px;float:left;" />
+                        <img src="~/assets/image/unionpay.png" height="80" width="120" style="float:left;margin-left:3px;" />
+                    </div>
+                </li>
+            </ul>
+            <div style="text-indent:12px; line-height:60px;margin-top: 70px;text-align: center;">
+                <span class="u-tt-md">支付方式</span>
+            </div>
+        </div>
+
+
+        @*<div class="m-dialog" id="orderDialog" style="display: none;">
+                <div class="in" style="top: 181px;">
+                    <div class="hd">
+                        <a class="close" href="javascript:void(0)" title="关闭">x</a>
+                        <h4 class="u-tt-md">支付结果确认</h4>
+                    </div>
+                    <div class="bd">
+                        <div class="paying f-tac">
+                            请您到新打开网银页面上进行支付，支付完成前请不要关闭该窗口。
+                        </div>
+                    </div>
+                    <div class="ft">
+                        <div class="sibmit f-tac">
+                            <a class="u-btn md active w154" id="pay_successed1" href="#">我已完成支付</a>
+                            <a class="u-btn md hover w154" id="pay_successed2" href="#" >付款遇到问题</a>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+
+    </div>
+
+    <div class="sibmit f-tac" id="payBtn" style="    padding: 0 20px 20px;">
+        <input type="submit" id="tbnsubmit" class="u-btn md active jsSubmit btn" style="margin:0;line-height: initial;" value="提交订单">
+    </div>
+
+    <script src="~/js/jquery-1.8.3.min.js"></script>
+    <script src="~/js/base.js"></script>
+    <script src="~/js/layer/layer.js"></script>
+    <script src="~/js/buycarsubmit.js"></script>
+
+    <script>
+        var orderNo = "@ViewBag.OrderNo";
+
+        $(function () {
+            window.top.$('#ContentFrame').css({
+                height: 1000
+            }); console.log('ready')
+        });
+
+    </script>
+
+    @*<script type="text/javascript">
+             $(document).ready(function () {
+
+                 //$("#tbnsubmit").click(function () {
+                 //    var div = $("#orderDialog");
+                 //    div.show();
+                 //});
+
+                 //$("#pay_successed2").click(function () {
+                 //    var div = $("#orderDialog");
+                 //    div.hide();
+                 //});
+
+                 //$("#pay_successed1").click(function () {
+                 //    var div = $("#orderDialog");
+                 //    div.hide();
+                 //});
+
+             });
+
+
+        </script>*@
+</body>
+</html>

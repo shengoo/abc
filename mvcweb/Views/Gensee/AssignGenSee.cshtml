@@ -1,0 +1,12 @@
+﻿@{
+    Layout = null;
+}
+<html xmlns:gs="http://www.gensee.com/ec">
+<head>
+    <script type="text/javascript" src="static.gensee.com/webcast/static/sdk/js/gssdk.js"></script>
+</head>
+<body>
+    <gs:video-vod id="videoComponent" site="abc.gensee.com:80" ctx="webcast"
+                  ownerid="@ViewBag.WebCastId" uid="" uname="@ViewBag.Name" authcode="@ViewBag.Token" />
+</body>
+</html>

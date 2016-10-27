@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="~/static/css/free_course.css" rel="stylesheet" />
+    <link href="~/assets/css/StyleSheet1.css" rel="stylesheet" />
+    <title>ABC在线英语</title>
+    <style>
+        .section .ad .slide .prev {
+            background-image: url(@Url.Content("~/assets/image/sprite2.png"));
+            background-position: -575px -5px;
+            cursor: pointer;
+
+        }
+        .section .ad .slide .prev.disabled {
+            background-position: -705px 0;
+            cursor: not-allowed;
+        }
+        .section .ad .slide .next {
+            background-image: url(@Url.Content("~/assets/image/sprite2.png"));
+            background-position: -535px -5px;
+            cursor: pointer;
+        }
+        .section .ad .slide .next.disabled {
+            background-position: -675px 0;
+            cursor: not-allowed;
+        }
+        .section .ad-1 .free-course .each-media .media-img img{
+            width: 100%;
+            height: 100%;
+        }
+        .section .ad-1 .free-course .each-media:nth-child(even) .media-img img {
+          -webkit-filter: none;
+          filter: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner_one"></div>
+    @Html.Partial("AdultNav", 1)
+    <div class="section">
+        <div class="page-title">
+            <h1>ABC ENGLISH ONLINE</h1>
+            <div class="divider"></div>
+            <p>
+                @*ABC教育集团以遍布全国的近30家实体教学中心为依托，数十万优秀学员卓越学习成果是<br />
+                ABC创建20年来里程碑似的见证“神奇的音标教学法”、“兴趣教学法”、“动感教学法”和“三维口语训练法”<br />
+                是ABC独创的英语教学方法帮助无数学员 从被动学习到主动灵活学习*@
+                王牌音标课程、新概念基础课程、中教口语、旅游英语、海外生活各种话题应有尽有。<br />
+                每天直播，不见不散哦！不花钱也可以学英文，<br />
+                ABC在线英语精彩大课堂！
+
+            </p>
+        </div>
+        <div class="container">
+            <div class="ad ad-1">
+                <h1 class="title">ABC/免费课堂</h1>
+                <h2 class="sub-text">精彩直播天天有，错过直播看录像</h2>
+                <div class="divider"></div>
+                <div class="slide">
+                    <i class="prev"></i>
+                    <i class="next"></i>
+                </div>
+                <div class="free-course">
+
+                </div>
+            </div>
+            <div class="ad ad-2">
+                <h1 class="title">每日一句</h1>
+                <div class="slide">
+                    <i class="prev disabled"></i>
+                    <i class="next"></i>
+                </div>
+                <div class="divider"></div>
+                <div class="sentence">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="~/js/base.js"></script>
+    <script src="~/js/common.js"></script>
+    <script src="~/js/open.js"></script>
+
+    <script>
+        $(function () {
+            //免费课堂
+
+            $.getJSON('@Url.Action("GetOpenClass")',
+                function (data) {
+                    if (data.IsSuccess) {
+                        initCourse(data.Result);
+                    } else {
+                        alert("error access: @Url.Action("GetOpenClass")");
+                    }
+                });
+
+            function initCourse(course) {
+                var courses = course,
+                pageSize = 4,
+                currentPage = 0,
+                totalPage = Math.ceil(courses.length / pageSize),
+                $pre = $('.ad-1 .prev'),
+                $next = $('.ad-1 .next');
+
+                $pre.click(function () {
+                    if (currentPage > 0) {
+                        showPage(currentPage - 1);
+                    }
+                });
+                $next.click(function () {
+                    if (currentPage + 1 < totalPage) {
+                        showPage(currentPage + 1);
+                    }
+                });
+
+                showPage(0);
+
+                function showPage(no) {
+                    if (no === 0) {
+                        $pre.addClass('disabled');
+                    } else {
+                        $pre.removeClass('disabled');
+                    }
+                    if (no + 1 === totalPage) {
+                        $next.addClass('disabled');
+                    } else {
+                        $next.removeClass('disabled');
+                    }
+                    $('.free-course').empty();
+                    currentPage = no;
+                    var start = currentPage * pageSize;
+                    var end = (currentPage + 1) * pageSize > courses.length
+                        ? courses.length
+                        : (currentPage + 1) * pageSize;
+                    var showing = courses.slice(start, end);
+                    console.log(showing);
+                    showing.forEach(function (item) {
+                        var $course =
+                            $('<div class="each-media"><div class="media-img">' +
+                                '<img src="' + item.ImgUrl + '" alt=""></div><div class="media-text"><i class="caret"></i>' +
+                                '<h5>' + item.Title + '</h5>' +
+                                '<p>' + item.About + '</p>' +
+                                '<div class="tool">' +
+                                '<div class="like"><span>' + item.Num + '</span><i></i></div>' +
+                                '<button class="play-btn" type="play" data="' + item.Id + '">视频回放</button></div></div></div>');
+                        $('.free-course').append($course);
+                        $course.find('button')
+                            .click(function() {
+                                var e = $(this),
+                                    type = e.attr('type'),
+                                    classId = e.attr('data'),
+                                    numObj = e.prev().find("font");
+
+                                var p = window.parent;
+                                if (!p.CurrentUser) {
+                                    p.showLogin();
+                                    return;
+                                }
+                                if (!type) return;
+                                if (type === "play") {
+                                    webAbc.PlayGenSee({ CplId: classId, CourseType: 1 });
+                                    return;
+                                }
+                                if (type === 'hold') {
+                                    webAbc.ajax({
+                                        url: '/Open/HoldOpenClass',
+                                        data: { classId: classId },
+                                        success: function(rel) {
+                                            window.parent.showMessage(1, '占座成功！');
+                                            e.html('已加入');
+                                            e.attr('data', '');
+                                            numObj.html(parseInt(numObj.text()) + 1);
+                                        }
+                                    });
+                                }
+                            });
+
+                    });
+                }
+            }
+
+
+            $.getJSON('@Url.Action("GetArticle","Open")',
+                function(data) {
+                    if (data.IsSuccess) {
+                        initArticle(data.Result);
+                    } else {
+                        alert("error access: @Url.Action("GetOpenClass")");
+                    }
+                }
+            );
+
+            function initArticle(articles) {
+                var pageSize = 8,
+                currentPage = 0,
+                totalPage = Math.ceil(articles.length / pageSize),
+                $pre = $('.ad-2 .prev'),
+                $next = $('.ad-2 .next');
+
+                $pre.click(function () {
+                    if (currentPage > 0) {
+                        showPage(currentPage - 1);
+                    }
+                });
+                $next.click(function () {
+                    if (currentPage + 1 < totalPage) {
+                        showPage(currentPage + 1);
+                    }
+                });
+
+                showPage(0);
+
+                function showPage(no) {
+                    if (no === 0) {
+                        $pre.addClass('disabled');
+                    } else {
+                        $pre.removeClass('disabled');
+                    }
+                    if (no + 1 === totalPage) {
+                        $next.addClass('disabled');
+                    } else {
+                        $next.removeClass('disabled');
+                    }
+                    $('.sentence').empty();
+                    currentPage = no;
+                    var start = currentPage * pageSize;
+                    var end = (currentPage + 1) * pageSize > articles.length
+                        ? articles.length
+                        : (currentPage + 1) * pageSize;
+                    var showing = articles.slice(start, end);
+                    console.log(showing);
+                    showing.forEach(function (item) {
+                        var no = articles.indexOf(item) + 1;
+                        var oddeven = no % 2 ? 'odd' : 'even';
+                        var $article =
+                            $('<div class="each-sentence ' + oddeven + '">' +
+                                '<div class="sen-left"><i>' + no + '</i>' +
+                                '<a href="' + item.WeiXinUrl + '" target="_blank"><span>' + item.Title + '</span></a></div>' +
+                                '<div class="like"><span>801</span><i></i></div></div>');
+                        $('.sentence').append($article);
+
+                    });
+                }
+            }
+
+
+            
+
+        })
+    </script><script src="~/assets/js/JavaScript1.js"></script>
+</body>
+</html>

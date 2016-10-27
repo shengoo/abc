@@ -1,0 +1,25 @@
+﻿<div class="nav_box">
+    <ul>
+        <li @(((int)Model == 0 ? " class=active" : ""))>
+            <a href="@Url.Action("Home", "Home")">首页</a>
+        </li>
+        <li @(((int)Model == 1 ? " class=active" : ""))>
+            <a href="@Url.Action("Member", "Member")">个人设置</a>
+        </li>
+        <li @(((int)Model == 2 ? " class=active" : ""))>
+            <a href="@Url.Action("Purchase", "Purchase")">课程管理</a>
+        </li>
+        <li @(((int)Model == 3 ? " class=active" : ""))>
+            <a href="@Url.Action("Orders", "Member")">我的订单</a>
+        </li>
+        <li @(((int)Model == 4 ? " class=active" : ""))>
+            <a href="@Url.Action("Buy", "Purchase")">购买课程</a>
+        </li>
+        <li @(((int)Model == 5 ? " class=active" : ""))>
+            <a href="@Url.Action("Free", "Free")">专家答疑</a>
+        </li>
+        <li @(((int)Model == 6 ? " class=active" : ""))>
+            <a href="@Url.Action("Option", "Option")">常见问题</a>
+        </li>
+    </ul>
+</div>

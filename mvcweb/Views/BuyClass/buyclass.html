@@ -1,0 +1,229 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ABC</title>
+<style type="text/css">
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-family:"微软雅黑";/* RL add */
+}
+li, a {
+	cursor: pointer;
+}
+.content {
+	width: 1000px;
+	margin: 0 auto;
+}
+.col_tab_ul {
+	list-style-type: none;
+	float: left;
+	height: 40px;
+	width: 1000px;
+}
+.col_tab_ul li {
+	width: 160px;
+	margin: 10px;
+	padding: 10px;
+	float: left;
+	background-color: #46a5e6;
+}
+.col_tab_ul li .focus {
+	background-color: #e152dc;
+}
+.coursetype {
+	float: left;
+	margin-left: 50px;
+	width: 200px;
+	height: 40px;
+}
+.flt {
+	float: left;
+}
+.hidden {
+	display: none;
+}
+.selector {
+	border: 2px solid #f00;
+}
+.coursetitle {
+	height: 60px;
+	margin-top: 15px;
+}
+.courseinfo {
+	height: 180px;
+}
+.price {
+	font-size: 20px;
+	height: 60px;
+	line-height: 60px;
+	margin-left: 120px;
+}
+.m2eBox {
+	float: left;
+	width: 100%;
+}
+.buy {
+	cursor: pointer;
+}
+.coursetype {
+	width: 400px;
+	height: 50px;
+}
+.course {
+	width: 80px;
+	height: 30px;
+	font-size: 18px;
+	line-height: 30px;
+	margin: 5px;
+	float: left;
+}
+.course_ul {
+	list-style-type: none;
+	float: left;
+}
+.course_t {
+	width: 100px;
+	height: 30px;
+	font-size: 18px;
+	line-height: 30px;
+}
+/* RL add */
+		.clearfix:after {
+	content:"\200B";
+	display:block;
+	height:0;
+	clear:both;
+}
+.clearfix {
+*zoom:1;
+}/*IE/7/6*/
+.col_tab_ul {
+	background:url(../Images/rl_buycar_bg.jpg) 0 0 repeat-x;
+	height:50px;
+	margin:0;
+	padding:0 0 0 10px;
+}
+.col_tab_ul li {
+	border:none;
+	margin:3px 0 0 0;
+	background:none;
+	line-height:47px;
+	color:#fff;
+	padding:0;
+	height:50px;
+	text-align:center;
+	font-size:16px;
+}
+.col_tab_ul li.selector {
+	background:#fff;
+	color:#30a0f6;
+}
+.col_tab_img {
+	float:left;
+	width:443px;
+	text-align:left;
+	margin:40px 0;
+	padding:0 0 0 0;
+}
+.col_tab_img img {
+	border:1px solid #efefef;
+}
+.col_tab_imgtxt {
+	float:right;
+	width:540px;
+	font-size:14px;
+	margin:40px 0;
+}
+.price, .course_t {
+	font-size:14px;
+}
+.coursetitle {
+	text-align:left;
+	font-size:18px;
+	line-height:40px;
+	border-bottom:1px solid #efefef;
+	height:40px;
+	margin:0;
+}
+.course{ border:2px solid #dddddd; width:40px; text-align:center; background:#f7f7f7;  padding:0 20px;font-size:14px; line-height:20px; height:20px;}
+.selector{ font-size:14px; border:2px solid #ff3351; height:20px; line-height:20px; width:40px; padding:0 20px; text-align:center; background:#fff;}
+.coursetype{ height:auto;}
+.course_ul{ margin:0;}
+.course_ul li{ padding:20px 0 0 0;}
+.price_num{ font-size:26px; color:#ff3351; font-weight:bold; margin-left:30px;}
+.courseinfo{ height:auto;}
+.price{ margin:20px 0 20px 120px;}
+.buy{ margin:0 30px 0 0;}
+.col_tab_ulbox{ border:1px solid #efefef; border-top:none;}
+.col_tab_ul2{ background:url(../Images/rl_buycar_bg.jpg) 0 -60px repeat-x; padding:0; margin:0;}
+.col_tab_ul2 li{ float:left; height:40px; line-height:40px; list-style:none; padding:0 30px; margin:0;}
+.col_tab_ul2 li.on{ background:url(../Images/rl_buycar_bg.jpg) 0 -110px repeat-x; border-right:1px solid #efefef;}
+.m2eBox p{ line-height:30px; padding:30px;}
+</style>
+<script src="../js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<div class="content">
+	<ul class="col_tab_ul clearfix">
+		<!--Rl mod-->
+		<li data="2" class="selector">VIP一对一授课</li>
+		<li data="5">一对六小班授课</li>
+		<li data="6">超级大课堂</li>
+		<li data="7">王牌零起点课程</li>
+	</ul>
+	<div class="clearfix"><!--Rl mod-->
+		<div class="col_tab_img"><!--Rl mod--> 
+			<img src="../Images/buyclass_1.jpg" width="423" height="297"> </div>
+		<div class="col_tab_imgtxt"><!--Rl mod-->
+			<div class="coursetitle">VIP一对一授课</div>
+			<div class="courseinfo">
+				<div class="clearfix">
+					<ul class="course_ul clearfix">
+						<li class="clearfix">
+							<div class="coursetype" data="type">
+								<div class="course_t flt">上课类型：</div>
+								<div class="course flt selector">次卡</div>
+							</div>
+						</li>
+						<li class="clearfix">
+							<div class="coursetype" data="time">
+								<div class="course_t flt">上课时间：</div>
+								<div class="course flt selector">50</div>
+								<div class="course flt">100</div>
+							</div>
+						</li>
+						<li class="hidden clearfix">
+							<div class="coursetype" data="time">
+								<div class="course_t flt">上课时间：</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="price clearfix"><span class="m2eleft">价格：</span><span class="price_num">￥1980元</span></div>
+			</div>
+			<div> <a method="buy" class="buy"> <img width="200" height="40" src="../Images/m2car.jpg"></a> <a method="search" class="buy"> <img src="../Images/m2e_btn.jpg" width="200" height="40"></a> </div>
+		</div>
+	</div>
+	<!--Rl mod-->
+	<div class="col_tab_ulbox clearfix">
+		<ul class="col_tab_ul2 clearfix">
+			<li class="on">超值优惠</li>
+			<li>开课详情</li>
+		</ul>
+		<div class="m2eBox">
+			<p>全天24小时自由选课，想学就学。<br>
+				一对一VIP教学服务，随到随学！</p>
+		</div>
+		<div class="m2eBox hidden">
+			<p>纯美国和加拿大的优质外籍老师，<br>
+				真正地道口语学习，<br>
+				五星级私人学习管理老师，全程跟踪辅导<br>
+				教学效果才是硬道理！</p>
+		</div>
+	</div>
+</div>
+<script src="../js/buyclass.js"></script>
+</body>
+</html>

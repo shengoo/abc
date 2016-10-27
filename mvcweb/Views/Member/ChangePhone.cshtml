@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>个人设置</title>
+    <link href="~/assets/css/common.css" rel="stylesheet" />
+
+    <style>
+    </style>
+</head>
+<body>
+    <div class="banner_one"></div>
+    @Html.Partial("UserCenterNav", 1)
+    <div class="section">
+        <div class="ad ad-1">
+            <div class="container safe">
+                <div class="page-title">
+                    <h1>PERSONAL SETTINGS</h1>
+                    <div class="divider"></div>
+                    <ul class="tab">
+                        <li><a href="@Url.Action("Member", "Member")">个人信息</a></li>
+                        <li><a href="@Url.Action("ChangePwd", "Member")">修改密码</a></li>
+                        <li class="active">修改手机</li>
+                    </ul>
+                </div>
+
+                <div class="phone member-page-content">
+                    <div class="single-body">
+                        <div class="form-group" style="margin-top: 45px; height: 45px;">
+                            <label class="label" style="margin-left: 20px">
+                                <span id="name">手机号：</span>
+                            </label>
+
+                            <input type="text" name="phone" class="input " style="width: 300px;" placeholder="请输入新手机号">
+                        </div>
+                        <div class="form-group" style="height: 45px;">
+                            <label class="label" style="margin-left: 20px">
+                                <span> 验证码：</span>
+                            </label>
+
+                            <input type="text" name="code" style="width: 200px" class="input" placeholder="请输入验证码">
+                            <button class="btn" style="margin: 1px 0px 0px 5px;" method="sendValid">获取验证码</button>
+                        </div>
+                        <div class="form-group">
+                            <button method="updatePassword" class="btn middle" style="margin-left: 105px; width: 108px;">保&nbsp;&nbsp;存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery-2.2.4.min.js"></script>
+    <script src="~/Scripts/abc/base.es5.min.js"></script>
+    <script src="~/Scripts/jquery.cookie.js"></script>
+    <script src="~/Scripts/layer/layer.js"></script>
+    <script src="~/Scripts/abc/common.es5.js"></script>
+    <script src="~/Scripts/abc/member.js"></script>
+    <script>
+        $(function () {
+            member.phoneReady();
+        });
+    </script>
+</body>
+</html>

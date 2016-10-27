@@ -1,0 +1,45 @@
+﻿#login {
+    width: 440px;
+    margin: 0 auto;
+}
+#login .login-popup {
+    padding: 30px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+    #login .logo {
+        margin: auto;
+        display: block;
+        padding: 30px;
+    }
+
+    .login-popup .login_form {
+        background-color: #F6F6F6;
+        padding: 20px;
+    }
+
+    .login-popup .mask-input {
+        margin: 10px 20px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+        .login-popup .mask-input input:not([type="checkbox"]) {
+            width: 100%;
+            height: 40px;
+            outline: hidden;
+            padding: 0 0 0 10px;
+        }
+
+    .login-popup button {
+        font-size: 16px;
+        width: 100%;
+        height: 42px;
+        background: #C7151D;
+        color: #FFF;
+        border: none;
+        display: block;
+        margin: 0 20px;
+        cursor: pointer;
+    }

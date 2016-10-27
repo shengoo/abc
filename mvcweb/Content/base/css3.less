@@ -1,0 +1,35 @@
+﻿.linear-gradient (@direction, @start, @stop) {
+  background: -webkit-linear-gradient(@direction, @start, @stop);
+  background: -moz-linear-gradient(@direction, @start, @stop);
+  background: -ms-linear-gradient(@direction, @start, @stop);
+  background: -o-linear-gradient(@direction, @start, @stop);
+  background: linear-gradient(@direction, @start, @stop);
+  filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr='@{start}',endcolorstr='@{stop}',gradientType=0);
+  background-color: @start;
+}
+.transition (@transition) {
+  -webkit-transition: @transition;
+  -moz-transition: @transition;
+  -o-transition: @transition;
+  transition: @transition;
+}
+
+.scale(@scale){
+  -webkit-transform: scale(@scale);
+  -moz-transform: scale(@scale);
+  -ms-transform: scale(@scale);
+  -o-transform: scale(@scale);
+  transform: scale(@scale);
+}
+
+.border-radius (@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+.opacity (@alpha) {
+  opacity: @alpha/100;
+  filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{alpha})";
+}

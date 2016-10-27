@@ -1,0 +1,473 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ABC在线英语</title>
+    <link href="~/static/css/Purchase.css" rel="stylesheet" />
+    <link href="~/assets/css/common.css" rel="stylesheet" />
+    <style>
+        .section .ad-1 .free-cours .each-media .media-img li.active,
+        .nav-tabs .focus {
+            width: 164px;
+            height: 55px;
+            background: url(@Url.Content("~/image/sprite.png")) no-repeat -650px -444px;
+            color: #fff;
+        }
+
+        .section .ad-1 .free-cours .each-media .media-img li,
+        .nav-tabs li {
+            display: inline-block;
+            width: 164px;
+            height: 55px;
+            text-align: center;
+            line-height: 55px;
+            color: #da1e1c;
+    margin-right: -5px;
+        }
+
+        .extb {
+            margin: 0 auto;
+        }
+        .extb tr {
+            display: block;
+            -ms-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+        /*.extb .odd {
+            background: #f1f1f1;
+        }*/
+        .extb tr td {
+            width: 134px;
+            height: 40px;
+            color: #333;
+            border-left: 1px solid #fff;
+            text-align: center;
+        }
+        .extb .opp {
+            background: #dcdcdc;
+        }
+        /*.extb .odd {
+            background: #f1f1f1;
+        }*/
+        .extb .add {
+            font-size: 15px;
+            background: #bbbbbb;
+        }
+        .btntiny {
+            -ms-border-radius: 2px;
+            border-radius: 2px;
+
+            vertical-align: middle;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid transparent;
+            background-color: #428bca;
+            font-weight: normal;
+            font-size: 12px;
+            margin-left: 3px;
+            color: white !important;
+            padding: 3px;
+        }
+
+        .flt {
+            font-size: 15px;
+            float: left;
+            font-family: "Microsoft YaHei";
+        }
+        .ul_yueke_left li {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+ .list_text {
+    font-weight: 400;
+    margin: 3px auto;
+    font-size: 13px;
+    vertical-align: middle;
+}
+ .list_text .container {
+    padding: 5px;
+}
+ .selbtn {
+    cursor: pointer;
+    border: none;
+    color: #30a0f6;
+    outline: 1px solid #30a0f6;
+    text-align: center;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+ .selbtn.select {
+    background-color: #30a0f6;
+    color: #fff;
+    font-weight: bold;
+}
+
+ .choicedate {
+    width: 600px;
+    height: 60px;
+}
+ .classdate {
+     width: 71px;
+    height: 48px;
+    padding-top: 10px;
+    float: left;
+    margin: 5px;
+    color: #2B7DBC;
+    text-align: center;
+    cursor: pointer;
+    background-image: url(../../Images/calender.png);
+     -ms-background-repeat: no-repeat;
+     background-repeat: no-repeat;
+    font-size: 13px;
+ }
+
+        .choicetime {
+    /* width: 700px; */
+    width: 790px;
+    margin-left: 30px;
+    border: 1px solid #ddd;
+    height: 164px;
+    overflow: auto;
+}
+
+ .content_table {
+    width: 790px;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+ .previewclass {
+    width: 100%;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+}
+ .previewclass li {
+    line-height: 1.42857;
+    text-align: left;
+    padding: 0;
+    height: 40px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+}
+ .previewclass li:first-child {
+    color: #666;
+    background: -moz-linear-gradient(top, #F6F6F6, #F0F0F0);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#F6F6F6), to(#F0F0F0));
+    font-weight: 400;
+}
+ .previewclass li div {
+    text-align: center;
+    border-bottom: none;
+    border-left: none;
+    border-top: none;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+}
+ .previewclass li .time {
+    width: 18%;
+}
+ .previewclass li .coursename {
+    width: 21%;
+}
+ .previewclass li .class, .previewclass li .name {
+    width: 14%;
+}
+ .previewclass li .operation {
+    width: 10%;
+}
+        .hidden{
+        display:none;
+        }
+        .classtime {
+    width: 56px;
+    height: 22px;
+    float: left;
+    margin: 5px;
+    color: #2B7DBC;
+    text-align: center;
+    line-height: 22px;
+    cursor: pointer;
+    background-image: url(@Url.Content("~/Images/classtime.png"));
+}
+        .selecttime {
+    background-image: url(@Url.Content("~/Images/classtime_focu.png"));
+    color: #fff;
+}
+        .win_table {
+    width: 98%;
+    height: 80%;
+    padding: 0;
+    background-color: #fff;
+    margin: 5px;
+    border-spacing: 0;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+        .win_table tbody td {
+    font-size: 12px;
+    text-align: center;
+    padding: 3px 5px;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+        .lessonaccess {
+    min-height: 80px;
+    padding: 5px 10px;
+}
+        .course_yueke {
+    width: 100%;
+    font-size: 12px;
+    border-spacing: 0;
+    /*border-top: 1px solid #ddd;*/
+    /*border-left: 1px solid #ddd;*/
+}
+        .course_yueke thead {
+    background: -moz-linear-gradient(top, #F6F6F6, #F0F0F0);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#F6F6F6), to(#F0F0F0));
+}
+        .course_yueke thead tr {
+    height: 39px;
+}
+        .course_yueke tr td,.course_yueke tr th {
+    /*border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;*/
+    text-align: center;
+    line-height: 1.42857;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    vertical-align: middle;
+    -moz-word-break: break-all;
+    -o-word-break: break-all;
+    word-break: break-all;
+    height: 34px;
+    color: #666666;
+}
+        .extb tr{
+        display:table-row;
+        }
+        .btntiny {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner_one"></div>
+    @Html.Partial("UserCenterNav", 2)
+    <div class="section">
+        <div class="ad ad-1">
+            <div class="container">
+                <div class="page-title">
+                    <h1>COURSE MANAGEMENT</h1>
+                    <div class="divider"></div>
+                    @Html.Partial("PurchaseTabs", new ViewDataDictionary { { "index", 1 } })
+                </div>
+                <div class="courselist flt">
+                    @*<div class="content_title">
+                            我的课程
+                        </div>*@
+                    <div>
+                        <ul class="nav-tabs" style="margin-bottom: -7px; background-color: #ccc;">
+                            <li class="focus" data="3">学习计划</li>
+                            <li data="0" class="hide3">我要约课</li>
+                            <li data="1">待上课</li>
+                            <li data="2">上课历史</li>
+                        </ul>
+                    </div>
+                    <div class="courselist-div">
+                        <div class="courselist_table_container">
+                            <table class="course_yueke extb" cellspacing="0">
+                                <colgroup>
+                                    <col width="15%" />
+                                    <col width="15%" />
+                                    <col width="15%" />
+                                    <col width="15%" />
+                                    <col width="10%" />
+                                    <col width="20%" />
+                                </colgroup>
+                                <thead>
+                                    <tr class="odd add">
+                                        <td>课程类型</td>
+                                        <td>课程级别</td>
+                                        <td>课程名称</td>
+                                        <td>上课方式</td>
+                                        <td>进度</td>
+                                        <td>操作</td>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                        <div style="width: 100%; height: 60px;">
+                            <div class="page"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="courseyuyue flt" style="height: 810px;display:none;">
+        @*<div class="content_title">
+                <div class="title flt">VIP1对1英语套餐课程</div>
+            </div>*@
+        <div class="content_left flt">
+            <ul class="ul_yueke_left">
+                <li style="height: 33px;">
+                    <div class="list_text">
+                        <div class="label flt">
+                            约课方式:
+                        </div>
+                        <div class=" flt">
+                            <div class="selbtn select flt" action="mode" data="1">按时间</div>
+                            <div class="selbtn flt" action="mode" data="2">按老师</div>
+                        </div>
+                    </div>
+                </li>
+                <li style="height: 33px;">
+                    <div class="list_text">
+                        <div class="label flt">
+                            约课次数:
+                        </div>
+                        <div class=" flt">
+                            <div class="selbtn select flt" action="times" data="1">按次约课</div>
+                            <div class="selbtn flt" action="times" data="2">连约两堂课</div>
+                            <div class="selbtn flt" action="times" data="3">连约三堂课</div>
+                        </div>
+                    </div>
+                </li>
+                <li style="height: 30px;" class="selteacher hidden">
+                    <div class="list_text">
+                        <div class="label flt">选择老师:</div>
+                        <div class="input flt" style="cursor: pointer; color: #30a0f6; padding: 5px; margin-top: 3px; text-align: center;" action="selectTeacher"></div>
+                    </div>
+                </li>
+                <li style="height: 40px;">
+                    <div class="list_text flt">
+                        <div class="label flt" style="height: 60px; line-height: 60px;">上课日期:</div>
+                        <div class="choicedate flt"></div>
+                    </div>
+                </li>
+                <li style="height: 120px;padding-top: 20px;">
+                    <div class="list_text flt">
+                        <div class="label">上课时段:</div>
+                        <div class="choicetime flt">
+                        </div>
+                    </div>
+                </li>
+                <li style="height: 30px;">
+                    <button class="btn flt" action="submit" style="margin-left: 742px; width: 80px; height: 30px;">预约</button>
+                </li>
+            </ul>
+        </div>
+        <div class="content_table flt">
+            <ul class="previewclass">
+                <li style="">
+                    <div class="time flt right_border">课程类型</div>
+                    <div class="coursename flt right_border">课程名称</div>
+                    <div class="class flt right_border">上课方式</div>
+                    <div class="coursename flt right_border">上课老师</div>
+                    <div class="class flt right_border">上课时间</div>
+                    <div class="operation flt">操作</div>
+                </li>
+            </ul>
+            <div class="page"></div>
+        </div>
+
+
+    </div>
+    <div class="win_grid hidden">
+        <div style="height: 60px; padding: 5px;">
+            <div class="label flt" style="width: inherit;">名称：</div>
+            <input class="input flt" style="padding: 5px" type="text" />
+        </div>
+        <div style="width: 100%; padding: 0;">
+            <table class="win_table">
+                <thead style="background-color: #ddd;">
+                    <tr>
+                        <th>头像</th>
+                        <th>英文名称</th>
+                        <th style="width: 280px;">介绍</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="classhour hidden">
+        <table class="course_yueke extb">
+            <thead>
+                <tr class="odd add">
+                    <th>课次</th>
+                    <th style="width: 113px;">上课老师</th>
+                    <th style="width: 113px;">学管师</th>
+                    <th>已约/可约</th>
+                    <th>上课时间</th>
+                    <th>时长</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="page"><a pos="1" data="1" class="page_focus">1</a></div>
+    </div>
+    <div class="lessonaccess hidden">
+        <table class="course_yueke">
+            <thead>
+                <tr>
+                    <td>序号</td>
+                    <td>课次号</td>
+                    <td>课次名称</td>
+                    <td>课件名称</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="classEvaluate hidden">
+        <div class="remark flt" style="width: 400px; height: 125px;">
+        </div>
+        <div class="flt" style="width: 400px; height: 120px;">
+            <label class="label flt" style="height: 120px; width: 120px; line-height: 120px;">评&nbsp;&nbsp;&nbsp;价：</label>
+            <textarea class="evaluatecontent flt" style="height: 120px; width: 260px;"></textarea>
+        </div>
+        <div style="width: 400px; height: 20px; float: left;">
+            <a class="btntiny frt" style="margin-top: 20px; margin-right: 30px;" action="evaluate">提交</a>
+        </div>
+    </div>
+
+
+    <script src="~/js/jquery-1.8.3.min.js"></script>
+    <script src="~/js/base.js"></script>
+    <script src="~/js/jquery.cookie.js"></script>
+    <script src="~/js/layer/layer.js"></script>
+    <script src="~/js/common.js"></script>
+    <script src="~/js/member.js" type="text/javascript"></script>
+    @*<script src="~/Scripts/jquery-2.2.4.min.js"></script>
+    <script src="~/Scripts/abc/base.es5.min.js"></script>
+    <script src="~/Scripts/jquery.cookie.js"></script>
+    <script src="~/Scripts/layer/layer.js"></script>
+    <script src="~/Scripts/abc/common.es5.js"></script>
+    <script src="~/Scripts/abc/member.js"></script>*@
+    <script>
+        $(function () {
+            window.top.$('#ContentFrame').css({
+                height: 1400
+            });
+            member.myCourseReady();
+        });
+    </script>
+</body>
+</html>

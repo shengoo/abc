@@ -1,0 +1,16 @@
+﻿<div class="nav_box">
+    <ul>
+        <li @(((int)Model == 0 ? " class=active" : ""))>
+            <a href="@Url.Action("ChangePassword", "Teacher")">Password Reset</a>
+        </li>
+        <li @(((int)Model == 1 ? " class=active" : ""))>
+            <a href="@Url.Action("CourseList", "Teacher")">Class History</a>
+        </li>
+        <li @(((int)Model == 2 ? " class=active" : ""))>
+            <a href="@Url.Action("CourseTable", "Teacher")">Schedule</a>
+        </li>
+        <li @(((int)Model == 3 ? " class=active" : ""))>
+            <a href="@Url.Action("Evaluate", "Teacher")">Score</a>
+        </li>
+    </ul>
+</div>

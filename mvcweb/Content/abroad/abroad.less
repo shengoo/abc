@@ -1,0 +1,117 @@
+﻿@import '../base/variable.less';
+@import '../base/reset.less';
+@import '../base/common.less';
+
+@abroad-red: #D8303B;
+
+body {
+    /*background-color: #FFFFED;*/
+}
+
+/*@navbordercolor: #EEE4D4;
+
+.nav {
+    border-color: @navbordercolor;
+
+    ul {
+        border-color: @navbordercolor;
+
+        li {
+            border-color: @navbordercolor;
+        }
+
+        li.active a {
+            color: @abroad-red;
+            border-bottom: 6px solid @abroad-red;
+        }
+    }
+}*/
+
+.divider {
+    background-color: @abroad-red;
+    border-color: @abroad-red;
+    margin-top: 10px;
+}
+
+.banner {
+    background: url(banner.png) center center no-repeat;
+    height: 527px;
+}
+
+.banner2 {
+    background: url(banner2.png) center center no-repeat;
+    height: 532px;
+    color: #FFFFED;
+    text-align: center;
+    font-size: 1.7em;
+
+    .container {
+        padding-top: 180px;
+
+        p {
+            margin-top: 20px;
+            border: 2px solid #FFFFED;
+            border-radius: 5px;
+            display: inline-block;
+            padding: 5px 28px;
+        }
+    }
+}
+
+.section {
+    /*background-color: #FFFFED;*/
+    padding: 80px 0;
+
+    .container {
+        .advantage {
+            padding: 80px 0;
+
+            &:after {
+                content: ' ';
+                display: table;
+                clear: both;
+            }
+
+            .item {
+                float: left;
+                width: 141px;
+                margin-right: 69px;
+                text-align: center;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.advantage-container {
+    color: #000;
+}
+
+.service-section {
+    color: #D7333E;
+    background-color: #EFEFEF;
+
+    .container {
+        position: relative;
+    }
+
+    .title {
+        margin-top: 35px;
+        font-size: 38px;
+    }
+
+    .sub-text {
+        margin-top: 10px;
+        font-weight: normal;
+        font-size: 24px;
+    }
+
+    .service-img {
+        position: absolute;
+        left: 450px;
+        top: -200px;
+    }
+}
