@@ -248,6 +248,13 @@
             }
 
 
+
+            webAbc.bindPageImage(2, function (result) {
+                if (result.length) {
+                    var url = result[0].Url;
+                    $('.banner_one').css('background-image', 'url(' + url + ')');
+                }
+            });
             
 
         })

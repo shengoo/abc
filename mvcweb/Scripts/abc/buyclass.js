@@ -270,10 +270,15 @@ $(document)
                                         move: false,
                                         shadeClose: true,
                                         skin: 'layer-ext-abccart' //该皮肤由layer.seaning.com友情扩展。关于皮肤的扩展规则，去这里查阅
-
+                                        , yes: function (index, layero) {
+                                            console.log('yes')
+                                            layer.closeAll();
+                                            location.href = $.url + '/BuyClass/BuyCar';
+                                        }
                                     },
-                                    function(index, layero) {
-                                        $(".search").click();
+                                    function (index, layero) {
+                                        console.log('callback')
+                                        layer.closeAll();
                                     }
                                 );
                             } else {

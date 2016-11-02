@@ -38,5 +38,17 @@
             height: 1900
         });
     </script><script src="<%=ViewBag.Path%>/assets/js/JavaScript1.js"></script>
+    <script>
+
+        $(function () {
+            webAbc.bindPageImage(6,
+                function (result) {
+                    if (result.length) {
+                        var url = result[0].Url;
+                        $('.banner').css('background-image', 'url(' + url + ')');
+                    }
+                });
+        });
+    </script>
 </body>
 </html>

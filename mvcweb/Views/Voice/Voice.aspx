@@ -54,4 +54,16 @@
 <script src="<%=ViewBag.Path%>/js/common.js"></script>
 <script src="<%=ViewBag.Path%>/js/voice.js"></script>
 <script src="<%: Url.Content("~/assets/js/JavaScript1.js") %>"></script>
+<script>
+
+    $(function () {
+        webAbc.bindPageImage(7,
+            function (result) {
+                if (result.length) {
+                    var url = result[0].Url;
+                    $('.banner').css('background-image', 'url(' + url + ')');
+                }
+            });
+    });
+</script>
 </html>

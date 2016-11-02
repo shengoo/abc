@@ -180,6 +180,10 @@ li {
             background: url(../../image/sprite.png) no-repeat -68px -441px;
         }
 
+            .section .ad-1 .page-title .teacher-type li a {
+                display: block;
+            }
+
             .section .ad-1 .page-title .teacher-type li.active {
                 -ms-background-position: -68px -470px;
                 background-position: -68px -470px;

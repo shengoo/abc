@@ -8,7 +8,7 @@
     <title>ABC在线英语首页</title>
     <link href="~/assets/young/css/foreign_teacher.css" rel="stylesheet" />
     <link href="~/assets/css/StyleSheet1.css" rel="stylesheet" />
-    <link href="~/assets/css/navmenu.css" rel="stylesheet"/>
+    <link href="~/assets/css/navmenu.css" rel="stylesheet" />
 </head>
 <body>
     <div class="banner"></div>
@@ -41,11 +41,11 @@
                     <h1>FOREIGN TEACHERS</h1>
                     <div class="divider"></div>
                     @*<ul class="teacher-type">
-                        <li>青少年讲师</li>
-                        <li class="active">成人讲师</li>
-                        <li>留学讲师</li>
-                        <li>企业讲师</li>
-                    </ul>*@
+                            <li>青少年讲师</li>
+                            <li class="active">成人讲师</li>
+                            <li>留学讲师</li>
+                            <li>企业讲师</li>
+                        </ul>*@
                     <p>外教团队</p>
                 </div>
                 <div class="teacher-info">
@@ -63,5 +63,17 @@
     <script src="~/js/common.js"></script>
     <script src="~/assets/js/JavaScript1.js"></script>
     <script src="~/js/team.js"></script>
+    <script>
+
+        $(function () {
+            webAbc.bindPageImage(4,
+                function (result) {
+                    if (result.length) {
+                        var url = result[0].Url;
+                        $('.banner').css('background-image', 'url(' + url + ')');
+                    }
+                });
+        });
+    </script>
 </body>
 </html>

@@ -57,6 +57,18 @@ $(function () {
 
     sig.find('.btn').click(function () {
         var els = sig.find('input');
+        if ($(els[4]).hasClass('error')) {
+            webAbc.showMessage(2, '请输入正确的生日！');
+            return;
+        }
+        if ($(els[0]).hasClass('error')) {
+            webAbc.showMessage(2, '请输入正确的中文名！');
+            return;
+        }
+        if ($(els[1]).hasClass('error')) {
+            webAbc.showMessage(2, '请输入正确的英文名！');
+            return;
+        }
         if (els.hasClass('error')) {
             webAbc.showMessage(2, '请输入正确的用户信息！');
             return;

@@ -49,5 +49,17 @@
     <script src="~/Scripts/abc/base.es5.min.js"></script>
     <script src="~/Scripts/abc/common.es5.min.js"></script>
     <script src="~/Scripts/abc/voice.es5.min.js"></script>
+    <script>
+
+        $(function () {
+            webAbc.bindPageImage(7,
+                function (result) {
+                    if (result.length) {
+                        var url = result[0].Url;
+                        $('.banner').css('background-image', 'url(' + url + ')');
+                    }
+                });
+        });
+    </script>
 </body>
 </html>

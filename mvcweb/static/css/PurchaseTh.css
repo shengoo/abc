@@ -180,6 +180,10 @@ li {
             background: url(../../image/sprite.png) no-repeat -68px -441px;
         }
 
+            .section .ad-1 .page-title .teacher-type li a {
+                display: block;
+            }
+
             .section .ad-1 .page-title .teacher-type li.active {
                 -ms-background-position: -68px -470px;
                 background-position: -68px -470px;
@@ -256,8 +260,8 @@ li {
     -moz-opacity: 0.5;
 }
 
-.slider .slider-box {
-    width: 770px;
+    .slider .slider-box {
+        width: 770px;
         height: 360px;
         position: absolute;
         left: 50%;
@@ -266,14 +270,14 @@ li {
         margin-top: -200px;
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
-    -ms-border-radius: 10px;
-    border-radius: 10px;
+        -ms-border-radius: 10px;
+        border-radius: 10px;
         behavior: url(PIE.htc);
         background: #e1e1e1;
-}
+    }
 
-.slider .slider-box .slider-one {
-    font-size: 20px;
+        .slider .slider-box .slider-one {
+            font-size: 20px;
             height: 40px;
             line-height: 40px;
             font-weight: bold;
@@ -282,12 +286,12 @@ li {
             color: #333;
             cursor: pointer;
             cursor: hand;
-    -ms-border-radius: 10px 10px 0 0;
-    border-radius: 10px 10px 0 0;
+            -ms-border-radius: 10px 10px 0 0;
+            border-radius: 10px 10px 0 0;
             behavior: url(PIE.htc);
-}
+        }
 
-.slider .slider-box .slider-one span {
+            .slider .slider-box .slider-one span {
                 margin-right: 25px;
             }
 

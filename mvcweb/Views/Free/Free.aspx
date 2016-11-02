@@ -20,6 +20,15 @@
                 }
             }
         }
+        $(function () {
+            webAbc.bindPageImage(5,
+                function (result) {
+                    if (result.length) {
+                        var url = result[0].Url;
+                        $('.banner').css('background-image', 'url(' + url + ')');
+                    }
+                });
+        });
     </script>
 </head>
 <body>

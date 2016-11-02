@@ -394,3 +394,5 @@ $(function () {
     });
 });
 
+window.SiteType = location.href.indexOf('Young') > -1 ? 1 : 0;
+

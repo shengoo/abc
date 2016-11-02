@@ -233,10 +233,15 @@ $(document).ready(function () {
                             area: ['477px', '257px'],
                             move: false,
                             shadeClose: true,
-                            skin: 'layer-ext-abccart' //该皮肤由layer.seaning.com友情扩展。关于皮肤的扩展规则，去这里查阅
-
+                            skin: 'layer-ext-abccart', //该皮肤由layer.seaning.com友情扩展。关于皮肤的扩展规则，去这里查阅
+                            yes: function yes(index, layero) {
+                                console.log('yes');
+                                layer.closeAll();
+                                location.href = $.url + '/BuyClass/BuyCar';
+                            }
                         }, function (index, layero) {
-                            $(".search").click();
+                            console.log('callback');
+                            layer.closeAll();
                         });
                     } else {
                         showMessage(type, message);

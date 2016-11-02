@@ -92,6 +92,13 @@ namespace mvcweb.Controllers
             return View();
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="siteType">0:成人版，1：少年版</param>
+        /// <param name="typeId">1：首页，2：免费课程，3：课程特色，4：外教团队，5：在线答疑，6：上课流程，7：学员心声</param>
+        /// <returns></returns>
         public ActionResult GetWebSiteImages(int siteType, int typeId)
         {
             return Json(pageSrv.GetPageImages(siteType, typeId));

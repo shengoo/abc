@@ -20,5 +20,11 @@ $(function () {
     window.onunload = function () {
         window.top.$('.fixed-register').hide();
     };
+    webAbc.bindPageImage(1, function (result) {
+        if (result.length) {
+            var url = result[0].Url;
+            $('.banner').css('background-image', 'url(' + url + ')');
+        }
+    });
 });
 

@@ -81,6 +81,15 @@
                 }
             }
         }
+        $(function() {
+            webAbc.bindPageImage(3,
+                function (result) {
+                    if (result.length) {
+                        var url = result[0].Url;
+                        $('.banner').css('background-image', 'url(' + url + ')');
+                    }
+                });
+        });
     </script>
     <script src="~/assets/js/JavaScript1.js"></script>
 </body>

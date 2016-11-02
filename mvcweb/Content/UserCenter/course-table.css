@@ -394,6 +394,9 @@ li {
   background: url(../image/sprite.png) no-repeat -68px -441px;
   cursor: pointer;
 }
+.section .container .tab li a {
+  display: block;
+}
 .section .container .tab li.active {
   background-position: -68px -470px;
   color: #fff;
