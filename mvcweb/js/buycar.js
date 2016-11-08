@@ -22,7 +22,7 @@ $(document).ready(function () {
         var el = this,
             type = el.attributes.data_ischeck.value;
 
-        $('input[type="checkbox"]').attr({ checked: type == "true" })
+        $('input[type="checkbox"]').prop({ checked: type == "true" })
         tprice = 0;
         if (type == "true") {
             window.carts.forEach(function (cart) {

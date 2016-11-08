@@ -471,6 +471,7 @@
       <DependentUpon>index.css</DependentUpon>
     </Content>
     <Content Include="Content\icons.png" />
+    <Content Include="Content\image\banner_1.png" />
     <Content Include="Content\image\clients.png" />
     <Content Include="Content\image\logo.png" />
     <Content Include="Content\image\sprite.png" />
@@ -510,6 +511,12 @@
     </Content>
     <Content Include="Content\UserCenter\course-table.min.css">
       <DependentUpon>course-table.css</DependentUpon>
+    </Content>
+    <Content Include="Content\UserCenter\orders.css">
+      <DependentUpon>orders.less</DependentUpon>
+    </Content>
+    <Content Include="Content\UserCenter\orders.min.css">
+      <DependentUpon>orders.css</DependentUpon>
     </Content>
     <Content Include="Content\UserCenter\profile.css">
       <DependentUpon>profile.less</DependentUpon>
@@ -984,6 +991,13 @@
       <DependentUpon>member.es5.js</DependentUpon>
     </Content>
     <Content Include="Scripts\abc\member.js" />
+    <Content Include="Scripts\abc\orders.es5.js">
+      <DependentUpon>orders.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\orders.es5.min.js">
+      <DependentUpon>orders.es5.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\orders.js" />
     <Content Include="Scripts\abc\profile.es5.js">
       <DependentUpon>profile.js</DependentUpon>
     </Content>
@@ -1038,6 +1052,7 @@
     <Content Include="Content\UserCenter\UserCenterCommon.less" />
     <Content Include="Content\UserCenter\course-table.less" />
     <Content Include="Content\young\feature.less" />
+    <Content Include="Content\UserCenter\orders.less" />
     <None Include="Content\young\index.less" />
     <Content Include="Content\train\train.less" />
     <Content Include="Content\abroad\abroad.less" />

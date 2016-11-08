@@ -249,13 +249,14 @@ li, a {
     margin-left: 5px;
     margin-bottom: 5px;
     float: left;
-    width: 100px;
+    /*width: 100px;*/
     height: 30px;
     border: 1px solid #ddd;
     position: relative;
     color: #666;
     font-family: "Microsoft YaHei","微软雅黑",arial,"宋体";
     /*background-image: url(../Images/course_off.png);*/
+    padding: 0 10px;
 }
 
     .course:hover {

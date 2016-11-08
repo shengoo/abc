@@ -1,0 +1,240 @@
+﻿@import '../base/variable.less';
+@import '../base/reset.less';
+@import '../base/common.less';
+@import '../base/form.less';
+
+@import 'UserCenterCommon.less';
+
+
+.banner_one {
+    width: 100%;
+    height: 331px;
+    background: url(../image/banner_1.png) center center no-repeat;
+}
+
+.page {
+    margin-top: 10px;
+    height: 45px;
+    float: right;
+}
+.page a {
+    float: left;
+    cursor: pointer;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e8e8e8;
+    text-align: center;
+    line-height: 40px;
+    margin-left: -1px;
+    display: inline;
+}
+.page_focus {
+    background: #0875c8;
+    color: #fff;
+    font-weight: bold;
+}
+
+.member-page-content {
+    width: 500px;
+    margin: 0 auto;
+}
+
+/*.nav-tabs {
+    
+    background-color: #E1E1E1;
+    margin: 0 1px -8px;
+}*/
+
+.password-description {
+    width: 100%;
+    padding-left: 105px;
+    color: #45649A;
+    font-size: .8em;
+}
+.password-description::before {
+    content: '*';
+    line-height: 16px;
+    vertical-align: middle;
+}
+.play-btn {
+    width: 80px;
+    height: 35px;
+    display: inline-block;
+    margin: 0 auto;
+    line-height: 35px;
+    text-align: center;
+    cursor: pointer;
+    cursor: hand;
+    border: 1px solid #ccc;
+    color: #000;
+}
+.extb {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.extb tr {
+    display: table-row;
+    -ms-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    behavior: url(PIE.htc);
+}
+
+.extb .add {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.extb .odd {
+    background: #ccc;
+}
+
+
+.extb tr td,.extb tr th {
+    width: 100px;
+    height: 50px;
+    color: #333;
+    border-left: 2px solid #fff;
+    text-align: center;
+    line-height: 50px;
+}
+.extb tr td:first-child,.extb tr th:first-child {
+    -ms-border-top-left-radius:8px;
+    border-top-left-radius:8px;
+    -ms-border-bottom-left-radius:8px;
+    border-bottom-left-radius:8px;
+}
+
+.extb tr td:last-child,.extb tr th:last-child {
+    -ms-border-top-right-radius:8px;
+    border-top-right-radius:8px;
+    -ms-border-bottom-right-radius:8px;
+    border-bottom-right-radius:8px;
+}
+
+.order-list {
+    margin-top: 5px;
+    width: 100%;
+    /*height: 440px;*/
+    /* border: 1px solid #ddd; */
+}
+.order-item {
+    margin-top: 15px;
+    border: 1px solid #ddd;
+}
+.order-item-title {
+    background-color: #f5f5f5;
+    color: #333;
+    font-weight: 400;
+    height: 34px;
+    font-size: 12px;
+    padding: 5px 20px;
+}
+.order-item-title .date {
+    float: right;
+    width: 150px;
+    text-align: left;
+    text-indent: 1em;
+    line-height: 24px;
+    height: 24px;
+    color: #aaa;
+}
+.order-item-title .no {
+    float: left;
+    width: 50px;
+    text-align: left;
+    line-height: 24px;
+    height: 24px;
+    color: #aaa;
+}
+.order-item-title .trade {
+    float: left;
+    width: 280px;
+    text-align: left;
+    height: 24px;
+    line-height: 24px;
+}
+.order-body {
+    float: left;
+    border-spacing: 0;
+    width: 740px;
+    margin-top: 5px;
+}
+.order-body tr {
+    height: 30px;
+}
+.order-item td {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    white-space: nowrap;
+    color: #666;
+}
+
+.order-body-name {
+    width: 197px;
+    overflow: hidden;
+    padding-left: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+.order-body-category {
+    width: 148px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 12px;
+}
+.order-body-price {
+    width: 98px;
+    text-align: center;
+    font-size: 12px;
+}
+.order-body-qty {
+    width: 98px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 12px;
+}
+.order-item-total {
+    width: 98px;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.order-item-operation {
+    /* width: 115px; */
+    /*width: 147px;*/
+    float: right;
+    text-align: center;
+    padding-left: 0;
+    cursor: pointer;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.order-item-operation .operation {
+    margin-right: 8px;
+    margin-left: 0;
+}
+
+.car_process{
+    background-image:url('../image/car_process_1.png');
+    height: 66px;
+}
+
+.ul_car li{
+    margin:0;
+}
+.ul_car li:first-child{
+    height: 50px;
+    line-height:50px;
+}
+.ul_car li:nth-child(even){
+    background-color:#fff;
+}
