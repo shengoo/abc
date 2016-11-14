@@ -303,12 +303,12 @@
 webAbc.autoAjustIframeHeight = () => {
     if (window.top !== window) {
         window.top.$('#ContentFrame').css({
-            height: document.body.clientHeight
+            height: document.documentElement.scrollHeight
         });
     }
 };
 webAbc.openDom = (dom,width='440px',height='auto') => {
-    var layer = window.layer || window.parent.layer;
+    var layer = window.layer || window.top.layer;
     layer.open({
         type: 1,
         title: ' ',

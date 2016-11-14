@@ -679,7 +679,6 @@ $(document).ready(function () {
         myCourseReadyStatu: false,
         //我的课程
         myCourseReady: function () {
-            console.log('myCourseReady')
             if (this.myCourseReadyStatu) return;
             var course, lesson, oldEl = null,
                 remark = [0, 0, 0],
@@ -1225,7 +1224,7 @@ $(document).ready(function () {
                     items.forEach(function (item) {
                         if (bookDate == item.ClassDate && item.CourseCount > 0) {
                             var li = $('<li class="courseinfo"><div class="time flt right_border">' + (item.CategoryCode == 1 ? "一对一课程" : "一对六课程") + '</div><div class="coursename flt right_border">' + item.CourseName + '</div> <div class="class flt right_border">' + (item.ClassModel ? '自约上课' : '固定开课') + '</div><div class="coursename flt right_border">' + (item.TeacherEnName || item.TeacherCnName || '暂无分配') + '</div><div class="class flt right_border">' + item.BeginTime + '~' + item.EndTime + '</div><div class="operation flt">' + (
-                            item.ClassModel ? '<div class="btntiny " style="height:18px; line-height:18px;margin-top: 8px;" >取消预约</div>' : ''
+                            item.ClassModel ? '<div class="btntiny " style="line-height:18px;" >取消预约</div>' : ''
                             ) + '</div></li>');
                             li.find('.btntiny').click(function () {
                                 //debugger;

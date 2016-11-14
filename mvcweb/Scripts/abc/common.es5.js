@@ -306,7 +306,7 @@ var webAbc = {
 webAbc.autoAjustIframeHeight = function () {
     if (window.top !== window) {
         window.top.$('#ContentFrame').css({
-            height: document.body.clientHeight
+            height: document.documentElement.scrollHeight
         });
     }
 };
@@ -314,7 +314,7 @@ webAbc.openDom = function (dom) {
     var width = arguments.length <= 1 || arguments[1] === undefined ? '440px' : arguments[1];
     var height = arguments.length <= 2 || arguments[2] === undefined ? 'auto' : arguments[2];
 
-    var layer = window.layer || window.parent.layer;
+    var layer = window.layer || window.top.layer;
     layer.open({
         type: 1,
         title: ' ',

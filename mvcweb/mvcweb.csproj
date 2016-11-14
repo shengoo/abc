@@ -518,6 +518,12 @@
     <Content Include="Content\UserCenter\orders.min.css">
       <DependentUpon>orders.css</DependentUpon>
     </Content>
+    <Content Include="Content\UserCenter\pager.css">
+      <DependentUpon>pager.less</DependentUpon>
+    </Content>
+    <Content Include="Content\UserCenter\pager.min.css">
+      <DependentUpon>pager.css</DependentUpon>
+    </Content>
     <Content Include="Content\UserCenter\profile.css">
       <DependentUpon>profile.less</DependentUpon>
     </Content>
@@ -954,6 +960,13 @@
       <DependentUpon>buyclass.es5.js</DependentUpon>
     </Content>
     <Content Include="Scripts\abc\buyclass.js" />
+    <Content Include="Scripts\abc\courseList.es5.js">
+      <DependentUpon>courseList.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\courseList.es5.min.js">
+      <DependentUpon>courseList.es5.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\abc\courseList.js" />
     <Content Include="Scripts\abc\courseTable.es5.js">
       <DependentUpon>courseTable.js</DependentUpon>
     </Content>
@@ -1053,6 +1066,7 @@
     <Content Include="Content\UserCenter\course-table.less" />
     <Content Include="Content\young\feature.less" />
     <Content Include="Content\UserCenter\orders.less" />
+    <Content Include="Content\UserCenter\pager.less" />
     <None Include="Content\young\index.less" />
     <Content Include="Content\train\train.less" />
     <Content Include="Content\abroad\abroad.less" />

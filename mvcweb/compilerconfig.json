@@ -114,5 +114,21 @@
   {
     "outputFile": "Content/young/feature.css",
     "inputFile": "Content/young/feature.less"
+  },
+  {
+    "outputFile": "Scripts/abc/orders.es5.js",
+    "inputFile": "Scripts/abc/orders.js"
+  },
+  {
+    "outputFile": "Content/UserCenter/orders.css",
+    "inputFile": "Content/UserCenter/orders.less"
+  },
+  {
+    "outputFile": "Scripts/abc/courseList.es5.js",
+    "inputFile": "Scripts/abc/courseList.js"
+  },
+  {
+    "outputFile": "Content/UserCenter/pager.css",
+    "inputFile": "Content/UserCenter/pager.less"
   }
 ]
