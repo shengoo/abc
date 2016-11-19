@@ -320,7 +320,7 @@ webAbc.openDom = (dom,width='440px',height='auto') => {
     });
 };
 
-window.parent.scrollTo(0, 0);
+//window.parent.scrollTo(0, 0);
 $('img[action="login"]').click(() => {
     window.parent.showLogin();
 });

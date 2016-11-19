@@ -293,7 +293,7 @@
     }
 };
 
-window.parent.scrollTo(0, 0);
+//window.parent.scrollTo(0, 0);
 $('img[action="login"]').click(function () {
     window.parent.showLogin();
 });
