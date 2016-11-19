@@ -1642,6 +1642,7 @@
     <Content Include="Views\Abroad\Train.cshtml" />
     <Content Include="Scripts\layer\skin\abc\style.less" />
     <Content Include="Scripts\layer\skin\abccart\style.less" />
+    <Content Include="Views\BuyClass\PayConfirm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="filt\" />

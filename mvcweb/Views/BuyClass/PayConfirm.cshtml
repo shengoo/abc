@@ -27,11 +27,11 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $("#pay_successed1").click(function () {
-            layer.closeAll('iframe');
+            window.parent.layer.closeAll('iframe');
             window.parent.location.href = "/Member/Member?action=orderform";
         });
         $("#pay_successed2").click(function () {
-            layer.closeAll('iframe');
+            window.parent.layer.closeAll('iframe');
         });
     });
 </script>
