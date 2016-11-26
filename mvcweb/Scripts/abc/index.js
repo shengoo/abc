@@ -179,15 +179,18 @@ $(document).ready(function () {
                                 if (times == 0) {
                                     el.innerHTML = '获取验证码';
                                     clearInterval(siv);
+                                    je.prop('disabled', false);
                                     return;
                                 }
                                 el.innerHTML = times-- + '秒后重新发送';
                             }, 1000);
                         } else {
                             showMessage(2, rel.ErrMsg);
+                            je.prop('disabled', false);
                         }
                     }
                 });
+                je.prop('disabled', true);
             }
         }
         else if (method == 'modifyPassword') {

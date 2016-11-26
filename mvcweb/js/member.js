@@ -689,37 +689,49 @@ $(document).ready(function () {
 
             if (memberType == 1) {
                 webAbc.markStar({
-                    container: mark, title: '教学质量', fn: function (mark) {
+                    container: mark,
+                    title: '教学质量',
+                    fn: function(mark) {
                         remark[0] = mark;
                     }
-                })
+                });
                 webAbc.markStar({
-                    container: mark, title: '教师态度', fn: function (mark) {
+                    container: mark,
+                    title: '教师态度',
+                    fn: function(mark) {
                         remark[1] = mark;
                     }
-                })
+                });
                 webAbc.markStar({
-                    container: mark, title: '课堂气氛', fn: function (mark) {
+                    container: mark,
+                    title: '课堂气氛',
+                    fn: function(mark) {
                         remark[2] = mark;
                     }
-                })
+                });
             }
             else if (memberType == 3) {
                 webAbc.markStar({
-                    container: mark, title: '学习能力', fn: function (mark) {
+                    container: mark,
+                    title: '学习能力',
+                    fn: function(mark) {
                         remark[0] = mark;
                     }
-                })
+                });
                 webAbc.markStar({
-                    container: mark, title: '学习态度', fn: function (mark) {
+                    container: mark,
+                    title: '学习态度',
+                    fn: function(mark) {
                         remark[1] = mark;
                     }
-                })
+                });
                 webAbc.markStar({
-                    container: mark, title: '掌握程度', fn: function (mark) {
+                    container: mark,
+                    title: '掌握程度',
+                    fn: function(mark) {
                         remark[2] = mark;
                     }
-                })
+                });
             }
 
             $('.classEvaluate .btntiny').on('click', function () {
@@ -906,16 +918,16 @@ $(document).ready(function () {
                             }
                         })
                     });
-                    OpenLayer({
-                        type: 1,
-                        title: ' ',
-                        area: '900px',
-                        shadeClose: true,
-                        //content: table
-                        content: $('.classhour')
-                    });
                     }
                 );
+                OpenLayer({
+                    type: 1,
+                    title: ' ',
+                    area: '900px',
+                    shadeClose: true,
+                    //content: table
+                    content: $('.classhour')
+                });
 
             }
             var searchClassLesson = function (type) {
@@ -935,8 +947,12 @@ $(document).ready(function () {
                         //    + (item.ClassProgress * item.LessonCount) + '/' + item.LessonCount + '</td><td>'
                         //    + (obj.queryType == '0' && item.CategoryCode == 1 ? '<div class="btntiny flt" action="yuyue">发起预约</div>' : '')
                         //    + (item.CourseType == -1 ? '' : '<div class="btntiny flt" action="search">查看详情</div>') + '</td></tr>');
-                        var row = $('<tr class=' + (index%2?'odd':'opp') + '><td>' + item.CategoryName + '</td><td>' + item.LevelName + '</td><td>' + item.CourseName + '</td><td>' + (item.ClassModel ? '自约上课' : '固定开课') + '</td><td>'
-                          + item.FinishCount + '/' + item.LessonCount + '</td><td style="width:200px;">'
+                        var row = $('<tr class=' + (index%2?'odd':'opp') + '><td>' + item.CategoryName + '</td>' +
+                            '<td>' + item.LevelName + '</td>' +
+                            '<td>' + item.CourseName + '</td>' +
+                            '<td>' + (item.ClassModel ? '自约上课' : '固定开课') + '</td>' +
+                            '<td>' + item.FinishCount + '/' + item.LessonCount + '</td>' +
+                            '<td style="width:200px;">'
                           + (obj.queryType == '0' && item.CategoryCode == 1 ? '<div class="btntiny " action="yuyue">发起预约</div>' : '')
                           + (item.CourseType == -1 ? '' :
                           (obj.queryType == '0' && item.CategoryCode == 1 ? '<div class="btntiny " action="search">查看详情</div>' : '<div class="btntiny " action="search">' + (fs ? "发起预约" : "查看详情") + '</div>') + '</td></tr>'));
@@ -949,31 +965,33 @@ $(document).ready(function () {
                                 case 'search':
                                     searchClassLesson(obj.queryType);
                                     oldbtn = $(this);
-                                    otab.addClass('hidden');
-                                    otab = $('.classlesson');
-                                    otab.removeClass('hidden');
+                                    //otab.addClass('hidden');
+                                    //otab = $('.classlesson');
+                                    //otab.removeClass('hidden');
                                     break;
                                 case 'yuyue':
                                     //    debugger;
                                     var title = $('.courseyuyue .title');
                                     title.html('<a style="cursor:pointer">我的课程</a>&gt;<a>' + course.CategoryName + '&nbsp;-&nbsp;' + item.CourseName + '<a>');
-                                    title.find('a').eq(0).click(function () {
-                                        member.setActiveTab('courselist');
-                                    })
+                                    title.find('a')
+                                        .eq(0)
+                                        .click(function() {
+                                            member.setActiveTab('courselist');
+                                        });
                                     member.myCapacityReady(course.ClassId, course.CourseId);
-                                    otab.addClass('hidden');
-                                    otab = $('.courseyuyue');
-                                    otab.removeClass('hidden');
+                                    //otab.addClass('hidden');
+                                    //otab = $('.courseyuyue');
+                                    //otab.removeClass('hidden');
                                     break;
                             }
                         })
                     });
                 });
             }
-            if (this.myCourseReadyStatu) {
-                $('.nav-tabs li', container).eq(0).click();
-                return;
-            }
+            //if (this.myCourseReadyStatu) {
+            //    $('.nav-tabs li', container).eq(0).click();
+            //    return;
+            //}
             $('.nav-tabs li', container).click(function (queryType) {
                 var je = $(this),
                     type = je.attr('data');
@@ -984,7 +1002,7 @@ $(document).ready(function () {
                 GetClassPlan({ classType: 0, queryType: type, courseType: 2 }, InitClassPlan);
             });
             $('.nav-tabs li', container).eq(0).click();
-            this.myCourseReadyStatu = true;
+            //this.myCourseReadyStatu = true;
         },
         myCourseReadyStatu: false,
         //智能约课
